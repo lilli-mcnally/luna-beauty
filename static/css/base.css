@@ -4,6 +4,8 @@ body {
     font-family: 'Jost', sans-serif;
 }
 
+/* Header */
+
 #logo {
     background: url(/media/logo-black.webp) no-repeat center center;
     background-size: contain;
@@ -14,6 +16,10 @@ body {
 header {
     background-color: #000;
     font-size: 20px;
+}
+
+.nav-link:visited {
+    color: #fff;
 }
 
 .nav-link {
@@ -34,4 +40,21 @@ header {
     background-color: #FF9C83;
     color: #000;
     border: 1px solid #000;
+}
+
+/* Footer */
+
+.lb-footer {
+    background-color: #000;
+    height: 300px;
+    font-size: 16px;
+}
+
+.lb-footer ul {
+    list-style-type: none;
+    justify-content: center;
+}
+
+#lb-socials {
+    font-size: 24px;
 }

@@ -80,7 +80,7 @@ header {
 .lb-btn-peach:hover {
     border: 1px solid #FF9C83;
     border-radius: 3px;
-    background-color: 1px solid #000;
+    background-color: #313639;
 }
 
 /* Eyeshadow Promotion */
@@ -116,4 +116,32 @@ header {
 .lb-eyeshadow-art {
     background: url(/media/home-eyeshadow-art.webp) no-repeat center center;
     background-size: cover;
+}
+
+/* Special Offer Clouds */
+
+.lb-offer-clouds {
+    background: url(/media/home-clouds.webp) no-repeat center center;
+    background-size: cover;
+    height: 150px;
+}
+
+.lb-btn-offer {
+    background-color: #FF9C83;
+    border-radius: 3px;
+    width: 100px;
+}
+
+
+.lb-btn-offer:hover {
+    /* background-color: #fff; */
+    border-radius: 3px;
+    border: 1px solid #000;
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+
+
+.dropdown-menu {
+    --bs-border-color-translucent: #000;
 }

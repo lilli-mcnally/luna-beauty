@@ -42,11 +42,16 @@ header {
     border: 1px solid #000;
 }
 
+.lb-nav-drop:hover,
+.lb-ul-drop {
+    background-color: #000;
+}
+
 /* Footer */
 
 .lb-footer {
     background-color: #000;
-    height: 300px;
+    height: 250px;
     font-size: 16px;
 }
 

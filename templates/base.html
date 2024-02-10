@@ -34,7 +34,43 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <div class="container-fluid px-0">
+            <nav class="navbar bg-dark border-bottom border-body navbar-expand-md" data-bs-theme="dark">
+                <!-- Navbar content -->
+                <div class="container-fluid col-12">
+                    <a class="navbar-brand mx-4" href="{% url 'home' %}">LOGO</a>
+                    <button class="navbar-toggler mx-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item mx-3 my-1 mx-xl-5 my-md-3">
+                                <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+                            </li>
+                            <li class="nav-item mx-3 my-1 mx-xl-5 my-md-3">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item mx-3 my-1 mx-xl-5 my-md-3">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <div class="container-fluid col-12 px-0">
+            <div class="bg-dark border-bottom border-body navbar-expand-md d-flex justify-content-center p-2">
+                <form class="d-flex col-4" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn btn-outline-info" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        </nav>
+
+    </header>
     {% block page_header %}
     {% endblock %}
 

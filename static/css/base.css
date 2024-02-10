@@ -4,6 +4,11 @@ body {
     font-family: 'Jost', sans-serif;
 }
 
+.lb-noto {
+    font-family: 'Noto Serif Display', sans-serif;
+    font-weight: 900;
+}
+
 /* Header */
 
 #logo {
@@ -62,4 +67,53 @@ header {
 
 #lb-socials {
     font-size: 24px;
+}
+
+/* Home Page */
+
+.lb-btn-peach {
+    background-color: #FF9C83;
+    border-radius: 3px;
+    border: 1px solid #000;
+}
+
+.lb-btn-peach:hover {
+    border: 1px solid #FF9C83;
+    border-radius: 3px;
+    background-color: 1px solid #000;
+}
+
+/* Eyeshadow Promotion */
+
+.lb-eyeshadow-container {
+    height: 400px;
+    color: #fff;
+}
+
+.lb-eyeshadow-promo {
+    background-color: #313639;
+
+}
+
+.lb-eyeshadow-heading-one,
+.lb-eyeshadow-heading-two {
+    font-style: italic;
+}
+
+.lb-eyeshadow-heading-one {
+    font-size: 40px;
+}
+
+.lb-eyeshadow-heading-two {
+    font-size: 50px;
+}
+
+.lb-eyeshadow-face {
+    background: url(/media/home-eyeshadow.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.lb-eyeshadow-art {
+    background: url(/media/home-eyeshadow-art.webp) no-repeat center center;
+    background-size: cover;
 }

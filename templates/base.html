@@ -16,7 +16,7 @@
     {% block corecss %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/1c3a2196db.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -26,6 +26,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
+    <script src="https://kit.fontawesome.com/1c3a2196db.js" crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -37,10 +38,9 @@
 <body>
     <header>
         <div class="container-fluid px-0">
-            <nav class="navbar bg-dark border-bottom border-body navbar-expand-md" data-bs-theme="dark">
-                <!-- Navbar content -->
+            <nav class="navbar border-bottom border-body navbar-expand-md p-0" id="luna-nav" data-bs-theme="dark">
                 <div class="container-fluid col-12">
-                    <a class="navbar-brand mx-4" href="{% url 'home' %}">LOGO</a>
+                    <a class="navbar-brand mx-4 p-0" id="logo" href="{% url 'home' %}"></a>
                     <button class="navbar-toggler mx-4" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -92,15 +92,15 @@
                 </div>
         </div>
         <div class="container-fluid col-12 px-0">
-            <div class="bg-dark border-bottom border-body navbar-expand-md d-flex justify-content-center p-2">
+            <div class="border-bottom border-body navbar-expand-md d-flex justify-content-center p-2" id="luna-search">
                 <form class="d-flex col-4" role="search" method="GET" action="">
-                    <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
-                    <button class="btn btn btn-outline-info" type="submit">Search</button>
+                    <input class="form-control me-2 rounded-1" type="text" name="q" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn btn-outline-dark rounded-1" id="search-button" type="submit">Search</button>
                 </form>
             </div>
         </div>
         </nav>
-
     </header>
     {% block page_header %}
     {% endblock %}

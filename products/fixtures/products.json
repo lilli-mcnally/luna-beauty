@@ -289,7 +289,7 @@
             "sku": "lb747929834",
             "name": "Maybelline Lash Sensational Sky High Mascara",
             "ml": "7.2ml",
-            "description": "Sky high lashes just got easier with Maybelline's Lash Sensational Sky High Mascara. The long-lasting mascara delivers full volume and intense length with just a swipe to create high lash impact from every angle. With Maybelline’s exclusive Flex Tower brush to bend to the natural shape of the lashes from root to tip to deliver the blackest black colour that won’t flake or smudge. Infused with bamboo extract and fibres, the mascara leaves the lashes looking effortlessly long, full, and lightweight lashes.",
+            "description": "Sky high lashes just got easier with Maybelline's Lash Sensational Sky High Mascara. The long-lasting mascara delivers full volume and intense length with just a swipe to create high lash impact from every angle. With Maybelline's exclusive Flex Tower brush to bend to the natural shape of the lashes from root to tip to deliver the blackest black colour that won’t flake or smudge. Infused with bamboo extract and fibres, the mascara leaves the lashes looking effortlessly long, full, and lightweight lashes.",
             "ingredients": "Aqua / Water / Eau, Propylene Glycol, Styrene/Acrylates/Ammonium Methacrylate Copolymer, Polyurethane-35, Cera Alba / Beeswax / Cire Dabeille, Synthetic Fluorphlogopite, Glyceryl Stearate, Cetyl Alcohol, Peg-200 Glyceryl Stearate, Ethylenediamine/Stearyl Dimer Dilinoleate Copolymer, Copernicia Cerifera Cera / Carnauba Wax / Cire De Carnauba, Stearic Acid, Palmitic Acid, Ethylene/Va Copolymer, Alcohol Denat., Paraffin, Aminomethyl Propanediol, Phenoxyethanol, Caprylyl Glycol, Glycerin, Hydroxyethylcellulose, Butylene Glycol, Rayon, Xanthan Gum, Caprylic/Capric Triglyceride, Sodium Laureth Sulfate, Disodium Edta, Myristic Acid, Tetrasodium Edta, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Potassium Sorbate, Silica, Soluble Collagen, Bambusa Vulgaris Extract, Trisodium Edta [+/- May Contain / Peut Contenir Ci 77491, Ci 77492, Ci 77499 / Iron Oxides, Ci 77007 / Ultramarines, Mica, Ci 77891 / Titanium Dioxide, Ci 75470 / Carmine, Ci 77288 / Chromium Oxide Greens, Ci 77742 / Manganese Violet, Ci 77510 / Ferric Ferrocyanide F.I.L. D250527/1",
             "price": 10.99,
             "category": "eyes",
@@ -308,7 +308,7 @@
             "sku": "lb732738679",
             "name": "e.l.f. Lash 'n Roll Curling Mascara",
             "ml": "9.2g",
-            "description": "Upgrade your lash game with the e.l.f. Cosmetics Lash 'N Roll Mascara. This curling mascara features a unique curved brush to lift and separate lashes for a luxe, eye-opening effect. Smudge- and flake-resistant, this drama-inducing mascara belongs in your next haul.",
+            "description": "Upgrade your lash game with the e.l.f. Cosmetics Lash 'N Roll Mascara. This curling mascara features a unique curved brush to lift and separate lashes for a luxe, eye-opening effect.",
             "ingredients": "Water (Aqua), Ricinus Communis (Castor) Seed Oil, Styrene/Acrylates Copolymer, Propylene Glycol, Synthetic Beeswax, Copernicia Cerifera (Carnauba) Wax, Glyceryl Stearate, PVP, Polyamide-5, Polyacrylic Acid, Palmitic Acid, PEG-8 Caprylic/Capric Glycerides, Stearic Acid, Magnesium Aluminum Silicate, Phenoxyethanol, PEG-100 Stearate, Nylon-12, Aminomethyl Propanol, Ceteareth-25, Butylene Glycol, PEG-40 Hydrogenated Castor Oil, Ethylhexylglycerin, Polyquaternium-10, PEG-90M, Caprylyl Glycol, Sodium Benzoate, Silica, Xanthan Gum, Kaolin, Tocopherol",
             "price": 7,
             "category": "eyes",
@@ -485,6 +485,125 @@
             "ingredients": "Mica, Talc, Caprylic/ Capric Triglyceride, Synthetic Fluorphlogopite, Magnesium Myristate, Nylon-12, Tridecyl Trimellitate, Silica, Magnesium Stearate, Magnesium Palmitate, Dimethicone, Bismuth Oxychloride, Bis-Diglyceryl Polyacyladipate-1, Dimethicone/Vinyl Dimethicone Crosspolymer, Aluminum Starch Octenylsuccinate, Phenyl Trimethicone, Polyisobutene, Phenoxyethanol, Caprylyl Glycol, Tin Oxide Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491), Iron Oxides (Ci 77499), Iron Oxides (Ci 77492)",
             "price": 5.99,
             "category": "eyes",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "NA"
+            ]
+        }
+    }, {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb779215243",
+            "name": "Benefit Mini Dandelion Baby-Pink Brightening Blush",
+            "ml": "NA",
+            "description": "It's Benefit's beloved, bestselling Dandelion blush! Sweeten up with this baby-pink blush for a subtle brightening boost. Silky-soft, blendable & buildable, this powder blush feels ultra-fine, weightless & creamy on skin. Sweep effortlessly onto cheeks for an airbrushed effect and a soft satin finish that lasts all day.",
+            "ingredients": "Talc, Mica, Calcium Aluminum Borosilicate, Polyethylene, Magnesium Myristate, Pentaerythrityl Tetraethylhexanoate, Zinc Stearate, Octyldodecyl Stearoyl Stearate, Silica, Isopropyl Titanium Triisostearate, Phenoxyethanol, Bis-Diglyceryl Polyacyladipate-2, Squalane, Parfum (Fragrance), Lecithin, Sodium Dehydroacetate, Sodium Lauroyl Aspartate, Tocopheryl Acetate, Tocopherol, Glycine Soja (Soybean) Oil, Limonene, Bht, Retinyl Palmitate, Zinc Chloride, Linalool, Aluminum Hydroxide, Aqua (Water), Hexyl Cinnamal, Benzyl Salicylate, Citronellol, Citral, Eugenol. [+/- : Ci 15850 (Red 6, Red 7, Red 7 Lake), Ci 15985 (Yellow 6, Yellow 6 Lake), Ci 19140 (Yellow 5, Yellow 5 Lake), Ci 42090 (Blue 1 Lake), Ci 45410 (Red 27, Red 27 Lake, Red 28 Lake), Ci 73360 (Red 30, Red 30 Lake), Ci 75470 (Carmine), Ci 77007 (Ultramarines), Ci 77163 (Bismuth Oxychloride), Ci 77288 (Chromium Oxide Greens), Ci 77289 (Chromium Hydroxide Green), Ci 77491, Ci 77492, Ci 77499 (Iron Oxides), Ci 77510 (Ferric Ferrocyanide, Ferric Ammonium Ferrocyanide), Ci 77742 (Manganese Violet), Ci 77891 (Titanium Dioxide)].",
+            "price": 17.50,
+            "category": "cheeks",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "NA"
+            ]
+        }
+    }, {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb875209966",
+            "name": "L'Oreal Paris Blush of Paradise Melon Dollar Baby",
+            "ml": "NA",
+            "description": "Take your skin to Paradise with a luminous, radiant glow! Introducing Blush of Paradise Melon Dollar Baby, a delicate melon shade that gives a healthy glow finish with a delicious scent. Add a pop of warmth to any complexion.  The pigmented melon powder highlights cheekbones and can be built up to achieve a customisable glow. Super wearable and flattering on all skintones, it's the perfect colour for your no-makeup makeup look.  Infused with 78% natural derived ingredients and and a juicy melon scent, you won't be able to resist it.",
+            "ingredients": "Talc, Cocos Nucifera Oil / Coconut Oil,  Zea Mays Starch / Corn Starch,  Synthetic Fluorphlogopite,  Magnesium Stearate,  Caprylyl Glycol,  Mangifera Indica Seed Butter / Mango Seed Butter,  Theobroma Cacao Seed Butter / Cocoa Seed Butter,  Alumina,  Benzyl Alcohol,  Parfum / Fragrance,  [+/- May Contain Mica,  Ci 77491, Ci 77492, Ci 77499 / Iron Oxides,  Ci 77891 / Titanium Dioxide,  Ci 75470 / Carmine,  Ci 77163 / Bismuth Oxychloride,  Ci 15850 / Red 7,  Ci 19140 / Yellow 5 Lake",
+            "price": 11.99,
+            "category": "cheeks",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "NA"
+            ]
+        }
+    }, {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb669561508",
+            "name": "Clinique Blushing Blush Powder Blush",
+            "ml": "NA",
+            "description": "Defining moment for cheeks. Silky formula sweeps effortlessly over cheekbones to create a natural look. Fresh, jet-milled colour builds to desired intensity with custom-sculpting brush. Long-wearing. Stays colour-true. Oil-free.",
+            "ingredients": "Talc, Dimethicone, Silica, Zinc Stearate, Nylon-12, Lauryl Laurate, Tetrasodium Edta, Potassium Sorbate, Chlorphenesin, [+/- Mica, Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491, Ci 77492, Ci 77499), Bismuth Oxychloride (Ci 77163), Yellow 5 Lake (Ci 19140), Carmine (Ci 75470), Red 7 Lake (Ci 15850), Ferric Ferrocyanide (Ci 77510), Blue 1 Lake (Ci 42090), Red 22 Lake (Ci 45380), Red 36 Lake (Ci 12085), Manganese Violet (Ci 77742), Red 30 Lake (Ci 73360), Red 33 Lake (Ci 17200), Red 28 Lake (Ci 45410), Red 34 Lake (Ci 15880), Ultramarines (Ci 77007), Yellow 6 Lake (Ci 15985), Red 6 (Ci 15850)] <ILN30735>",
+            "price": 21,
+            "category": "cheeks",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "NA"
+            ]
+        }
+    }, {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb587852400",
+            "name": "bareMinerals Gen Nude Blushlighter",
+            "ml": "NA",
+            "description": "A blush + highlighter hybrid that combines the rosiness of a blush with the 'lit from within' glow of a highlighter - in just one step. Achieve a naturally luminous, rosy glow in a silky, weightless formula. Finely milled pearls melt into the skin for a fresh, translucent 'lit from within' glow. What It Does: Silky blurring mineral microspheres blend effortlessly into skin to blur pores and imperfections. Blush + highlighter hybrid features a silky texture that blends seamlessly for a sheer glow. Smooths the look of skin imperfections.",
+            "ingredients": "Mica, Caprylic/Capric Triglyceride, Bis-Diglyceryl Polyacyladipate-2, Diisostearyl Malate, Phenyl Trimethicone, Microcrystalline Cellulose, Dimethicone, Cucumis Sativus (Cucumber) Fruit Extract, Boron Nitride, Silica, Dimethicone/Vinyl Dimethicone Crosspolymer, Ethylhexylglycerin, Caprylyl Glycol, Caffeine, Borago Officinalis Seed Oil, Tin Oxide, Sodium Dehydroacetate. May Contain/Peut Contenir(+/-): Iron Oxides (Ci 77491, Ci 77492, Ci 77499), Titanium Dioxide (Ci 77891), Red 7 Lake (Ci 15850), Manganese Violet ( Ci 77742).",
+            "price": 18,
+            "category": "cheeks",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "NA"
+            ]
+        }
+    }, {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb",
+            "name": "e.l.f. Primer-Infused Bronzer",
+            "ml": "NA",
+            "description": "Get the best of both worlds with the e.l.f. Cosmetics Primer-Infused Bronzer. This long-wear, buildable powder bronzer is enriched with a nourishing primer for seamless blending and incredible staying power.",
+            "ingredients": "Talc, Dimethicone, Silica, Nylon-12, Magnesium Stearate, Magnesium Palmitate, Boron Nitride, Ptfe, Ethylhexyl Palmitate, Triethoxycaprylylsilane, Tocopheryl Acetate (Ve), Simmondsia Chinensis (Jojoba) Seed Oil, Butyrospermum Parkii (Shea) Butter, Bambusa Arundinacea (Bamboo) Stem Powder, Phenoxyethanol, Caprylyl Glycol Mica (Ci 77019), Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491, Ci 77492, Ci 77499), Red 40 Lake (Ci 16035)",
+            "price": 5,
+            "category": "cheeks",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "NA"
+            ]
+        }
+    }, {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb157647332",
+            "name": "MAC Mineralize Blush Warm Soul",
+            "ml": "NA",
+            "description": "Made with baked minerals refined into a powder blush, the MAC Cosmetics Mineralize Blush provides sheer but buildable, luminous coverage onto the skin. This lightweight formula glides onto skin to achieve natural-looking, radiant colour that builds lightly, layer after layer, without heavy coverage.",
+            "ingredients": "Mica, Talc, Dimethicone, Isopropyl Palmitate, Tocopheryl Acetate, Lauroyl Lysine, Simmondsia Chinensis (Jojoba) Seed Oil, Yeast Extract/Faex/Extrait De Levure, Cetearyl Ethylhexanoate, Isohexadecane, Octyldodecyl Stearoyl Stearate, Glyceryl Ethylhexanoate/Stearate/Adipate, Ethylhexyl Methoxycinnamate, Magnesium Aluminum Silicate, Calcium Aluminum Borosilicate, Calcium Sodium Borosilicate, Silica, Tin Oxide, Nylon-12, Synthetic Fluorphlogopite, Acrylamide/Sodium Acryloyldimethyltaurate Copolymer, Zea Mays (Corn) Starch, Polysorbate 20, Polysorbate 80, Sorbitan Stearate, Phenoxyethanol, Sodium Dehydroacetate, [+/- Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491), Iron Oxides (Ci 77492), Iron Oxides (Ci 77499), Bismuth Oxychloride (Ci 77163), Blue 1 Lake (Ci 42090), Carmine (Ci 75470), Chromium Hydroxide Green (Ci 77289), Chromium Oxide Greens (Ci 77288), Ferric Ammonium Ferrocyanide (Ci 77510), Ferric Ferrocyanide (Ci 77510), Manganese Violet (Ci 77742), Red 6 (Ci 15850), Red 7 (Ci 15850), Red 7 Lake (Ci 15850), Ultramarines (Ci 77007), Yellow 5 Lake (Ci 19140), Yellow 6 Lake (Ci 15985)] Please be aware that ingredient lists may change or vary from time to time. Please refer to the ingredient list on the product package you receive for the most up to date list of ingredients.",
+            "price": 24.99,
+            "category": "cheeks",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "NA"
+            ]
+        }
+    }, {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb798750114",
+            "name": "NXY Highlight and Contour Pro Palette",
+            "ml": "NA",
+            "description": "Get pro-level makeup with the NYX Professional Cosmetics Highlight & Contour Pro Palette. This eight-colour palette features all the pressed powder shades you need to sculpt, perfect, and highlight your complexion. The super soft formula blends seamlessly into the skin for a finish that defines your best features.",
+            "ingredients": "Talc, Polymethyl Methacrylate, Boron Nitride, Aluminum Starch Octenylsuccinate, Lauroyl Lysine, Trimethylsiloxyphenyl Dimethicone, Dimethicone, Octyldodecyl Stearoyl Stearate, Zinc Stearate, Phenoxyethanol, Caprylyl Glycol, Tocopheryl Acetate. MAY CONTAIN / PEUT CONTENIR (+/-): Mica, Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 6 (CI 15850).",
+            "price": 18,
+            "category": "cheeks",
             "rating": "TBC",
             "image": "TBC",
             "shades": [

@@ -4,11 +4,11 @@
         "fields": {
             "sku": "lb925892215",
             "name": "L'Oréal Paris True Match Liquid Foundation",
-            "ml": "30ml",
+            "volume": "30ml",
             "description": "Discover True Match, a skincare infused foundation, now available in 48 shades. The formula provides perfect, natural and true-to-skin coverage. Now upgraded with a new skin-matching technology, which includes up to 6 different pigments for a more precise match. Enriched with Hyaluronic Acid. The formula provides up to 24H hydration. Improves skin quality in 2 weeks.",
             "ingredients": "Aqua / Water, Dimethicone, Isododecane, Cyclohexasiloxane, Glycerin, Peg-10 Dimethicone, Methyl Methacrylate Crosspolymer, Butylene Glycol, Pentylene Glycol, Synthetic Fluorphlogopite, Disteardimonium Hectorite, Hydroxyethylpiperazine Ethane Sulfonic Acid, Cetyl Peg/Ppg-10/1 Dimethicone, Sodium Chloride, Polyglyceryl-4 Isostearate, Hexyl Laurate, Caprylyl Glycol, Phenoxyethanol, Disodium Stearoyl Glutamate, Tocopherol, Panthenol, Aluminum Hydroxide, Hydroxyethyl Urea, Tin Oxide, Hydrated Silica, Methicone, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate , [+/- May Contain: Ci 77891 / Titanium Dioxide, Ci 77491, Ci 77492, Ci 77499 / Iron Oxides, Mica, Ci 77510 / Ferric Ammonium Ferrocyanide, Ci 15985 / Yellow 6 Lake, Ci 42090 / Blue 1 Lake, Ci 45410 / Red 28 Lake, Ci 15850 / Red 7]. (F.I.L. D167167/2).",
             "price": 8.99,
-            "category": "face",
+            "category": 1,
             "rating": "5.0",
             "image": "true-match.png",
             "shades": [
@@ -27,11 +27,11 @@
         "fields": {
             "sku": "lb466551275",
             "name": "e.l.f. Halo Glow Liquid Filter",
-            "ml": "31.5ml",
+            "volume": "31.5ml",
             "description": "A multi-purpose, liquid glow booster infused with skin-loving ingredients to give your complexion a soft-focus social filter effect IRL. Glowy makeup and skincare hybrid for dewy skin. Complexion looks healthy and more radiant. Liquid Filter can be worn 4 ways: alone, over or under makeup, mixed with foundation, or as a highlighter. Enriched with skin-loving ingredients like Squalane and Hyaluronic Acid. Available in 8 flexible shades that work across all skin tones.",
             "ingredients": "Water (Aqua), Hydrogenated Didecene, Squalane, Propylene Glycol, Glycerin, Octyldodecanol, Cetyl PEG/PPG-10/1 Dimethicone, Dimethicone, Polyglyceryl-4 Isostearate, Synthetic Fluorphlogopite, Ethylhexyl Hydroxystearate, Isoamyl Laurate, Hydrogenated Styrene/Isoprene Copolymer, Sodium Chloride, Phenoxyethanol, Caprylic/Capric Triglyceride, Disteardimonium Hectorite, Propylene Carbonate, Ethylhexylglycerin, Caprylyl Glycol, Helianthus Annuus (Sunflower) Seed Oil, Hydrolyzed Sodium Hyaluronate, Sodium Hyaluronate, Disodium EDTA, Tocopherol, Aluminum Hydroxide, Polymethylsilsesquioxane, Triethoxycaprylylsilane, Calendula Officinalis Flower Extract, Tin Oxide, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate May Contain: Titanium Dioxide (CI 77891), Yellow Iron Oxide (CI 77492), Red Iron Oxide (CI 77491), Black Iron Oxide (CI 77499), Bismuth Oxychloride (CI 77163)",
             "price": 12,
-            "category": "face",
+            "category": 1,
             "rating": "3.9",
             "image": "halo-glow.png",
             "shades": [
@@ -52,11 +52,11 @@
         "fields": {
             "sku": "lb121260918",
             "name": "NARS Sheer Glow Foundation",
-            "ml": "30ml",
+            "volume": "30ml",
             "description": "NARS Sheer Glow Foundation is a glowing, natural radiant finish foundation with sheer and buildable coverage that immaculately evens skin tone. Formulated with skincare benefits and the NARS Complexion Brightening Formula, it leaves skin hydrated, more luminous, softer and smoother. Used daily, Sheer Glow Foundation improves the skin's brightness and texture.",
             "ingredients": "Cyclopentasiloxane , Water/Aqua/Eau, Butylene Glycol, Glycerin, Polymethylsilsesquioxane, Dimethicone, Triethylhexanoin, Dimethicone/Vinyl Dimethicone Crosspolymer, Peg-10 Dimethicone, Bis-Butyldimethicone Polyglyceryl-3, Disteardimonium Hectorite, Curcuma Longa (Turmeric) Root Extract, Ascorbyl Glucoside, Paeonia Albiflora Root Extract, Tocopherol, Sorbitan Sesquiisostearate, Sodium Glutamate, 1-Methylhydantoin-2-Imide, Sodium Dehydroacetate, Aluminum Hydroxide, Polysilicone-2, Triethoxycaprylylsilane, Ethylhexylglycerin, Glucosyl Hesperidin, Benzoic Acid, Chlorphenesin, Phenoxyethanol, [+/- (May Contain/Peut Contenir): Iron Oxides (Ci 77491), Iron Oxides (Ci 77492), Iron Oxides (Ci 77499), Titanium Dioxide (Ci 77891)].",
             "price": 26.99,
-            "category": "face",
+            "category": 1,
             "rating": "4.2",
             "image": "sheer-glow.png",
             "shades": [
@@ -76,11 +76,11 @@
         "fields": {
             "sku": "lb283636717",
             "name": "Estée Lauder Double Wear Stay-in-Place Foundation",
-            "ml": "30ml",
+            "volume": "30ml",
             "description": "Wear confidence with Double Wear Makeup and stay flawless for whatever comes your way. With 24-hour wear, this fresh matte, oil-free makeup controls oil all day. It's sweat-, heat- and humidity-resistant, waterproof, lifeproof and 24-hour colour true. It comes in a wide range of shades that flatters all and it won't look grey on deeper skintones. It unifies uneven skintone and covers imperfections with buildable, medium-to-full coverage that feels lightweight and so comfortable, you won't believe it's long wear. Double Wear is the makeup that keeps up—no matter where your day takes you. Apply it once and don’t think twice. No touchups needed.",
             "ingredients": "Water/Aqua/Eau, Cyclopentasiloxane, Trimethylsiloxysilicate, Butylene Glycol, Peg/Ppg-18/18 Dimethicone, Polyglyceryl-3 Diisostearate, Magnesium Sulfate, Tribehenin, Titanium Dioxide, Tocopheryl Acetate, Methicone, Polymethylsilsesquioxane, Laureth-7, Disteardimonium Hectorite, Cellulose Gum, Propylene Carbonate, Xanthan Gum, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Alumina, Phenoxyethanol, Sodium Dehydroacetate, [+/- Titanium Dioxide (Ci 77891), Mica, Iron Oxides (Ci 77491, Ci 77492, Ci 77499)] <ILN39274>",
             "price": 36.99,
-            "category": "face",
+            "category": 1,
             "rating": "4.3",
             "image": "double-wear.png",
             "shades": [
@@ -101,13 +101,13 @@
         "fields": {
             "sku": "lb716377874",
             "name": "MAC Studio Fix Fluid Spf15 Foundation",
-            "ml": "30ml",
+            "volume": "30ml",
             "description": "For a matte finish that lasts for a full 24 hours, reach for the MAC Cosmetics Studio Fix Fluid SPF15 Foundation. This comfortable foundation delivers medium-to-full buildable coverage with broad spectrum SPF 15 protection, for a breathable, long-wearing and streak-free finish. It applies, builds and blends easily and evenly while controlling oil and blurring pores and imperfections for a non-cakey, smooth result.",
             "ingredients": "Water/Aqua/Eau, Cyclopentasiloxane, Peg-10 Dimethicone, Butylene Glycol, Trimethylsiloxysilicate, Ethylhexyl Methoxycinnamate, Dimethicone, Magnesium Sulfate, Titanium Dioxide, Laminaria Saccharina Extract, Algae Extract, Tocopheryl Acetate, Sodium Hyaluronate, Tocopherol, Lecithin, Hydrogenated Lecithin, Xanthan Gum, Sorbitan Sesquioleate, Methoxy Amodimethicone/Silsesquioxane Copolymer, Laureth-7, Dipropylene Glycol, Dimethicone/Peg-10/15 Crosspolymer, Dimethicone/Peg-10 Crosspolymer, Peg/Ppg-18/18 Dimethicone, Disteardimonium Hectorite, Silica, Dimethicone Crosspolymer, Triethoxycaprylylsilane, Propylene Carbonate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Sorbic Acid, Chloroxylenol, Phenoxyethanol, [+/- Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491), Iron Oxides (Ci 77492), Iron Oxides (Ci 77499), Chromium Oxide Greens (Ci 77288)]",
             "price": 30,
-            "category": "face",
+            "category": 1,
             "rating": "4.8",
-            "image": "studio-fix.png",
+            "image": "studio-fix.jpeg",
             "shades": [
                 "NC17",
                 "NW20",
@@ -125,11 +125,11 @@
         "fields": {
             "sku": "lb176324425",
             "name": "Makeup Revolution Conceal & Define Foundation",
-            "ml": "23ml",
+            "volume": "23ml",
             "description": "Offering lightweight yet buildable coverage, Makeup Revolution Conceal and Define Foundation is available in a range of universally flattering tones. The oil-free, creamy formula dries down to a demi-matte finish without settling into fine lines and creates an even, airbrushed complexion.",
             "ingredients": "Isododecane, Aqua/Water/Eau, Cyclopentasiloxane, Dimethicone, Silica, Isobutylmethacrylate/Bis-Hydroxypropyl Dimethicone Acryalate Copolymer, Butylene Glycol, Ethylhexyl Palmitate, Cetyl Peg-Ppg—10/1 Dimethicone, Isononyl Isononanoate, Dimethicone Crosspolymer, Quatenium-90 Bentonite, Sorbitan Sesquioleate, C30-45 Alkyl Dimethicone, Sodium Chloride, Phenoxyethanol, Propylene Carbonate, Tocopheryl Acetate, Caprylyl Glycol, Methicone, Lecithin, Polyhydroxysteric Acid, Isopropyl Myristate, Isostearic Acid, Polyglycerol-3 Polyricinoleate, [+/- Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491, 77492, 77499)].",
             "price": 12,
-            "category": "face",
+            "category": 1,
             "rating": "3.7",
             "image": "conceal-define.jpg",
             "shades": [
@@ -148,11 +148,11 @@
         "fields": {
             "sku": "lb919642176",
             "name": "e.l.f Glow Reviver Lip Oil",
-            "ml": "7.6ml",
+            "volume": "7.6ml",
             "description": "Lock your lips into much-needed moisture with the e.l.f. Cosmetics Glow Reviver Lip Oil. Formulated with a hydrating blend of squalane, apricot oil, avocado oil, jojoba oil, and pomegranate oil, this lip oil nourishes the lips and enhances their natural colour with a non-sticky, high-shine finish. Featuring a plush oversized cushion applicator, this revitalising lip oil hugs the lips to deliver a sheer veil of colour, whether it's worn alone or over lipstick. With a fresh minty scent, this super-glossy lip oil ensures your lips smell as good as they look and feel.",
             "ingredients": "Hydrogenated Polyisobutene, Tridecyl Trimellitate, Polyisobutene, Phytosteryl/Octyldodecyl Lauroyl Glutamate, Hydrogenated Styrene/Isoprene Copolymer, Squalane, Prunus Armeniaca (Apricot) Kernel Oil, Persea Gratissima (Avocado) Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Punica Granatum Seed Oil, Tocopheryl Acetate, Fragrance (Parfum), Diethylhexyl Syringylidenemalonate, Phenoxyethanol, Caprylyl Glycol, Caprylic/Capric Triglyceride, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, Tocopherol; MAY CONTAIN: Red 6 Lake (CI 15850), Red 7 Lake (CI 15850), Iron Oxides (CI 77491, CI 77499)",
             "price": 9,
-            "category": "lips",
+            "category": 3,
             "rating": "4.4",
             "image": "glow-reviver.jpg",
             "shades": [
@@ -168,11 +168,11 @@
         "fields": {
             "sku": "lb441064405",
             "name": "MAC Matte Lipstick",
-            "ml": "3g",
+            "volume": "3g",
             "description": "For up to ten hours of long-wearing, non-feathering lip colour, reach for the MAC Cosmetics Matte Lipstick. Colour-rich, classic and with a full-matte finish, this comfortable matte lipstick is a name to know.",
             "ingredients": "Octyldodecanol, Ricinus Communis (Castor) Seed Oil, Silica, Tricaprylyl Citrate, Ozokerite, Isononyl Isononanoate, Paraffin, Phenyl Trimethicone, Microcrystalline Wax /Cera Microcristallina/Cire Microcristalline, Ethylhexyl Palmitate, Caprylic/Capric Triglyceride, Copernicia Cerifera (Carnauba) Wax/Cera Carnauba/Cire De Carnauba, Ascorbyl Palmitate, Tocopherol, Vanillin, Acrylates Copolymer, Polyethylene Terephthalate, Stearyl Stearoyl Stearate, [+/- Mica, Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491, Ci 77492, Ci 77499), Blue 1 Lake (Ci 42090), Carmine (Ci 75470), Red 6 (Ci 15850), Red 6 Lake (Ci 15850), Red 7 Lake (Ci 15850), Red 21 Lake (Ci 45380), Red 28 Lake (Ci 45410), Red 30 Lake (Ci 73360), Red 33 Lake (Ci 17200), Yellow 5 Lake (Ci 19140), Yellow 6 Lake (Ci 15985), Yellow 10 Lake (Ci 47005)]",
             "price": 20,
-            "category": "lips",
+            "category": 3,
             "rating": "3.4",
             "image": "matte-lipstick.jpg",
             "shades": [
@@ -188,11 +188,11 @@
         "fields": {
             "sku": "lb123182242",
             "name": "L'Oreal Paris Color Riche Satin Lipstick",
-            "ml": "28g",
+            "volume": "28g",
             "description": "Your colour, your way. Discover Color Riche luxurious lipstick colour. Its rich formula is enriched with a combination of Omega-3 and Vitamin E and leaves your lips feeling moisturised. Available in over 30 shades, from natural nudes and soft pinks to bright daring corals and reds: there is always a shade to suit your mood or the time of your day.",
             "ingredients": "Tocopheryl Acetate Rosa Canina Fruit Oil Synthetic Fluorphlogopite Alumina Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate Silica Geraniol Calcium Sodium Borosilicate Benzyl Alcohol Tin Oxide Hexyl Cinnamal Hydroxycitronellal Methyl-2-Octynoate Polyethylene Terephthalate Polymethyl Methacrylate Parfum / Fragrance [+/- May contain: CI 77891 / Titanium Dioxide, Mica, CI 77491, CI 77492, CI 77499 / Iron Oxides, CI 15850 / Red 7, CI 45410 / Red 28 Lake, CI 15985 / Yellow 6 Lake, CI 77163 / Bismuth Oxychloride, CI 45380 / Red 22 Lake, CI 42090 / Blue 1 Lake, CI 19140 / Yellow 5 Lake, CI 75470 / Carmine]",
             "price": 5.99,
-            "category": "lips",
+            "category": 3,
             "rating": "4.1",
             "image": "riche-satin.png",
             "shades": [
@@ -208,11 +208,11 @@
         "fields": {
             "sku": "lb690596287",
             "name": "NYX Professional Makeup Butter Lip Gloss",
-            "ml": "15g",
+            "volume": "15g",
             "description": "NYX Professional Makeup Butter Lip Gloss slides onto your lips in one quick and creamy application, leaving them looking irresistible and glowing for the rest of the day. Sweet tasting but never sticky you'll feel like you've hit the lip gloss jackpot as soon as you discover the silky smooth texture of butter Gloss.",
             "ingredients": "Mineral Oil/ParaffinumLiquidum/ Huile Minérale,Polybutene, Diisostearyl Malate, Beeswax /Cera Alba / Cire d’abeille, Ceresin,Silica Dimethyl Silylate, Polyethylene, SorbitanSesquioleate, Phenoxyethanol, Fragrance/Parfum. MAY CONTAIN / PEUT CONTENIR (+/-): Titanium Dioxide (CI 77891), Iron Oxides (CI77499, 77491, 77492), Manganese Violet (CI 77742), Red 6 (CI 15850), Red 7 Lake(CI 15850), Red 28 Lake (CI 45410), Yellow 6 Lake (CI 15985), Yellow 5 Lake (CI19140)",
             "price": 8,
-            "category": "lips",
+            "category": 3,
             "rating": "4.9",
             "image": "butter-glow.png",
             "shades": [
@@ -228,11 +228,11 @@
         "fields": {
             "sku": "lb172295651",
             "name": "Maybelline Lifter Gloss Hydrating Lip Gloss",
-            "ml": "48g",
+            "volume": "48g",
             "description": "Maybelline New York's Lifter Gloss Bronzed delivers glossy lips and a full look. Take your look to the next level with sun-kissed pigments that create a warm, glowing shine. Its breakthrough formula with Hyaluronic Acid visibly smooths lip surface and enhances lip contour with high shine for hydrated, fuller-looking lips. No Filler. Plus, its XL wand transforms lips in an easy, one swipe application. ",
             "ingredients": "C18-36 Acid Triglyceride, Bis-Diglyceryl Polyacyladipate-2, Pentaerythrityl Tetraisostearate, Polybutene, Tridecyl Trimellitate, Diisostearyl Malate, Silica Dimethyl Silylate, Phenoxyethanol, Ethylhexyl Palmitate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Calcium Sodium Borosilicate, Ethylhexylglycerin, Calcium Aluminum Borosilicate, Tocopheryl Acetate, Sodium Saccharin, Sorbic Acid, Alumina, Silica, Polybutylene Terephthalate, Trihydroxystearin, Cocos Nucifera Oil / Coconut Oil, Aluminum Hydroxide, Ethylene/Va Copolymer, Acrylates Copolymer, Tin Oxide, Sodium Hyaluronate, Synthetic Fluorphlogopite, Tocopherol, Magnesium Silicate, Glucomannan, Parfum / Fragrance, [+/-May Contain Ci 77891 / Titanium Dioxide, Ci 77491, Ci 77492, Ci 77499 / Iron Oxides, Mica, Ci 45410 / Red 28 Lake, Ci 15850 / Red 7, Ci 75470 / Carmine, Ci 15850 / Red 6, Ci 17200 / Red 33 Lake, Ci 45380 / Red 22 Lake, Ci 15985 / Yellow 6 Lake, Ci 19140 / Yellow 5 Lake, Ci 42090 / Blue 1 Lake",
             "price": 7,
-            "category": "lips",
+            "category": 3,
             "rating": "5.0",
             "image": "lifter-gloss.png",
             "shades": [
@@ -248,11 +248,11 @@
         "fields": {
             "sku": "lb641186084",
             "name": "Clinique Pop Plush Creamy Lip Gloss",
-            "ml": "3.4ml",
+            "volume": "3.4ml",
             "description": "Upgrade your makeup collection with the Clinique Pop Plush™ Creamy Lip Gloss. This lightweight, luxuriously smooth and never sticky lip gloss uniquely coats lips with a blend of multi-dimension pearlescent pigments and whipped SuperButters for lips that reflect light and feel bouncier. Pick your fave shade or collect them all.",
             "ingredients": "Triisostearyl Citrate, Hydrogenated Polyisobutene, Butyrospermum Parkii (Shea) Butter, Microcrystalline Wax/Cera Microcristallina/Cire Microcristalline, Punica Granatum (Pomegranate) Sterols, Octyldodecanol, Polyethylene, Disteardimonium Hectorite, Ricinus Communis (Castor) Seed Oil, Cocos Nucifera (Coconut) Oil, Aloe Barbadensis Leaf Extract, Persea Gratissima (Avocado) Oil, Phytosterols, Linolenic Acid, Linoleic Acid, Hydrogenated Castor Oil, Lauryl Pca, Sodium Hyaluronate, Caprylyl Glycol, Oleic Acid, Lecithin, Hexylene Glycol, Phenoxyethanol, Tetrahexyldecyl Ascorbate, Tocopheryl Acetate, [+/- Mica, Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491), Iron Oxides (Ci 77492), Iron Oxides (Ci 77499), Bismuth Oxychloride (Ci 77163), Blue 1 Lake (Ci 42090), Carmine (Ci 75470), Red 6 (Ci 15850), Red 7 Lake (Ci 15850), Red 22 Lake (Ci 45380), Red 28 Lake (Ci 45410), Red 30 Lake (Ci 73360), Red 33 Lake (Ci 17200), Yellow 5 Lake (Ci 19140), Yellow 6 Lake (Ci 15985)].",
             "price": 18,
-            "category": "lips",
+            "category": 3,
             "rating": "4.8",
             "image": "pop-plush.jpg",
             "shades": [
@@ -268,11 +268,11 @@
         "fields": {
             "sku": "lb747929834",
             "name": "Maybelline Lash Sensational Sky High Mascara",
-            "ml": "7.2ml",
+            "volume": "7.2ml",
             "description": "Sky high lashes just got easier with Maybelline's Lash Sensational Sky High Mascara. The long-lasting mascara delivers full volume and intense length with just a swipe to create high lash impact from every angle. With Maybelline's exclusive Flex Tower brush to bend to the natural shape of the lashes from root to tip to deliver the blackest black colour that won’t flake or smudge. Infused with bamboo extract and fibres, the mascara leaves the lashes looking effortlessly long, full, and lightweight lashes.",
             "ingredients": "Aqua / Water / Eau, Propylene Glycol, Styrene/Acrylates/Ammonium Methacrylate Copolymer, Polyurethane-35, Cera Alba / Beeswax / Cire Dabeille, Synthetic Fluorphlogopite, Glyceryl Stearate, Cetyl Alcohol, Peg-200 Glyceryl Stearate, Ethylenediamine/Stearyl Dimer Dilinoleate Copolymer, Copernicia Cerifera Cera / Carnauba Wax / Cire De Carnauba, Stearic Acid, Palmitic Acid, Ethylene/Va Copolymer, Alcohol Denat., Paraffin, Aminomethyl Propanediol, Phenoxyethanol, Caprylyl Glycol, Glycerin, Hydroxyethylcellulose, Butylene Glycol, Rayon, Xanthan Gum, Caprylic/Capric Triglyceride, Sodium Laureth Sulfate, Disodium Edta, Myristic Acid, Tetrasodium Edta, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Potassium Sorbate, Silica, Soluble Collagen, Bambusa Vulgaris Extract, Trisodium Edta [+/- May Contain / Peut Contenir Ci 77491, Ci 77492, Ci 77499 / Iron Oxides, Ci 77007 / Ultramarines, Mica, Ci 77891 / Titanium Dioxide, Ci 75470 / Carmine, Ci 77288 / Chromium Oxide Greens, Ci 77742 / Manganese Violet, Ci 77510 / Ferric Ferrocyanide F.I.L. D250527/1",
             "price": 10.99,
-            "category": "eyes",
+            "category": 2,
             "rating": "3.9",
             "image": "sky-high.jpg",
             "shades": [
@@ -287,11 +287,11 @@
         "fields": {
             "sku": "lb732738679",
             "name": "e.l.f. Lash 'n Roll Curling Mascara",
-            "ml": "9.2g",
+            "volume": "9.2g",
             "description": "Upgrade your lash game with the e.l.f. Cosmetics Lash 'N Roll Mascara. This curling mascara features a unique curved brush to lift and separate lashes for a luxe, eye-opening effect.",
             "ingredients": "Water (Aqua), Ricinus Communis (Castor) Seed Oil, Styrene/Acrylates Copolymer, Propylene Glycol, Synthetic Beeswax, Copernicia Cerifera (Carnauba) Wax, Glyceryl Stearate, PVP, Polyamide-5, Polyacrylic Acid, Palmitic Acid, PEG-8 Caprylic/Capric Glycerides, Stearic Acid, Magnesium Aluminum Silicate, Phenoxyethanol, PEG-100 Stearate, Nylon-12, Aminomethyl Propanol, Ceteareth-25, Butylene Glycol, PEG-40 Hydrogenated Castor Oil, Ethylhexylglycerin, Polyquaternium-10, PEG-90M, Caprylyl Glycol, Sodium Benzoate, Silica, Xanthan Gum, Kaolin, Tocopherol",
             "price": 7,
-            "category": "eyes",
+            "category": 2,
             "rating": "4.7",
             "image": "lash-n-roll.jpg",
             "shades": [
@@ -305,11 +305,11 @@
         "fields": {
             "sku": "lb603486044",
             "name": "Maybelline Lash Sensational Mascara Intense Black",
-            "ml": "9.5ml",
+            "volume": "9.5ml",
             "description": "Discover the next icon of your makeup bag with Maybelline’s Lash Sensational mascara. With a layer-reveal brush with six lengths of bristles to capture even the smallest of lashes, the mascara leaves nothing but intense volume and definition. The low-wax formula means less clumps but all the pigment without lashes sticking together. The result? A multiplied effect and serious lash drama.",
             "ingredients": "Isododecane, Cera Alba / Beeswax, Copernicia Cerifera Cera / Carnauba Wax, Disteardimonium Hectorite, Aqua / Water, Allyl Stearate/Va Copolymer, Oryza Sativa Cera / Rice Bran Wax, Paraffin, Alcohol Denat., Polyvinyl Laurate, VP/Eicosene Copolymer, Propylene Carbonate, Talc, Ethylenediamine/Stearyl Dimer Dilinoleate Copolymer, PEG-30 Glyceryl Stearate, Propylparaben, Methylparaben, Hydrogenated Jojoba Oil, Silica, Soluble Collagen, [+/- May Contain, CI 77491, CI 77492, CI 77499 / Iron Oxides, CI 77007 / Ultramarines, CI 77891 / Titanium Dioxide, Mica, CI 75470 / Carmine, CI 77288 / Chromium Oxide Greens, CI 77742 / Manganese Violet, CI 77510 / Ferric Ferrocyanide]",
             "price": 11.99,
-            "category": "eyes",
+            "category": 2,
             "rating": "4.1",
             "image": "sensational-intense.jpg",
             "shades": [
@@ -323,11 +323,11 @@
         "fields": {
             "sku": "lb961548550",
             "name": "Urban Decay Perversion Mascara",
-            "ml": "12ml",
+            "volume": "12ml",
             "description": "This is the mascara that will change all you looks for good. Urban Decay's Perversion Mascara is here to create bigger, better, and blacker lashes than ever before thanks to an ultra-creamy formula and a high-tech volumising brush. The mascara uses triple black pigments and a complex blend of proteins and amino acids to lengthen, volumize, and define, the lashes while promising lash growth. As for clumps, the twisted trim brush gently coats and separates the lashes so that clumpy finish will be a thing of the past.",
             "ingredients": "Aqua (Water/Eau), Synthetic Beeswax, Acacia Senegal Gum, Stearic Acid, Palmitic Acid, Copernicia Cerifera (Carnauba) Wax (Cera Carnauba/Cire de Carnuba), Butylene Glycol, Glyceryl Stearate, Polybutene, VP/Eicosene Copolymer, Aminomethyl Propanol, Pentylene Glycol, Phenoxyethanol, Caprylyl Glycol, Sodium Dehydroacetate, Potassium Sorbate, Hydroxyethylcellulose, Soluble Collagen, Myristic Acid, Arachidic Acid, Behenic Acid, Glycerin, Propylene Glycol, Oleic Acid, Mel (Honey/Miel) Extract, Sodium PCA,Hydrolyzed Elastin, Glycogen, Serine. [+/- (May Contain/Peut contenir): CI 77499 (Iron Oxides)].",
             "price": 22.99,
-            "category": "eyes",
+            "category": 2,
             "rating": "4.8",
             "image": "perversion.jpg",
             "shades": [
@@ -340,11 +340,11 @@
         "fields": {
             "sku": "lb950358931",
             "name": "Clinique High Impact Mascara",
-            "ml": "7ml",
+            "volume": "7ml",
             "description": "Prepare to amp up the drama with High Impact Mascara. Kicking up the volume, length, and colour of each induvial lash, this bold mascara features a specifically developed brush and formula which work together to separate and thicken the lashes for maximum impact.",
             "ingredients": "Water/Aqua/Eau, Copernicia Cerifera (Carnauba) Wax/ Copernicia Cerifera Cera /Cire De Carnauba, Stearic Acid, Glyceryl Stearate, Polyisobutene, Silica, Acrylates Copolymer, Aminomethyl Propanediol, Vp/Eicosene Copolymer, Sodium Hyaluronate, Lauroyl Lysine, Pantethine, Melanin, Panthenol, Ethylhexylglycerin, Hydroxyethylcellulose, Calcium Aluminum Borosilicate, Pvp, Acacia Senegal Gum, Isostearic Acid, Simethicone, Dimethicone Peg-8 Polyacrylate, Urea, Glycerin, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Sodium Lauryl Sulfate, Peg-8 Dimethicone, Disodium Edta, Sorbic Acid, Chlorphenesin, Sodium Dehydroacetate, Phenoxyethanol, Mica, Iron Oxides (Ci 77491), Iron Oxides (Ci 77492), Iron Oxides (Ci 77499), Bronze Powder (Ci 77400), Blue 1 Lake (Ci 42090), Titanium Dioxide (Ci 77891), Yellow 5 Lake (Ci 19140), Chromium Oxide Greens (Ci 77288), Chromium Hydroxide Green (Ci 77289), Carmine (Ci 75470), Bismuth Oxychloride (Ci 77163), Ultramarines (Ci 77007), Aluminum Powder (Ci 77000)].",
             "price": 21,
-            "category": "eyes",
+            "category": 2,
             "rating": "3.4",
             "image": "high-impact.jpg",
             "shades": [
@@ -358,16 +358,13 @@
         "fields": {
             "sku": "lb438486831",
             "name": "Revlon ColorStay Day to Night Eyeshadow Quad Pretty",
-            "ml": "NA",
             "description": "Revlon ColorStayDay to Night™ Eyeshadow Quad. Now better than ever! Our #1 powder shadow palette now has a buttery soft feel, true colour payoff, and transitional shades designed to take you from day to night. Wears for up to 24 hours.",
             "ingredients": "Shade 2: Mica, Caprylic/Capric Triglyceride, Bis-Diglyceryl Polyacyladipate-2, Diisostearyl Malate, Microcrystalline Cellulose, Phenyl Trimethicone, Dimethicone, Calcium Aluminum Borosilicate, Calcium Sodium Borosilicate, Caprylyl Glycol, Dimethicone/Vinyl Dimethicone Crosspolymer, Ethylhexylglycerin, Silica, Synthetic Fluorphlogopite, Tin Oxide, Sodium Dehydroacetate, Sorbic Acid. May contain [+/-: Carmine (CI 75470), Ferric Ferrocyanide (CI 77510), Iron Oxides (CI 77491), Iron Oxides (CI 77492), Iron Oxides (CI 77499), Manganese Violet (CI 77742), Titanium Dioxide (CI 77891)*, Ultramarines (CI 77007)], Shade 1, 3 & 4: Caprylic/Capric Triglyceride, Mica, Bis-Diglyceryl Polyacyladipate-2, Diisostearyl Malate, Microcrystalline Cellulose, Phenyl Trimethicone, Dimethicone, Calcium Aluminum Borosilicate, Calcium Sodium Borosilicate, Caprylyl Glycol, Dimethicone/Vinyl Dimethicone Crosspolymer, Ethylhexylglycerin, Methicone, Silica, Synthetic Fluorphlogopite, Tin Oxide, Sodium Dehydroacetate, Sorbic Acid. May contain [+/-: Carmine (CI 75470), Iron Oxides (CI 77491), Iron Oxides (CI 77492), Iron Oxides (CI 77499), Manganese Violet (CI 77742), Titanium Dioxide (CI 77891)*, Ultramarines (CI 77007)],",
             "price": 12.99,
-            "category": "eyes",
+            "category": 2,
             "rating": "4.5",
             "image": "colorstay-palette.png",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 19,
@@ -375,16 +372,13 @@
         "fields": {
             "sku": "lb875820054",
             "name": "Max Factor Masterpiece Nude Eyeshadow Palette Rose Nudes",
-            "ml": "NA",
             "description": "Perfectly combined velvety eyeshadows, from pale to deep neutral shades to contour your eyes in endless combination.",
             "ingredients": "Mica, Talc, Caprylic/Capric Triglyceride, Dimethicone, Silica, Magnesium Stearate, Nylon-12, Boron Nitride, Isostearyl Alcohol, Calcium Aluminum Borosilicate, Paraffinum Liquidum, Methylparaben, Synthetic Fluorphlogopite, Ethylparaben, Cera Microcristallina, Paraffin, Sodium Dehydroacetate, Sorbitan Isostearate, Tocopheryl Acetate, Tin Oxide, Calcium Sodium Borosilicate [+/- CI 77499, CI 77891, CI 77491, CI 77742, CI 77492, CI 77007, CI 75470, CI 77288, CI 77510]",
             "price": 17.99,
-            "category": "eyes",
+            "category": 2,
             "rating": "4.8",
             "image": "rose-nudes.png",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 20,
@@ -392,16 +386,13 @@
         "fields": {
             "sku": "lb979988377",
             "name": "Urban Decay Naked 3 Mini Eyeshadow Palette",
-            "ml": "NA",
             "description": "Our bestselling Naked3 Eyeshadow Palette goes mini with six all-new, universally flattering rose-hued shades made for every skin tone and mood. These vegan formula* shadows have high-pigmented rich colours and finishes that glide on smoothly—forget chalky or powdery— and last up to 12 hours. Get the full range of versatile nude and neutral shades in one everyday eye palette: ivory sheen, peachy champagne shimmer, dusty rose pink, mauve, grey-plum matte, and deep charcoal brown with a hint of purple. Use these ultra-blendable, velvety shadows solo or layer to create endless looks, from a monochromatic wash of colour to bold, smoky eyes. *Vegan formula: does not contain animal-derived ingredients or by products.",
             "ingredients": "2029620 - Glassy Ingredients (Ingrédients): Mica, Talc, Ci 77891 / Titanium Dioxide, Caprylic/Capric Triglyceride, Ci 77163 / Bismuth Oxychloride, Ci 77491 / Iron Oxides, Ci 77742 / Manganese Violet, Zinc Stearate, Ci 77492 / Iron Oxides, Sodium Dehydroacetate, Phenoxyethanol, Silica, Sorbic Acid, Ci 77499 / Iron Oxides, Magnesium Stearate, Cellulose, Boron Nitride, Ethylene/Acrylic Acid Copolymer. (D259820/1) 2029621 3 - Public Ingredients (Ingrédients): Mica, Caprylic/Capric Triglyceride, Ci 77891 / Titanium Dioxide, Zinc Stearate, Talc, Synthetic Fluorphlogopite, Ci 77491 / Iron Oxides, Ci 77742 / Manganese Violet, Calcium Aluminum Borosilicate, Ci 77007 / Ultramarines, Sodium Dehydroacetate, Phenoxyethanol, Sorbic Acid, Tin Oxide, Cellulose, Boron Nitride, Ethylene/Acrylic Acid Copolymer. (D261506/1) 2029622- Laced Up Ingredients (Ingrédients): Talc, Ci 77742 / Manganese Violet, Mica, Ci 77891 / Titanium Dioxide, Ethylene/Acrylic Acid Copolymer, Caprylic/Capric Triglyceride, Zinc Stearate, Ci 77491 / Iron Oxides, Ci 77499 / Iron Oxides, Ci 77492 / Iron Oxides, Sodium Dehydroacetate, Phenoxyethanol, Sorbic Acid, Cellulose, Boron Nitride. (D259822/1) 2029618 - Stolen Ingredients (Ingrédients): Mica, Caprylic/Capric Triglyceride, Talc, Ci 77891 / Titanium Dioxide, Ci 77491 / Iron Oxides, Zinc Stearate, Silica, Ci 77499 / Iron Oxides, Sodium Dehydroacetate, Phenoxyethanol, Sorbic Acid, Cellulose, Boron Nitride, Ethylene/Acrylic Acid Copolymer. (D259818/1) 2029623 2 - Right Time Ingredients (Ingrédients): Mica, Talc, Ci 77742 / Manganese Violet, Ci 77007 / Ultramarines, Ci 77891 / Titanium Dioxide, Ci 77499 / Iron Oxides, Caprylic/Capric Triglyceride, Ethylene/Acrylic Acid Copolymer, Zinc Stearate, Ci 77491 / Iron Oxides, Ci 77492 / Iron Oxides, Sodium Dehydroacetate, Phenoxyethanol, Sorbic Acid, Cellulose, Boron Nitride. (D272080/1) 2029619 4 - Spiced Ingredients (Ingrédients): Mica, Ci 77499 / Iron Oxides, Caprylic/Capric Triglyceride, Ci 77491 / Iron Oxides, Ci 77400 / Copper Powder, Ci 77742 / Manganese Violet, Ci 77492 / Iron Oxides, Ci 77891 / Titanium Dioxide, Talc, Zinc Stearate, Sodium Dehydroacetate, Silica, Phenoxyethanol, Sorbic Acid, Cellulose, Boron Nitride, Ethylene/Acrylic Acid Copolymer. (D272079/1)",
             "price": 18.99,
-            "category": "eyes",
+            "category": 2,
             "rating": "3.1",
             "image": "naked-mini.png",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 21,
@@ -409,16 +400,13 @@
         "fields": {
             "sku": "lb250902627",
             "name": "No7 Limited Edition Pink Collection Eyeshadow Quad",
-            "ml": "NA",
             "description": "Inspired by the spellbinding sparkle of our star-filled galaxies, this highly pigmented nude-pink eye palette features a cosmic blend of warm silvers, sun-like gold and lunar shimmery pink. Available in a mix of matte and metallic finishes, the easy-to-blend shadows can be used alone or together for an elegant galactic glow.",
             "ingredients": "Base: Talc, Mica, Synthetic Fluorphlogopite, Silica, Zinc Stearate, Ethylhexyl Palmitate, Pentaerythrityl Tetraisostearate, Dimethicone, Triethoxycaprylylsilane, Phenoxyethanol, Caprylyl Glycol, Tocopheryl Acetateethylhexylglycerin, Tin Oxide (May Contain +/-) Ci 77891 (Titanium Dioxide), Ci 77742 (Manganese Violet), Ci 77492 (Iron Oxides), Ci 77491 (Iron Oxides), Ci 77499 (Iron Oxides). Glisten: Synthetic Fluorphlogopite, Talc, Phenyl Trimethicone, Zinc Stearate, Mica, Dimethicone, Caprylic/Capric Triglyceride, Polymethyl Methacrylate, Boron Nitride, Trimethylsiloxysilicate, Phenoxyethanol, Caprylyl Glycol, Tin Oxide, Tocopheryl Acetate, Ethylhexylglycerin (May Contain +/-) Ci 77891 (Titanium Dioxide), Ci 77491 (Iron Oxides),Ci 77499 (Iron Oxides), Ci 77492 (Iron Oxides). Heavenly Gold: Synthetic Fluorphlogopite, Mica, Talc, Diisostearyl Malate, Dimethicone, Zinc Stearate, Polyethylene, Octyldodecanol, Bis-Diglyceryl Polyacyladipate-2, Boron Nitride, Nylon-12, Phenoxyethanol, Triethoxycaprylylsilane, Caprylyl Glycol, Tin Oxide, Tocopheryl Acetate, Ethylhexylglycerin (May Contain +/- ) Ci 77891 (Titanium Dioxide), Ci 77491 (Iron Oxides). Luna Pink: Synthetic Fluorphlogopite, Mica, Talc, Dimethicone, Zinc Stearate, Diisostearyl Malate, Polyethylene, Boron Nitride, Nylon-12, Octyldodecanol, Bis-Diglyceryl Polyacyladipate-2, Phenoxyethanol, Caprylyl Glycol, Triethoxycaprylylsilane, Silica, Tocopheryl Acetate, Tin Oxide, Ethylhexylglycerin(May Contain +/-) Ci 77891 (Titanium Dioxide), Ci 77742 (Manganese Violet), Ci 16035 (Red 40 Lake), Ci 77491 (Iron Oxides), Ci 77499 (Iron Oxides).",
             "price": 14.99,
-            "category": "eyes",
+            "category": 2,
             "rating": "3.8",
             "image": "pink-collection.png",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 22,
@@ -426,16 +414,13 @@
         "fields": {
             "sku": "lb971442126",
             "name": "Max Factor Color Xpert Soft Touch Palette 004 - Veiled Bronze",
-            "ml": "NA",
             "description": "Max Factor's Colour X-Pert Soft Touch Palettes provide opulent colours that stay divinely soft. The unique powder to cream formula blends easily with even just the tip of a finger and the sublimely saturated pigments result in an opulent colour pay off. With a range of different colours between the 4 palettes, you can easily create endless day to night looks.",
             "ingredients": "Mica, Caprylic/Capric Triglyceride, Diisostearyl Malate, Dimethicone, Silica, Synthetic Fluorphlogopite, Stearalkonium Hectorite,",
             "price": 9.99,
-            "category": "eyes",
+            "category": 2,
             "rating": "4.2",
             "image": "veiled-bronze.png",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 23,
@@ -443,16 +428,13 @@
         "fields": {
             "sku": "lb897908469",
             "name": "NYX Professional Makeup Ultimate Shadow Palette Vegan 16-Pan Warm Neutrals",
-            "ml": "NA",
             "description": "Turn up and switch up your looks with ultimate shadow palettes! Pro-curated and designed to create a wide range of artistry looks. Pick a palette for your every mood: from vibrant brights to vintage jean blues to electric tropics to fierce nudes. You better believe there's a shade for every look and mood! Instantly go from day to play with a splash of vibrant, 1-swipe colour. Get ready to create endless, ultimate looks with our vegan* shades and formulas proudly curated by makeup pros in Los Angeles.",
             "ingredients": "Talc, Synthetic Fluorphlogopite, Mica, Ci 77891 / Titanium Dioxide, Dimethicone, Hydrogenated Polyisobutene, Synthetic Wax, Magnesium Stearate, Octyldodecyl Stearoyl Stearate, Bis-Diglyceryl Polyacyladipate-2, Tin Oxide, Methicone, Caprylic/Capric Triglyceride, Caprylyl Glycol, Ethylhexylglycerin, Tocopherol, Diethylhexyl Syringylidenemalonate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Sorbic Acid, Phenoxyethanol, Ci 77491 / Iron Oxides, Ci 77492 / Iron Oxides, Ci 77499 / Iron Oxides (F.I.L. Z70016510/1).",
             "price": 12,
-            "category": "eyes",
+            "category": 2,
             "rating": "3.3",
             "image": "warm-neutrals.png",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 24,
@@ -460,16 +442,13 @@
         "fields": {
             "sku": "lb731905715",
             "name": "e.l.f. Bite-Size Eyeshadow Palette I Love You A Latte",
-            "ml": "NA",
             "description": "Bite-sized beauty doesn't get any cuter than this. e.l.f. Cosmetics' ultra-pigmented eyeshadow quads are here to deliver creamy, bendable colour that will fit perfectly in your pocket or bag. Featuring a mix of matte and shimmer shades, the quads are the ones for taking your looks from day to night, leaving nothing but rich colour.",
             "ingredients": "Mica, Talc, Caprylic/ Capric Triglyceride, Synthetic Fluorphlogopite, Magnesium Myristate, Nylon-12, Tridecyl Trimellitate, Silica, Magnesium Stearate, Magnesium Palmitate, Dimethicone, Bismuth Oxychloride, Bis-Diglyceryl Polyacyladipate-1, Dimethicone/Vinyl Dimethicone Crosspolymer, Aluminum Starch Octenylsuccinate, Phenyl Trimethicone, Polyisobutene, Phenoxyethanol, Caprylyl Glycol, Tin Oxide Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491), Iron Oxides (Ci 77499), Iron Oxides (Ci 77492)",
             "price": 5.99,
-            "category": "eyes",
+            "category": 2,
             "rating": "4.7",
             "image": "bite-size.jpg",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 25,
@@ -477,16 +456,13 @@
         "fields": {
             "sku": "lb779215243",
             "name": "Benefit Mini Dandelion Baby-Pink Brightening Blush",
-            "ml": "NA",
             "description": "It's Benefit's beloved, bestselling Dandelion blush! Sweeten up with this baby-pink blush for a subtle brightening boost. Silky-soft, blendable & buildable, this powder blush feels ultra-fine, weightless & creamy on skin. Sweep effortlessly onto cheeks for an airbrushed effect and a soft satin finish that lasts all day.",
             "ingredients": "Talc, Mica, Calcium Aluminum Borosilicate, Polyethylene, Magnesium Myristate, Pentaerythrityl Tetraethylhexanoate, Zinc Stearate, Octyldodecyl Stearoyl Stearate, Silica, Isopropyl Titanium Triisostearate, Phenoxyethanol, Bis-Diglyceryl Polyacyladipate-2, Squalane, Parfum (Fragrance), Lecithin, Sodium Dehydroacetate, Sodium Lauroyl Aspartate, Tocopheryl Acetate, Tocopherol, Glycine Soja (Soybean) Oil, Limonene, Bht, Retinyl Palmitate, Zinc Chloride, Linalool, Aluminum Hydroxide, Aqua (Water), Hexyl Cinnamal, Benzyl Salicylate, Citronellol, Citral, Eugenol. [+/- : Ci 15850 (Red 6, Red 7, Red 7 Lake), Ci 15985 (Yellow 6, Yellow 6 Lake), Ci 19140 (Yellow 5, Yellow 5 Lake), Ci 42090 (Blue 1 Lake), Ci 45410 (Red 27, Red 27 Lake, Red 28 Lake), Ci 73360 (Red 30, Red 30 Lake), Ci 75470 (Carmine), Ci 77007 (Ultramarines), Ci 77163 (Bismuth Oxychloride), Ci 77288 (Chromium Oxide Greens), Ci 77289 (Chromium Hydroxide Green), Ci 77491, Ci 77492, Ci 77499 (Iron Oxides), Ci 77510 (Ferric Ferrocyanide, Ferric Ammonium Ferrocyanide), Ci 77742 (Manganese Violet), Ci 77891 (Titanium Dioxide)].",
             "price": 17.50,
-            "category": "cheeks",
+            "category": 4,
             "rating": "4.9",
             "image": "dandelion.png",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 26,
@@ -494,16 +470,13 @@
         "fields": {
             "sku": "lb875209966",
             "name": "L'Oreal Paris Blush of Paradise Melon Dollar Baby",
-            "ml": "NA",
             "description": "Take your skin to Paradise with a luminous, radiant glow! Introducing Blush of Paradise Melon Dollar Baby, a delicate melon shade that gives a healthy glow finish with a delicious scent. Add a pop of warmth to any complexion.  The pigmented melon powder highlights cheekbones and can be built up to achieve a customisable glow. Super wearable and flattering on all skintones, it's the perfect colour for your no-makeup makeup look.  Infused with 78% natural derived ingredients and and a juicy melon scent, you won't be able to resist it.",
             "ingredients": "Talc, Cocos Nucifera Oil / Coconut Oil,  Zea Mays Starch / Corn Starch,  Synthetic Fluorphlogopite,  Magnesium Stearate,  Caprylyl Glycol,  Mangifera Indica Seed Butter / Mango Seed Butter,  Theobroma Cacao Seed Butter / Cocoa Seed Butter,  Alumina,  Benzyl Alcohol,  Parfum / Fragrance,  [+/- May Contain Mica,  Ci 77491, Ci 77492, Ci 77499 / Iron Oxides,  Ci 77891 / Titanium Dioxide,  Ci 75470 / Carmine,  Ci 77163 / Bismuth Oxychloride,  Ci 15850 / Red 7,  Ci 19140 / Yellow 5 Lake",
             "price": 11.99,
-            "category": "cheeks",
+            "category": 4,
             "rating": "5.0",
             "image": "melon-dollar.png",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 27,
@@ -511,16 +484,13 @@
         "fields": {
             "sku": "lb669561508",
             "name": "Clinique Blushing Blush Powder Blush",
-            "ml": "NA",
             "description": "Defining moment for cheeks. Silky formula sweeps effortlessly over cheekbones to create a natural look. Fresh, jet-milled colour builds to desired intensity with custom-sculpting brush. Long-wearing. Stays colour-true. Oil-free.",
             "ingredients": "Talc, Dimethicone, Silica, Zinc Stearate, Nylon-12, Lauryl Laurate, Tetrasodium Edta, Potassium Sorbate, Chlorphenesin, [+/- Mica, Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491, Ci 77492, Ci 77499), Bismuth Oxychloride (Ci 77163), Yellow 5 Lake (Ci 19140), Carmine (Ci 75470), Red 7 Lake (Ci 15850), Ferric Ferrocyanide (Ci 77510), Blue 1 Lake (Ci 42090), Red 22 Lake (Ci 45380), Red 36 Lake (Ci 12085), Manganese Violet (Ci 77742), Red 30 Lake (Ci 73360), Red 33 Lake (Ci 17200), Red 28 Lake (Ci 45410), Red 34 Lake (Ci 15880), Ultramarines (Ci 77007), Yellow 6 Lake (Ci 15985), Red 6 (Ci 15850)] <ILN30735>",
             "price": 21,
-            "category": "cheeks",
+            "category": 4,
             "rating": "4.6",
             "image": "clinique-blush.png",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 28,
@@ -528,16 +498,13 @@
         "fields": {
             "sku": "lb587852400",
             "name": "bareMinerals Gen Nude Blushlighter",
-            "ml": "NA",
             "description": "A blush + highlighter hybrid that combines the rosiness of a blush with the 'lit from within' glow of a highlighter - in just one step. Achieve a naturally luminous, rosy glow in a silky, weightless formula. Finely milled pearls melt into the skin for a fresh, translucent 'lit from within' glow. What It Does: Silky blurring mineral microspheres blend effortlessly into skin to blur pores and imperfections. Blush + highlighter hybrid features a silky texture that blends seamlessly for a sheer glow. Smooths the look of skin imperfections.",
             "ingredients": "Mica, Caprylic/Capric Triglyceride, Bis-Diglyceryl Polyacyladipate-2, Diisostearyl Malate, Phenyl Trimethicone, Microcrystalline Cellulose, Dimethicone, Cucumis Sativus (Cucumber) Fruit Extract, Boron Nitride, Silica, Dimethicone/Vinyl Dimethicone Crosspolymer, Ethylhexylglycerin, Caprylyl Glycol, Caffeine, Borago Officinalis Seed Oil, Tin Oxide, Sodium Dehydroacetate. May Contain/Peut Contenir(+/-): Iron Oxides (Ci 77491, Ci 77492, Ci 77499), Titanium Dioxide (Ci 77891), Red 7 Lake (Ci 15850), Manganese Violet ( Ci 77742).",
             "price": 18,
-            "category": "cheeks",
+            "category": 4,
             "rating": "3.9",
             "image": "nude-blushlighter.png",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 29,
@@ -545,16 +512,13 @@
         "fields": {
             "sku": "lb835023183",
             "name": "e.l.f. Primer-Infused Bronzer",
-            "ml": "NA",
             "description": "Get the best of both worlds with the e.l.f. Cosmetics Primer-Infused Bronzer. This long-wear, buildable powder bronzer is enriched with a nourishing primer for seamless blending and incredible staying power.",
             "ingredients": "Talc, Dimethicone, Silica, Nylon-12, Magnesium Stearate, Magnesium Palmitate, Boron Nitride, Ptfe, Ethylhexyl Palmitate, Triethoxycaprylylsilane, Tocopheryl Acetate (Ve), Simmondsia Chinensis (Jojoba) Seed Oil, Butyrospermum Parkii (Shea) Butter, Bambusa Arundinacea (Bamboo) Stem Powder, Phenoxyethanol, Caprylyl Glycol Mica (Ci 77019), Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491, Ci 77492, Ci 77499), Red 40 Lake (Ci 16035)",
             "price": 5,
-            "category": "cheeks",
+            "category": 4,
             "rating": "4.8",
             "image": "primer-bronzer.jpg",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 30,
@@ -562,16 +526,13 @@
         "fields": {
             "sku": "lb157647332",
             "name": "MAC Mineralize Blush Warm Soul",
-            "ml": "NA",
             "description": "Made with baked minerals refined into a powder blush, the MAC Cosmetics Mineralize Blush provides sheer but buildable, luminous coverage onto the skin. This lightweight formula glides onto skin to achieve natural-looking, radiant colour that builds lightly, layer after layer, without heavy coverage.",
             "ingredients": "Mica, Talc, Dimethicone, Isopropyl Palmitate, Tocopheryl Acetate, Lauroyl Lysine, Simmondsia Chinensis (Jojoba) Seed Oil, Yeast Extract/Faex/Extrait De Levure, Cetearyl Ethylhexanoate, Isohexadecane, Octyldodecyl Stearoyl Stearate, Glyceryl Ethylhexanoate/Stearate/Adipate, Ethylhexyl Methoxycinnamate, Magnesium Aluminum Silicate, Calcium Aluminum Borosilicate, Calcium Sodium Borosilicate, Silica, Tin Oxide, Nylon-12, Synthetic Fluorphlogopite, Acrylamide/Sodium Acryloyldimethyltaurate Copolymer, Zea Mays (Corn) Starch, Polysorbate 20, Polysorbate 80, Sorbitan Stearate, Phenoxyethanol, Sodium Dehydroacetate, [+/- Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491), Iron Oxides (Ci 77492), Iron Oxides (Ci 77499), Bismuth Oxychloride (Ci 77163), Blue 1 Lake (Ci 42090), Carmine (Ci 75470), Chromium Hydroxide Green (Ci 77289), Chromium Oxide Greens (Ci 77288), Ferric Ammonium Ferrocyanide (Ci 77510), Ferric Ferrocyanide (Ci 77510), Manganese Violet (Ci 77742), Red 6 (Ci 15850), Red 7 (Ci 15850), Red 7 Lake (Ci 15850), Ultramarines (Ci 77007), Yellow 5 Lake (Ci 19140), Yellow 6 Lake (Ci 15985)] Please be aware that ingredient lists may change or vary from time to time. Please refer to the ingredient list on the product package you receive for the most up to date list of ingredients.",
             "price": 24.99,
-            "category": "cheeks",
+            "category": 4,
             "rating": "5.0",
             "image": "mineralize-blush.jpg",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }, {
         "pk": 31,
@@ -579,16 +540,13 @@
         "fields": {
             "sku": "lb798750114",
             "name": "NXY Highlight and Contour Pro Palette",
-            "ml": "NA",
             "description": "Get pro-level makeup with the NYX Professional Cosmetics Highlight & Contour Pro Palette. This eight-colour palette features all the pressed powder shades you need to sculpt, perfect, and highlight your complexion. The super soft formula blends seamlessly into the skin for a finish that defines your best features.",
             "ingredients": "Talc, Polymethyl Methacrylate, Boron Nitride, Aluminum Starch Octenylsuccinate, Lauroyl Lysine, Trimethylsiloxyphenyl Dimethicone, Dimethicone, Octyldodecyl Stearoyl Stearate, Zinc Stearate, Phenoxyethanol, Caprylyl Glycol, Tocopheryl Acetate. MAY CONTAIN / PEUT CONTENIR (+/-): Mica, Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 6 (CI 15850).",
             "price": 18,
-            "category": "cheeks",
+            "category": 4,
             "rating": "4.6",
             "image": "nxy-pro-palette.jpg",
-            "shades": [
-                "NA"
-            ]
+            "shades": []
         }
     }
 ]

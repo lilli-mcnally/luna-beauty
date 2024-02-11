@@ -3,6 +3,11 @@ from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 class Category(models.Model):
+
+    class Meta:
+        # Tells Django Admin to put Categories not Categorys 
+        verbose_name_plural = "Categories" 
+
     name = models.CharField(max_length=200)
     friendly_name = models.CharField(max_length=200, null=True, blank=True)
 

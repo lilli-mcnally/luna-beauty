@@ -1,0 +1,145 @@
+[{
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb925892215",
+            "name": "L'Oréal Paris True Match Liquid Foundation",
+            "ml": "30ml",
+            "description": "Discover True Match, a skincare infused foundation, now available in 48 shades. The formula provides perfect, natural and true-to-skin coverage. Now upgraded with a new skin-matching technology, which includes up to 6 different pigments for a more precise match. Enriched with Hyaluronic Acid. The formula provides up to 24H hydration. Improves skin quality in 2 weeks.",
+            "ingredients": "Aqua / Water, Dimethicone, Isododecane, Cyclohexasiloxane, Glycerin, Peg-10 Dimethicone, Methyl Methacrylate Crosspolymer, Butylene Glycol, Pentylene Glycol, Synthetic Fluorphlogopite, Disteardimonium Hectorite, Hydroxyethylpiperazine Ethane Sulfonic Acid, Cetyl Peg/Ppg-10/1 Dimethicone, Sodium Chloride, Polyglyceryl-4 Isostearate, Hexyl Laurate, Caprylyl Glycol, Phenoxyethanol, Disodium Stearoyl Glutamate, Tocopherol, Panthenol, Aluminum Hydroxide, Hydroxyethyl Urea, Tin Oxide, Hydrated Silica, Methicone, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate , [+/- May Contain: Ci 77891 / Titanium Dioxide, Ci 77491, Ci 77492, Ci 77499 / Iron Oxides, Mica, Ci 77510 / Ferric Ammonium Ferrocyanide, Ci 15985 / Yellow 6 Lake, Ci 42090 / Blue 1 Lake, Ci 45410 / Red 28 Lake, Ci 15850 / Red 7]. (F.I.L. D167167/2).",
+            "price": 8.99,
+            "category": "face",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "1N",
+                "3N",
+                "5N",
+                "7N",
+                "9N",
+                "11N"
+            ]
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb466551275",
+            "name": "e.l.f. Halo Glow Liquid Filter",
+            "ml": "31.5ml",
+            "description": "A multi-purpose, liquid glow booster infused with skin-loving ingredients to give your complexion a soft-focus social filter effect IRL. Glowy makeup and skincare hybrid for dewy skin. Complexion looks healthy and more radiant. Liquid Filter can be worn 4 ways: alone, over or under makeup, mixed with foundation, or as a highlighter. Enriched with skin-loving ingredients like Squalane and Hyaluronic Acid. Available in 8 flexible shades that work across all skin tones.",
+            "ingredients": "Water (Aqua), Hydrogenated Didecene, Squalane, Propylene Glycol, Glycerin, Octyldodecanol, Cetyl PEG/PPG-10/1 Dimethicone, Dimethicone, Polyglyceryl-4 Isostearate, Synthetic Fluorphlogopite, Ethylhexyl Hydroxystearate, Isoamyl Laurate, Hydrogenated Styrene/Isoprene Copolymer, Sodium Chloride, Phenoxyethanol, Caprylic/Capric Triglyceride, Disteardimonium Hectorite, Propylene Carbonate, Ethylhexylglycerin, Caprylyl Glycol, Helianthus Annuus (Sunflower) Seed Oil, Hydrolyzed Sodium Hyaluronate, Sodium Hyaluronate, Disodium EDTA, Tocopherol, Aluminum Hydroxide, Polymethylsilsesquioxane, Triethoxycaprylylsilane, Calendula Officinalis Flower Extract, Tin Oxide, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate May Contain: Titanium Dioxide (CI 77891), Yellow Iron Oxide (CI 77492), Red Iron Oxide (CI 77491), Black Iron Oxide (CI 77499), Bismuth Oxychloride (CI 77163)",
+            "price": 12,
+            "category": "face",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+            ]
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb121260918",
+            "name": "NARS Sheer Glow Foundation",
+            "ml": "30ml",
+            "description": "NARS Sheer Glow Foundation is a glowing, natural radiant finish foundation with sheer and buildable coverage that immaculately evens skin tone. Formulated with skincare benefits and the NARS Complexion Brightening Formula, it leaves skin hydrated, more luminous, softer and smoother. Used daily, Sheer Glow Foundation improves the skin's brightness and texture.",
+            "ingredients": "Cyclopentasiloxane , Water/Aqua/Eau, Butylene Glycol, Glycerin, Polymethylsilsesquioxane, Dimethicone, Triethylhexanoin, Dimethicone/Vinyl Dimethicone Crosspolymer, Peg-10 Dimethicone, Bis-Butyldimethicone Polyglyceryl-3, Disteardimonium Hectorite, Curcuma Longa (Turmeric) Root Extract, Ascorbyl Glucoside, Paeonia Albiflora Root Extract, Tocopherol, Sorbitan Sesquiisostearate, Sodium Glutamate, 1-Methylhydantoin-2-Imide, Sodium Dehydroacetate, Aluminum Hydroxide, Polysilicone-2, Triethoxycaprylylsilane, Ethylhexylglycerin, Glucosyl Hesperidin, Benzoic Acid, Chlorphenesin, Phenoxyethanol, [+/- (May Contain/Peut Contenir): Iron Oxides (Ci 77491), Iron Oxides (Ci 77492), Iron Oxides (Ci 77499), Titanium Dioxide (Ci 77891)].",
+            "price": 26.99,
+            "category": "face",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "L2 Mont Blanc",
+                "L5 Fiji",
+                "M2 Santa Fe",
+                "MD3 Cadiz",
+                "MD5 Marquises",
+                "XD3 Iguacu",
+                "XD5 Zambie"
+            ]
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb283636717",
+            "name": "Estée Lauder Double Wear Stay-in-Place Foundation",
+            "ml": "30ml",
+            "description": "Wear confidence with Double Wear Makeup and stay flawless for whatever comes your way. With 24-hour wear, this fresh matte, oil-free makeup controls oil all day. It's sweat-, heat- and humidity-resistant, waterproof, lifeproof and 24-hour colour true. It comes in a wide range of shades that flatters all and it won't look grey on deeper skintones. It unifies uneven skintone and covers imperfections with buildable, medium-to-full coverage that feels lightweight and so comfortable, you won't believe it's long wear. Double Wear is the makeup that keeps up—no matter where your day takes you. Apply it once and don’t think twice. No touchups needed.",
+            "ingredients": "Water/Aqua/Eau, Cyclopentasiloxane, Trimethylsiloxysilicate, Butylene Glycol, Peg/Ppg-18/18 Dimethicone, Polyglyceryl-3 Diisostearate, Magnesium Sulfate, Tribehenin, Titanium Dioxide, Tocopheryl Acetate, Methicone, Polymethylsilsesquioxane, Laureth-7, Disteardimonium Hectorite, Cellulose Gum, Propylene Carbonate, Xanthan Gum, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Alumina, Phenoxyethanol, Sodium Dehydroacetate, [+/- Titanium Dioxide (Ci 77891), Mica, Iron Oxides (Ci 77491, Ci 77492, Ci 77499)] <ILN39274>",
+            "price": 36.99,
+            "category": "face",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "1N0 Porcelain",
+                "2N1 Desert Beige",
+                "3N2 Wheat",
+                "4N2 Spiced Sand",
+                "5N2 Amber Honey",
+                "6N2 Truffle",
+                "7N2 Deep Amber",
+                "8N1 Espresso"
+            ]
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb716377874",
+            "name": "Studio Fix Fluid Spf15 Foundation",
+            "ml": "30ml",
+            "description": "For a matte finish that lasts for a full 24 hours, reach for the MAC Cosmetics Studio Fix Fluid SPF15 Foundation. This comfortable foundation delivers medium-to-full buildable coverage with broad spectrum SPF 15 protection, for a breathable, long-wearing and streak-free finish. It applies, builds and blends easily and evenly while controlling oil and blurring pores and imperfections for a non-cakey, smooth result.",
+            "ingredients": "Water/Aqua/Eau, Cyclopentasiloxane, Peg-10 Dimethicone, Butylene Glycol, Trimethylsiloxysilicate, Ethylhexyl Methoxycinnamate, Dimethicone, Magnesium Sulfate, Titanium Dioxide, Laminaria Saccharina Extract, Algae Extract, Tocopheryl Acetate, Sodium Hyaluronate, Tocopherol, Lecithin, Hydrogenated Lecithin, Xanthan Gum, Sorbitan Sesquioleate, Methoxy Amodimethicone/Silsesquioxane Copolymer, Laureth-7, Dipropylene Glycol, Dimethicone/Peg-10/15 Crosspolymer, Dimethicone/Peg-10 Crosspolymer, Peg/Ppg-18/18 Dimethicone, Disteardimonium Hectorite, Silica, Dimethicone Crosspolymer, Triethoxycaprylylsilane, Propylene Carbonate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Sorbic Acid, Chloroxylenol, Phenoxyethanol, [+/- Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491), Iron Oxides (Ci 77492), Iron Oxides (Ci 77499), Chromium Oxide Greens (Ci 77288)]",
+            "price": 30,
+            "category": "face",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "NC17",
+                "NW20",
+                "NC35",
+                "NW40",
+                "NC42",
+                "NC47",
+                "NW50"
+            ]
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "lb176324425",
+            "name": "Makeup Revolution Conceal & Define Foundation",
+            "ml": "23ml",
+            "description": "Offering lightweight yet buildable coverage, Makeup Revolution Conceal and Define Foundation is available in a range of universally flattering tones. The oil-free, creamy formula dries down to a demi-matte finish without settling into fine lines and creates an even, airbrushed complexion.",
+            "ingredients": "Isododecane, Aqua/Water/Eau, Cyclopentasiloxane, Dimethicone, Silica, Isobutylmethacrylate/Bis-Hydroxypropyl Dimethicone Acryalate Copolymer, Butylene Glycol, Ethylhexyl Palmitate, Cetyl Peg-Ppg—10/1 Dimethicone, Isononyl Isononanoate, Dimethicone Crosspolymer, Quatenium-90 Bentonite, Sorbitan Sesquioleate, C30-45 Alkyl Dimethicone, Sodium Chloride, Phenoxyethanol, Propylene Carbonate, Tocopheryl Acetate, Caprylyl Glycol, Methicone, Lecithin, Polyhydroxysteric Acid, Isopropyl Myristate, Isostearic Acid, Polyglycerol-3 Polyricinoleate, [+/- Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491, 77492, 77499)].",
+            "price": 12,
+            "category": "face",
+            "rating": "TBC",
+            "image": "TBC",
+            "shades": [
+                "F2",
+                "F3",
+                "F7",
+                "F10",
+                "F13",
+                "F17"
+            ]
+        }
+    }
+]

@@ -132,15 +132,11 @@ header {
     width: 100px;
 }
 
-
 .lb-btn-offer:hover {
-    /* background-color: #fff; */
     border-radius: 3px;
     border: 1px solid #000;
     background-color: rgb(255, 255, 255, 0.3);
 }
-
-
 
 .dropdown-menu {
     --bs-border-color-translucent: #000;

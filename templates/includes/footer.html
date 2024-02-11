@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-12 lb-footer">
+        <ul class="d-flex align-items-center">
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
+                <a class="nav-link" href="#">Face</a>
+            </li>
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
+                <a class="nav-link" href="#">Eyes</a>
+            </li>
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
+                <a class="nav-link" href="#">Lips</a>
+            </li>
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
+                <a class="nav-link" href="#">Cheeks</a>
+            </li>
+        </ul>
+        <ul class="d-flex align-items-center">
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
+                <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+            </li>
+            {% if request.user.is_authenticated %}
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
+                <a class="nav-link" href="#">Profile</a>
+            </li>
+            {% if request.user.is_superuser %}
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
+                <a class="nav-link" href="#">Manage Products</a>
+            </li>
+            {% endif %}
+            {% else %}
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
+                <a class="nav-link" href="#">Log In</a>
+            </li>
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
+                <a class="nav-link" href="#">Register</a>
+            </li>
+            {% endif %}
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
+                <a class="nav-link" href="#">Shopping Bag
+                </a>
+            </li>
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
+                <a class="nav-link" href="#">Search</a>
+            </li>
+        </ul>
+        <ul class="d-flex align-items-center" id="lb-socials">
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3"><a class="nav-link" href="https://www.facebook.com/"
+                    target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3"><a class="nav-link" href="https://www.instagram.com/"
+                    target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3"><a class="nav-link" href="https://twitter.com/"
+                    target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+            </li>
+            <li class="nav-item px-3 py-1 px-xl-4 py-md-3"><a class="nav-link" href="https://www.youtube.com/"
+                    target="_blank"><i class="fa-brands fa-square-youtube"></i></a></li>
+        </ul>
+    </div>
+</div>

@@ -141,3 +141,12 @@ header {
 .dropdown-menu {
     --bs-border-color-translucent: #000;
 }
+
+.lb-product-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.lb-images {
+    width: fit-content;
+}

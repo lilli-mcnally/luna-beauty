@@ -2,8 +2,24 @@
 {% load static %}
 
 {% block content %}
-<div class="mt-2">
-    <div class="lb-eyeshadow-container d-flex col-12"> {{ products }}
+<div class="row my-3 justify-content-center">
+    <div class="col-8">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for product in products %}
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                    <hr>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">£{{ product.price }} | {{ product.rating }} <i
+                                class="fa-solid fa-star"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

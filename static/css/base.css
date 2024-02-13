@@ -129,7 +129,7 @@ header {
 .lb-btn-offer {
     background-color: #FF9C83;
     border-radius: 3px;
-    width: 100px;
+    width: 150px;
 }
 
 .lb-btn-offer:hover {
@@ -142,6 +142,8 @@ header {
     --bs-border-color-translucent: #000;
 }
 
+/* Products Page */
+
 .lb-product-image {
     height: 300px;
     overflow: hidden;
@@ -149,4 +151,8 @@ header {
 
 .lb-images {
     width: fit-content;
+}
+
+.lb-buy-product {
+    width: 70%;
 }

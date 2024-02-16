@@ -15,47 +15,48 @@
             <div class="align-self-center mt-5 mx-3 text-center">
                 <p>From classic neutrals to rich spectrums, there's a shade to suit every skin tone</p>
             </div>
-            <button class="btn lb-btn-peach align-self-center mt-5">Shop Eyeshadow</button>
+            <button class="btn lb-btn-peach align-self-center mt-5">Shop Eyeshadow <i
+                    class="fa-solid fa-angles-right"></i></button>
         </div>
         <div class="lb-eyeshadow-art flex-fill"></div>
     </div>
 
     <div class="lb-offer-clouds col-12 mt-2 d-flex align-items-center">
         <div class="col-12 d-flex justify-content-around">
-            <button class="btn lb-btn-offer">Face</button>
-            <button class="btn lb-btn-offer">Eyes</button>
+            <button class="btn lb-btn-offer">Face <i class="fa-solid fa-angles-right"></i></button>
+            <button class="btn lb-btn-offer">Eyes <i class="fa-solid fa-angles-right"></i></button>
             <h3>Spend £50 to get 5% off!</h3>
-            <button class="btn lb-btn-offer">Lips</button>
-            <button class="btn lb-btn-offer">Cheeks</button>
+            <button class="btn lb-btn-offer">Lips <i class="fa-solid fa-angles-right"></i></button>
+            <button class="btn lb-btn-offer">Cheeks <i class="fa-solid fa-angles-right"></i></button>
         </div>
     </div>
 </div>
 
 
-<div class="row my-3 justify-content-center">
-    <div class="lb-eyeshadow-promo d-flex flex-column col-3 py-3 px-3">
-        <div>
-            <h3 class="lb-eyeshadow-heading-one text-white text-center">
-                Discover MAC
-            </h3>
-        </div>
-        <div class="d-flex align-self-center flex-row mt-5 mx-3 text-center">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><span>MAC Matte Lipstick:</span> Colour-rich, classic and with a full-matte
-                    finish</li>
-                <li class="list-group-item"><span>MAC Mineralize Blush:</span> Natural-looking, radiant colour</li>
-                <li class="list-group-item"><span>MAC Studio Fix:</span> Breathable, long-wearing and streak-free finish
-                </li>
-            </ul>
-        </div>
-        <button class="btn lb-btn-peach align-self-center mt-5">Shop Eyeshadow</button>
-    </div>
-    <div class="col-8">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="row my-2 justify-content-center">
+    <div class="col-10">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card h-100 border-rad d-flex flex-column justify-content-around" id="mac-promo">
+                    <div class="d-flex flex-column mx-3 text-center">
+                        <h5 class="text-peach">MAC Matte Lipstick</h5>
+                        <p class="text-white">Colour-rich, classic and with a full-matte
+                            finish </p>
+                        <hr class="text-white">
+                        <h5 class="text-peach">MAC Mineralize Blush</h5>
+                        <p class="text-white">Natural-looking, radiant colour </p>
+                        <hr class="text-white">
+                        <h5 class="text-peach">MAC Studio Fix</h5>
+                        <p class="text-white">Breathable, long-wearing and streak-free finish</p>
+                    </div>
+                    <button class="btn lb-btn-peach align-self-center">Shop Make Up <i
+                            class="fa-solid fa-angles-right"></i></button>
+                </div>
+            </div>
             {% for product in products %}
             {% if "MAC" in product.name %}
             <div class="col">
-                <div class="card h-100 p-2">
+                <div class="card h-100 p-2 border-rad">
                     <div class="lb-product-image d-flex justify-content-center">
                         <img src="{{ product.image.url }}" class="card-img-top h-100 lb-images"
                             alt="{{ product.name }}">
@@ -76,8 +77,6 @@
     </div>
 </div>
 
-
-<div>showcase of top products</div>
 <div>why luna</div>
 </div>
 {% endblock %}

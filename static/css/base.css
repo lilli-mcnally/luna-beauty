@@ -20,7 +20,7 @@ body {
 .card {
     border-color: #FFECEB;
     background-color: #FFECEB;
-    border-width: 2px;
+    border-width: 0;
 }
 
 /* Header */
@@ -174,4 +174,25 @@ header {
 
 .lb-buy-product {
     width: 70%;
+}
+
+/* Product Details */
+
+.lb-text-title {
+    font-weight: 200;
+    font-size: 50px;
+}
+
+#lb-margin-top {
+    margin-top: -100px;
+    z-index: 2;
+}
+
+.accordion-button:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #fff;
 }

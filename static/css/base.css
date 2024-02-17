@@ -164,12 +164,8 @@ header {
 /* Products Page */
 
 .lb-product-image {
-    height: 300px;
+    height: fit-content;
     overflow: hidden;
-}
-
-.lb-images {
-    width: fit-content;
 }
 
 .lb-buy-product {
@@ -183,11 +179,6 @@ header {
     font-size: 50px;
 }
 
-#lb-margin-top {
-    margin-top: -100px;
-    z-index: 2;
-}
-
 .accordion-button:focus {
     border-color: none;
     box-shadow: none;
@@ -195,4 +186,25 @@ header {
 
 .accordion-button:not(.collapsed) {
     background-color: #fff;
+}
+
+.lb-add-bag {
+    background-color: #FF9C83;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.lb-add-bag:hover {
+    border: 1px solid #000;
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+.form-select {
+    max-width: 300px;
+}
+
+.lb-shades-picker {
+    width: 100%;
 }

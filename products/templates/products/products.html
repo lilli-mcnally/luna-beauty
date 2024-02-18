@@ -3,10 +3,13 @@
 
 {% block content %}
 <div class="row my-3 justify-content-center">
+    <span class="d-flex justify-content-end align-items-end mt-5">
+        <a class="btn col-1 mx-5 lb-see-category" id="lb-back-top">Back to top</a>
+    </span>
     <div class="col-8">
         <div class="row my-2">
             <div class="col d-flex justify-content-between align-items-center">
-                <select class="form-select m-0 col-4">
+                <select id="sort-selector" class="form-select lb-products-dropdown m-0">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
                     </option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %} selected {% endif %}>Price (low -
@@ -29,10 +32,10 @@
                     <option value="name_desc" {% if current_sorting == 'name_desc' %} selected {% endif %}>Name (Z-A)
                     </option>
                 </select>
-                <p class="col-4 text-end m-0">{{ products | length }} results</p>
+                <p class="lb-products-dropdown text-end m-0">{{ products | length }} results</p>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 mt-0">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
             {% for product in products %}
             <div class="col">
                 <div class="card h-100 p-2 border-rad">
@@ -55,5 +58,43 @@
         </div>
     </div>
 </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('#lb-back-top').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        console.log("one")
+        let selector = $(this)
+        let currentUrl = new URL(window.location);
+
+        let selectedValue = selector.val();
+        if (selectedValue != "reset") {
+            console.log("two")
+
+            let sort = selectedValue.split("_")[0];
+            let direction = selectedValue.split("_")[1];
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+
+            window.location.replace(currentUrl);
+        } else {
+            console.log("three")
+
+
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 
 {% endblock %}

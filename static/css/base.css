@@ -171,6 +171,10 @@ header {
 
 /* Products Page */
 
+#lb-back-top {
+    position: fixed;
+}
+
 .lb-product-image {
     height: fit-content;
     overflow: hidden;
@@ -183,6 +187,10 @@ header {
 .form-select:focus {
     border-color: #313639;
     box-shadow: none;
+}
+
+.lb-products-dropdown {
+    width: 200px;
 }
 
 /* Product Details */

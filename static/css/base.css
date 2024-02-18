@@ -169,6 +169,10 @@ header {
     border: 2px solid #313639;
 }
 
+#mac-promo p {
+    margin-bottom: 0 !important;
+}
+
 /* Products Page */
 
 #lb-back-top {

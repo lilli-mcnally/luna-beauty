@@ -155,6 +155,14 @@ header {
     --bs-border-color-translucent: #000;
 }
 
+.lb-cloud-mini {
+    height: 70px;
+}
+
+.lb-cloud-mini h3 {
+    margin-bottom: 0;
+}
+
 /* MAC Promo */
 #mac-promo {
     background-color: #313639;
@@ -207,4 +215,13 @@ header {
 
 .lb-shades-picker {
     width: 100%;
+}
+
+.lb-see-category {
+    border: 1px solid #000;
+}
+
+.lb-see-category:hover {
+    color: #FF9C83;
+    border: 1px solid #FF9C83;
 }

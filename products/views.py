@@ -54,9 +54,20 @@ def all_products(request):
 
 def product_detail(request, product_id):
 
+    all_products = Product.objects.all()
     product = get_object_or_404(Product, pk=product_id)
+    filter_products = []
+
+    for p in all_products:
+        if p.category == product.category:
+            if p.name != product.name:
+                filter_products.append(p)
+    similar_products = filter_products[:4]
+
     context = {
         'product': product,
+        'all_products': all_products,
+        'similar_products': similar_products,
     }
 
     return render(request, 'products/product_detail.html', context)

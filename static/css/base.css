@@ -180,6 +180,11 @@ header {
     width: 70%;
 }
 
+.form-select:focus {
+    border-color: #313639;
+    box-shadow: none;
+}
+
 /* Product Details */
 
 .lb-text-title {

@@ -5,6 +5,8 @@
 <div class="lb-offer-clouds lb-cloud-mini col-12 mt-2 d-flex align-items-center justify-content-around">
     <h3>Spend £{{ discount_threshold }} to get {{ discount_percentage }}% off!</h3>
 </div>
+<a class="btn lb-see-category m-2" href="{% url 'products' %}"><i class="fa-solid fa-angles-left"></i> Back to Make
+    Up</a>
 <div class="row my-3 justify-content-center">
     <div class="col-10">
         <div class="row border-rad">
@@ -19,17 +21,22 @@
                     {{ product.rating }} <i class="fa-solid fa-star"></i>
                 </p>
                 <h4 class="lb-noto lb-eyeshadow-heading-two m-2">£{{ product.price }}</h4>
-                <span class="lb-shades-picker d-flex justify-content-center my-3">
+                <form class="lb-shades-picker d-flex justify-content-center my-3">
                     {% if product.shades %}
-                    <select class="form-select mx-1">
+                    <input class="shade-input-button" type="hidden" name="shade" data-item-id="{{ product.id }}"
+                        id="id_shade_{{ product.id }}"></input>
+                    <select class="form-select mx-1" id="shade-selector">
                         <option selected>Choose your shade</option>
                         {% for shade in product.shades %}
                         <option>{{ shade }}</option>
                         {% endfor %}
                     </select>
                     {% endif %}
-                    <a class="btn lb-add-bag px-1 py-2 mx-1" href="{% url 'products' %}">Add to shopping bag</a>
-                </span>
+
+                    <input type="submit" value="Add to shopping bag" class="btn lb-add-bag px-1 py-2 mx-1"
+                        href="{% url 'products' %}"></input>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}"></input>
+                </form>
                 <div class="d-flex align-items-center mt-4">
                     <p class="md-0">{{ product.description }}</p>
                 </div>
@@ -87,4 +94,17 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('#shade-selector').change(function () {
+        if ($('#shade-selector')[0].value != "Choose your shade") {
+            $('.shade-input-button')[0].value = $('#shade-selector')[0].value;
+        } else {
+            $('.shade-input-button')[0].value = ""
+        }
+    });
+</script>
 {% endblock %}

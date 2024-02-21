@@ -83,13 +83,11 @@
 </script>
 <script type="text/javascript">
     $('#sort-selector').change(function () {
-        console.log("one")
         let selector = $(this)
         let currentUrl = new URL(window.location);
 
         let selectedValue = selector.val();
         if (selectedValue != "reset") {
-            console.log("two")
 
             let sort = selectedValue.split("_")[0];
             let direction = selectedValue.split("_")[1];
@@ -99,7 +97,6 @@
 
             window.location.replace(currentUrl);
         } else {
-            console.log("three")
 
 
             currentUrl.searchParams.delete("sort");

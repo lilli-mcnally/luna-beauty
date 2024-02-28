@@ -25,8 +25,6 @@
                     class="lb-shades-picker d-flex justify-content-center my-3">
                     {% csrf_token %}
                     {% if product.shades %}
-                    <input class="shade-input-button" type="hidden" name="product_shade" data-item-id="{{ product.id }}"
-                        id="id_shade_{{ product.id }}"></input>
                     <select class="form-select mx-1" id="shade-selector" name="shade">
                         <option selected>Choose your shade</option>
                         {% for shade in product.shades %}
@@ -34,8 +32,7 @@
                         {% endfor %}
                     </select>
                     {% endif %}
-                    <input type="hidden" name="quantity" data-item-id="{{ product.id }}" id="id_qty_{{ product.id }}"
-                        value="1"></input>
+                    <input type="hidden" name="quantity" value="1"></input>
                     <input type="submit" value="Add to shopping bag" class="btn lb-add-bag px-1 py-2 mx-1"
                         href="{% url 'products' %}"></input>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}"></input>

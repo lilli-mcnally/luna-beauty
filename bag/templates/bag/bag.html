@@ -9,21 +9,31 @@
 <div class="row my-3 justify-content-center align-items-center">
     <div class="col-10 d-flex flex-column align-items-center">
         {% for item in bag_items %}
-        {{ bag_items }}
-        <br>
-        <br>
-        {{ request.session.bag }}
         <div class="col-6 col-xxl-4 card mb-3">
             <div class="row g-0">
-                <div class="col-md-3 d-flex align-items-center justify-content-center bg-white">
+                <div class="col-md-3 d-flex align-items-center justify-content-center bg-white lb-bd-pink">
                     <img src="{{ item.product.image.url }}" class="img-fluid rounded-start">
                 </div>
                 <div class="col-md-9">
                     <div class="card-body">
                         <h5 class="card-title">{{ item.product.name }}</h5>
-                        <p class="card-text"><small class="text-body-secondary">{{ item.product.shade }} x
-                                {{ item.quantity }}</small></p>
-                        <p class="card-text"> <strong>£{{ item.product.price }}</strong></p>
+                        {% if item.shade %}
+                        <p class="card-text"><small class="text-body-secondary">Shade: {{ item.shade }}</small>
+                        </p>
+                        {% endif %}
+                        <div class="d-flex flex-row justify-content-between">
+                            <p class="card-text"> <strong>£{{ item.product.price }}</strong></p>
+                            <form method="POST" action="">
+                                {% csrf_token %}
+                                <select class="form-select mx-1" name="bag-quantity">
+                                    <option {% if item.quantity == 1 %} selected {% endif %}>1</option>
+                                    <option {% if item.quantity == 2 %} selected {% endif %}>2</option>
+                                    <option {% if item.quantity == 3 %} selected {% endif %}>3</option>
+                                    <option {% if item.quantity == 4 %} selected {% endif %}>4</option>
+                                    <option {% if item.quantity == 5 %} selected {% endif %}>5</option>
+                                </select>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -35,9 +45,11 @@
         {% if total_from_discount < 0 %}
         <h5 class="lb-noto m-2">Woohoo! You got {{ discount|floatformat:2 }} off</h5>
         {% else %}
-        <h5 class="lb-noto m-2">Spend {{ total_from_discount }} to get {{ discount_percentage }} off!</h5>
+        <h5 class="lb-noto m-2">Spend {{ total_from_discount }} to get {{ discount_percentage }}
+            off!</h5>
         {% endif %}
-        <h4 class="lb-noto lb-eyeshadow-heading-two m-2">Total: £{{ grand_total|floatformat:2 }} </h4>
+        <h4 class="lb-noto lb-eyeshadow-heading-two m-2">Total: £{{ grand_total|floatformat:2 }}
+        </h4>
         <a class="btn lb-add-bag px-1 py-2 mx-1 my-3" href="{% url 'products' %}">Checkout</a>
     </div>
 </div>

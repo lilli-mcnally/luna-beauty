@@ -23,26 +23,16 @@ def bag_contents(request):
                 'product': product,
             })
         else:
-            print("one")
             product = get_object_or_404(Product, pk=item_id)
-            print("two")
             for shade, quantity in item_data['items_by_shade'].items():
-                print("three")
-
                 total += quantity * product.price
-                print("four")
-
                 product_count += quantity
-                print("five")
-
                 bag_items.append({
                     'item_id': item_id,
-                    'quantity': item_data,
+                    'quantity': quantity,
                     'product': product,
                     'shade': shade,
                 })
-                print("six")
-
 
     if total >= settings.DISCOUNT_THRESHOLD:
         discount = Decimal((total / 100) * settings.DISCOUNT_PERCENTAGE)

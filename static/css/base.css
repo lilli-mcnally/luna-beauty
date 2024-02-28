@@ -247,3 +247,8 @@ header {
 }
 
 /* Shopping Bag */
+
+.lb-bd-pink {
+    border: 3px solid #FFECEB;
+    border-radius: 3px;
+}

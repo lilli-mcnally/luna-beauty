@@ -16,23 +16,35 @@
                 </div>
                 <div class="col-md-9">
                     <div class="card-body">
-                        <h5 class="card-title">{{ item.product.name }}</h5>
-                        {% if item.shade %}
-                        <p class="card-text"><small class="text-body-secondary">Shade: {{ item.shade }}</small>
-                        </p>
-                        {% endif %}
-                        <div class="d-flex flex-row justify-content-between">
-                            <p class="card-text"> <strong>£{{ item.product.price }}</strong></p>
-                            <form method="POST" action="">
+                        <div class="lb-item-title">
+                            <h5 class="card-title">{{ item.product.name }}</h5>
+                            {% if item.shade %}
+                            <p class="card-text"><small class="text-body-secondary">Shade: {{ item.shade }}</small>
+                            </p>
+                            {% endif %}
+                        </div>
+                        <div class="d-flex flex-row justify-content-between align-items-center">
+                            <p class="card-text lb-item-text mb-0"><strong>£{{ item.product.price }}</strong></p>
+                            <form method="POST" action="" class="lb-drop-form">
                                 {% csrf_token %}
-                                <select class="form-select mx-1" name="bag-quantity">
-                                    <option {% if item.quantity == 1 %} selected {% endif %}>1</option>
-                                    <option {% if item.quantity == 2 %} selected {% endif %}>2</option>
-                                    <option {% if item.quantity == 3 %} selected {% endif %}>3</option>
-                                    <option {% if item.quantity == 4 %} selected {% endif %}>4</option>
-                                    <option {% if item.quantity == 5 %} selected {% endif %}>5</option>
+                                <select class="form-select mx-1 lb-drop-option" name="bag-quantity">
+                                    <option {% if item.quantity == 1 %} selected {% endif %}>1
+                                    </option>
+                                    <option {% if item.quantity == 2 %} selected {% endif %}>2
+                                    </option>
+                                    <option {% if item.quantity == 3 %} selected {% endif %}>3
+                                    </option>
+                                    <option {% if item.quantity == 4 %} selected {% endif %}>4
+                                    </option>
+                                    <option {% if item.quantity == 5 %} selected {% endif %}>5
+                                    </option>
                                 </select>
                             </form>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between mt-2">
+                            <a class="text-body-secondary lb-hover-underline update-item" id="remove_{{ item.item_id }}"
+                                data-size="{{ item.size }}"><small>Remove</small></a>
+                            <a class="text-body-secondary lb-hover-underline remove-item"><small>Update</small></a>
                         </div>
                     </div>
                 </div>
@@ -53,5 +65,36 @@
         <a class="btn lb-add-bag px-1 py-2 mx-1 my-3" href="{% url 'products' %}">Checkout</a>
     </div>
 </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script type="text/javascript">
+    // Function to update the quantity of an item
+    $('.update-item').click(function (e) {
+        let form = $(this).prev('.lb-drop-form');
+        form.submit();
+    })
+
+    // Function to remove an item
+    $('.remove-item').click(function (e) {
+        let csrfToken = "{{ csrf_token }}"
+        let itemId = $(this).attr('id').split('remove_')[1];
+        let size = $(this).data.('size');
+        let url = `/bag/remove/${itemId}`
+        let data = {
+            'csrfmiddlewaretoken': csrfToken,
+            'size': size
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            })
+
+    })
+</script>
 
 {% endblock %}

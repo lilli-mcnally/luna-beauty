@@ -252,3 +252,17 @@ header {
     border: 3px solid #FFECEB;
     border-radius: 3px;
 }
+
+.lb-item-title {
+    min-height: 60px;
+}
+
+.lb-hover-underline {
+    color: #000;
+    text-decoration: none;
+}
+
+.lb-hover-underline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

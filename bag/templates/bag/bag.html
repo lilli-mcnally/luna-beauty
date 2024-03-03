@@ -8,7 +8,6 @@
 
 <div class="row my-3 justify-content-center align-items-center">
     <div class="col-10 d-flex flex-column align-items-center">
-        <p>{{ bag_items }}</p>
         {% for item in bag_items %}
         <div class="col-6 col-xxl-4 card mb-3">
             <div class="row g-0">
@@ -24,9 +23,9 @@
                             </p>
                             {% endif %}
                         </div>
-                        <div class="d-flex flex-row justify-content-between align-items-center">
-                            <p class="card-text lb-item-text mb-0"><strong>£{{ item.product.price }}</strong></p>
-                            <form class="lb-drop-form" method="POST" action="{% url 'update_bag' item.item_id %}">
+                        <div class="d-flex flex-row justify-content-between align-items-center flex-wrap">
+                            <p class="card-text lb-item-text mb-0 col-8"><strong>£{{ item.product.price }}</strong></p>
+                            <form class="lb-drop-form col-4" method="POST" action="{% url 'update_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <select class="form-select mx-1 lb-drop-option" name="bag-quantity">
                                     <option {% if item.quantity == 1 %} selected {% endif %}>1
@@ -42,19 +41,17 @@
                                 </select>
                                 <input type="hidden" name="shade" value="{{ item.shade }}">
                             </form>
-                            <a class="text-body-secondary lb-hover-underline update-item"><small>Update</small></a>
-
-                        </div>
-                        <div class="d-flex flex-row justify-content-between mt-2">
-                            <a class="text-body-secondary lb-hover-underline remove-item" id="remove_{{ item.item_id }}"
-                                data-shade="{{ item.shade }}"><small>Remove</small></a>
-                            <!-- <a class="text-body-secondary lb-hover-underline update-item"><small>Update</small></a> -->
+                            <a class="text-body-secondary lb-hover-underline update-item mt-1"><small>Update</small></a>
+                            <a class="text-body-secondary lb-hover-underline remove-item mt-1"
+                                id="remove_{{ item.item_id }}"
+                                data-product_shade="{{ item.shade }}"><small>Remove</small></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         {% endfor %}
+        {% if bag_items %}
         <div class="col-6 col-xxl-4 mb-3">
             <p class="text-end">+ Delivery: £{{ delivery|floatformat:2 }}</p>
         </div>
@@ -67,6 +64,12 @@
         <h4 class="lb-noto lb-eyeshadow-heading-two m-2">Total: £{{ grand_total|floatformat:2 }}
         </h4>
         <a class="btn lb-add-bag px-1 py-2 mx-1 my-3" href="{% url 'products' %}">Checkout</a>
+        {% else %}
+        <h4 class="lb-eyeshadow-heading-two m-2">There's nothing in your basket
+        </h4>
+        <a class="btn lb-add-bag px-1 py-2 mx-1 my-3" href="{% url 'products' %}">Back to Make
+            Up</a>
+        {% endif %}
     </div>
 </div>
 
@@ -78,7 +81,6 @@
 <script type="text/javascript">
     // Function to update the quantity of an item
     $('.update-item').click(function (e) {
-        console.log('update-item function is being called')
         let form = $(this).prev('.lb-drop-form');
         form.submit();
         console.log(form)
@@ -89,11 +91,11 @@
         let csrfToken = "{{ csrf_token }}";
         let itemId = $(this).attr('id').split('remove_')[1];
 
-        let shade = $(this).data('shade');
+        let shade = $(this).data('product_shade');
         let url = `/bag/remove/${itemId}`;
         let data = {
             'csrfmiddlewaretoken': csrfToken,
-            'shade': shade
+            'product_shade': shade
         };
 
         $.post(url, data)

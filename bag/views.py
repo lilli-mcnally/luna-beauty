@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 # Create your views here.
 
@@ -52,3 +52,22 @@ def update_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
+
+def remove_from_bag(request, item_id):
+    try:
+        shade = None
+        if 'shade' in request.POST:
+            shade = request.POST['shade']
+        bag = request.session.get('bag', {})
+
+        if shade:
+            del bag[item_id]['items_by_shade'][shade]
+            if not bag[item_id]['items_by_shade']:
+                bag.pop(item_id)
+        else:
+            bag.pop(item_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+    except Exception as e:
+        return HttpResponse(status=500)

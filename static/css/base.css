@@ -266,3 +266,13 @@ header {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.update-item,
+.remove-item {
+    position: absolute;
+    bottom: 10px;
+}
+
+.remove-item {
+    right: 16px
+}

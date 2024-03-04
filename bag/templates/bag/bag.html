@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block content %}
 <div class="lb-offer-clouds lb-cloud-mini col-12 mt-2 d-flex align-items-center justify-content-around">
@@ -9,22 +10,28 @@
 <div class="row my-3 justify-content-center align-items-center">
     <div class="col-10 d-flex flex-column align-items-center">
         {% for item in bag_items %}
-        <div class="col-6 col-xxl-4 card mb-3">
+        <div class="col-8 col-xxl-6 card mb-3">
             <div class="row g-0">
                 <div class="col-md-3 d-flex align-items-center justify-content-center bg-white lb-bd-pink">
                     <img src="{{ item.product.image.url }}" class="img-fluid rounded-start">
                 </div>
                 <div class="col-md-9">
                     <div class="card-body">
-                        <div class="lb-item-title">
+                        <div class="lb-item-title mb-3">
                             <h5 class="card-title">{{ item.product.name }}</h5>
                             {% if item.shade %}
                             <p class="card-text"><small class="text-body-secondary">Shade: {{ item.shade }}</small>
                             </p>
                             {% endif %}
                         </div>
-                        <div class="d-flex flex-row justify-content-between align-items-center flex-wrap">
-                            <p class="card-text lb-item-text mb-0 col-8"><strong>£{{ item.product.price }}</strong></p>
+                        <div class="d-flex flex-row justify-content-between align-items-center flex-wrap mt-2">
+                            {% if item.quantity > 1 %}
+                            <p class="card-text text-body-secondary mb-0 col-12">{{ item.quantity }} x
+                                £{{ item.product.price }}
+                            </p>
+                            {% endif %}
+                            <p class="card-text lb-item-text mb-0 col-8">
+                                <strong>£{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
                             <form class="lb-drop-form col-4" method="POST" action="{% url 'update_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <select class="form-select mx-1 lb-drop-option" name="bag-quantity">
@@ -92,7 +99,7 @@
         let itemId = $(this).attr('id').split('remove_')[1];
 
         let shade = $(this).data('product_shade');
-        let url = `/bag/remove/${itemId}`;
+        let url = `/bag/remove/${itemId}/`;
         let data = {
             'csrfmiddlewaretoken': csrfToken,
             'product_shade': shade

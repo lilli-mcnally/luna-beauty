@@ -23,6 +23,17 @@ body {
     border-width: 0;
 }
 
+.message-container {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
 /* Header */
 
 #logo {

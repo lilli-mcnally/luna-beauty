@@ -41,6 +41,15 @@
     <header>
         {% include 'includes/navbar.html' %}
     </header>
+
+    {% if messages %}
+    <div class="message-container">
+        {% for message in messages %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
     {% block page_header %}
     {% endblock %}
 
@@ -48,6 +57,13 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+        const lbToastList = $('.toast');
+        for (let lbToast of lbToastList) {
+            const toast = new bootstrap.Toast(lbToast);
+            toast.show()
+        }
+    </script>
     {% endblock %}
 
     <footer>

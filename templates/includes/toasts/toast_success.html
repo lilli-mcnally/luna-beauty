@@ -1,11 +1,33 @@
-<div class="toast custom-toast border" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
     <div class="toast-header toast-capper text-bg-success">
-        <img class="rounded me-2">
         <strong class="me-auto">Success</strong>
         <button type="button" class="btn-close" data-bs-dismiss="toast" data-dismiss="toast"
             aria-label="Close"></button>
     </div>
-    <div class="toast-body">
+    {% with image='false' %}
+    {% if grand_total %}
+    <div class="d-flex flex-row p-2">
+
+        {% for item in bag_items %}
+        {% if item.product.name in message.message %}
+        {% if image == 'false' %}
+        <img class="h-100 col-4" src="{{ item.product.image.url }}">
+        <div id="success-bag" class="col-8 p-3 d-flex flex-column justify-content-center">
+            <p class="card-title">{{ message }}</p>
+        </div>
+        {% with image='true' %}
+        {% endwith %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+
+
+    </div>
+    <a class="btn lb-btn-offer p-0 w-100 text-center" href="{% url 'view_bag' %}">View Bag</a>
+    <div id="success-other" class="toast-body">
         {{ message }}
     </div>
+
+    {% endif %}
+    {% endwith %}
 </div>

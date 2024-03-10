@@ -17,7 +17,6 @@ def add_to_bag(request, item_id):
         shade = request.POST['shade']
 
     bag = request.session.get('bag', {})
-    print(request.POST)
 
     if shade:
         print(shade)
@@ -83,12 +82,10 @@ def remove_from_bag(request, item_id):
             del bag[item_id]['items_by_shade'][shade]
             if not bag[item_id]['items_by_shade']:
                 bag.pop(item_id)
-                print('one')
-                messages.success(request, f'{product.name} {shade} quantity was updated')
+                messages.success(request, f'{product.name} was removed from your bag')
 
         else:
             bag.pop(item_id)
-            print('two')
             messages.success(request, f'{product.name} was removed from your bag')
 
         request.session['bag'] = bag

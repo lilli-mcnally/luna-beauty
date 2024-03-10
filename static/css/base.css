@@ -94,6 +94,14 @@ header {
     font-size: 24px;
 }
 
+/* Toasts */
+
+.toast,
+.toast-capper {
+    background-color: #FFECEB;
+    color: #000;
+}
+
 /* Home Page */
 
 .lb-btn-peach {

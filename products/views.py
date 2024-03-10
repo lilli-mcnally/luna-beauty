@@ -37,13 +37,12 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter anything to search for")
+                messages.error(request, "No search criteria entered")
                 return redirect(reverse('products'))
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-    print(current_sorting)
 
     context = {
         'products': products,

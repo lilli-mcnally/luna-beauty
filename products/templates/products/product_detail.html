@@ -28,7 +28,7 @@
                     <select class="form-select mx-1" id="shade-selector" name="shade">
                         <option selected>Choose your shade</option>
                         {% for shade in product.shades %}
-                        <option>{{ shade }}</option>
+                        <option value="{{ shade }}">{{ shade }}</option>
                         {% endfor %}
                     </select>
                     {% endif %}
@@ -103,7 +103,8 @@
         if ($('#shade-selector')[0].value != "Choose your shade") {
             $('.shade-input-button')[0].value = $('#shade-selector')[0].value;
         } else {
-            $('.shade-input-button')[0].value = ""
+            // $('.shade-input-button')[0].value = ""
+            $('input[name="shade"]').val("");
         }
     });
 </script>

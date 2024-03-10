@@ -25,11 +25,10 @@
                             {% endif %}
                         </div>
                         <div class="d-flex flex-row justify-content-between align-items-center flex-wrap mt-2">
-                            {% if item.quantity > 1 %}
-                            <p class="card-text text-body-secondary mb-0 col-12">{{ item.quantity }} x
+                            <p class="card-text text-body-secondary mb-0 col-8">{{ item.quantity }} x
                                 £{{ item.product.price }}
                             </p>
-                            {% endif %}
+                            <p class="card-text text-body-secondary mb-0 px-2 col-4">Quantity</p>
                             <p class="card-text lb-item-text mb-0 col-8">
                                 <strong>£{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
                             <form class="lb-drop-form col-4" method="POST" action="{% url 'update_bag' item.item_id %}">
@@ -46,7 +45,9 @@
                                     <option {% if item.quantity == 5 %} selected {% endif %}>5
                                     </option>
                                 </select>
+                                {% if item.shade %}
                                 <input type="hidden" name="shade" value="{{ item.shade }}">
+                                {% endif %}
                             </form>
                             <a class="text-body-secondary lb-hover-underline update-item mt-1"><small>Update</small></a>
                             <a class="text-body-secondary lb-hover-underline remove-item mt-1"
@@ -90,7 +91,6 @@
     $('.update-item').click(function (e) {
         let form = $(this).prev('.lb-drop-form');
         form.submit();
-        console.log(form)
     });
 
     // Function to remove an item
@@ -102,7 +102,7 @@
         let url = `/bag/remove/${itemId}/`;
         let data = {
             'csrfmiddlewaretoken': csrfToken,
-            'product_shade': shade
+            'shade': shade
         };
 
         $.post(url, data)

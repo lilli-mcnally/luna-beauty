@@ -80,9 +80,9 @@ def remove_from_bag(request, item_id):
         bag = request.session.get('bag', {})
         if shade:
             del bag[item_id]['items_by_shade'][shade]
+            messages.success(request, f'{product.name} was removed from your bag')
             if not bag[item_id]['items_by_shade']:
                 bag.pop(item_id)
-                messages.success(request, f'{product.name} was removed from your bag')
 
         else:
             bag.pop(item_id)

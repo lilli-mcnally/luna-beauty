@@ -27,7 +27,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
     rating = models.DecimalField(max_digits=2, decimal_places=1)
     image = models.ImageField(null=True, blank=True)
-    shades = ArrayField(models.CharField(max_length=200, null=True, blank=True))
+    shades = ArrayField(models.CharField(max_length=200), null=True, blank=True)
 
     def __str__(self):
         return self.name

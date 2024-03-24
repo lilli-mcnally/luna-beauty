@@ -5,10 +5,11 @@
 <div class="lb-offer-clouds lb-cloud-mini col-12 mt-2 d-flex align-items-center justify-content-around">
     <h3>Spend £{{ discount_threshold }} to get {{ discount_percentage }}% off!</h3>
 </div>
-<a class="btn lb-see-category m-2" href="{% url 'products' %}"><i class="fa-solid fa-angles-left"></i> Back to Make
-    Up</a>
 <div class="row my-3 justify-content-center">
     <div class="col-10">
+        <a class="btn lb-see-category m-2" href="{% url 'products' %}"><i class="fa-solid fa-angles-left"></i> Back to
+            Make
+            Up</a>
         <div class="row border-rad">
             <div class="lb-detail-image d-flex justify-content-center align-items-center col-4">
                 <img src="{{ product.image.url }}" class="card-img-top border-rad" alt="{{ product.name }}">

@@ -193,6 +193,11 @@ header {
 
 /* Products Page */
 
+.lb-title {
+    border-top: 2px solid #FFECEB;
+    border-bottom: 2px solid #FFECEB;
+}
+
 #lb-back-top {
     position: fixed;
     bottom: 20px;

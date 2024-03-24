@@ -3,16 +3,13 @@
 {% load bag_tools %}
 
 {% block content %}
-<div class="lb-offer-clouds lb-cloud-mini col-12 mt-2 d-flex align-items-center justify-content-around">
-    <h3>Spend £{{ discount_threshold }} to get {{ discount_percentage }}% off!</h3>
-</div>
-
 <div class="col-12 mt-2 d-flex align-items-center justify-content-around">
-    <h1 class="col-4 text-center my-3 py-2 lb-title">Shopping Bag</h1>
+    <h1 class="col-4 text-center my-3 py-2 lb-title">Checkout</h1>
 </div>
 
 <div class="row my-3 justify-content-center align-items-center">
-    <div class="col-10 d-flex flex-column align-items-center">
+    <div class="col-8 d-flex flex-column">
+        <h5>Please complete the below form</h5>
         {% for item in bag_items %}
         <div class="col-8 col-xxl-6 card mb-3">
             <div class="row g-0">
@@ -22,7 +19,7 @@
                 <div class="col-md-9">
                     <div class="card-body">
                         <div class="lb-item-title mb-3">
-                            <h5 class="card-title">{{ item.product.name }}</h5>
+
                             {% if item.shade %}
                             <p class="card-text"><small class="text-body-secondary">Shade: {{ item.shade }}</small>
                             </p>
@@ -63,57 +60,7 @@
             </div>
         </div>
         {% endfor %}
-        {% if bag_items %}
-        <div class="card col-8 col-xxl-6">
-            <p class="text-center my-1 mx-3">+ Delivery: £{{ delivery|floatformat:2 }}</p>
-        </div>
-        {% if total_from_discount < 0 %}
-        <h5 class="lb-noto m-2">Woohoo! You got {{ discount|floatformat:2 }} off</h5>
-        {% else %}
-        <h5 class="lb-noto m-2">Spend {{ total_from_discount }} to get {{ discount_percentage }}
-            off!</h5>
-        {% endif %}
-        <h4 class="lb-noto lb-eyeshadow-heading-two m-2">Total: £{{ grand_total|floatformat:2 }}
-        </h4>
-        <a class="btn lb-add-bag px-1 py-2 mx-1 my-3" href="{% url 'products' %}">Checkout</a>
-        {% else %}
-        <h4 class="lb-eyeshadow-heading-two m-2">There's nothing in your basket
-        </h4>
-        <a class="btn lb-add-bag px-1 py-2 mx-1 my-3" href="{% url 'products' %}">Back to Make
-            Up</a>
-        {% endif %}
     </div>
 </div>
-
-{% endblock %}
-
-{% block postloadjs %}
-{{ block.super }}
-
-<script type="text/javascript">
-    // Function to update the quantity of an item
-    $('.update-item').click(function (e) {
-        let form = $(this).prev('.lb-drop-form');
-        form.submit();
-    });
-
-    // Function to remove an item
-    $('.remove-item').click(function (e) {
-        let csrfToken = "{{ csrf_token }}";
-        let itemId = $(this).attr('id').split('remove_')[1];
-
-        let shade = $(this).data('product_shade');
-        let url = `/bag/remove/${itemId}/`;
-        let data = {
-            'csrfmiddlewaretoken': csrfToken,
-            'shade': shade
-        };
-
-        $.post(url, data)
-            .done(function () {
-                location.reload();
-            });
-    });
-</script>
 
 {% endblock %}

@@ -1,0 +1,20 @@
+.lb-submit-order {
+    background-color: #FF9C83;
+    border-color: #FF9C83;
+}
+
+.lb-submit-order:hover {
+    background-color: #FF9C83;
+    border-color: #000;
+}
+
+.lb-edit-bag {
+    background-color: #FFECEB;
+    border-color: #FFECEB;
+
+}
+
+.lb-edit-bag:hover {
+    border-color: #000;
+    background-color: #FFECEB;
+}

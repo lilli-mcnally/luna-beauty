@@ -2,64 +2,90 @@
 {% load static %}
 {% load bag_tools %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+
 {% block content %}
 <div class="col-12 mt-2 d-flex align-items-center justify-content-around">
     <h1 class="col-4 text-center my-3 py-2 lb-title">Checkout</h1>
 </div>
 
-<div class="row my-3 justify-content-center align-items-center">
-    <div class="col-8 d-flex flex-column">
-        <h5>Please complete the below form</h5>
-        {% for item in bag_items %}
-        <div class="col-8 col-xxl-6 card mb-3">
-            <div class="row g-0">
-                <div class="col-md-3 d-flex align-items-center justify-content-center bg-white lb-bd-pink">
-                    <img src="{{ item.product.image.url }}" class="img-fluid rounded-start">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <div class="lb-item-title mb-3">
+<div class="d-flex my-3 justify-content-center align-items-center">
+    <div class="col-8 d-flex flex-row justify-content-between">
+        <div class="col-7">
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="py-2">
+                {% csrf_token %}
+                <h5>Details</h5>
+                {{ order_form.first_name | as_crispy_field }}
+                {{ order_form.last_name | as_crispy_field }}
+                {{ order_form.email | as_crispy_field }}
+                {{ order_form.phone | as_crispy_field }}
+                {{ order_form.street_address1 | as_crispy_field }}
+                {{ order_form.street_address2 | as_crispy_field }}
+                {{ order_form.town_or_city | as_crispy_field }}
+                {{ order_form.county | as_crispy_field }}
+                {{ order_form.postcode | as_crispy_field }}
+                {{ order_form.country | as_crispy_field }}
+                {% if user.is_authenticated %}
+                <input type="checkbox" id="lb-save-details" name="lb-save-details">
+                <label for="lb-save-details">Save details to profile</label>
+                {% else %}
+                <label for="lb-save-details">
+                    <a href="{% url 'account_login' %}">Sign In</a> or
+                    <a href="{% url 'account_signup' %}">Create Account</a>
+                </label>
+                {% endif %}
 
-                            {% if item.shade %}
-                            <p class="card-text"><small class="text-body-secondary">Shade: {{ item.shade }}</small>
-                            </p>
-                            {% endif %}
-                        </div>
-                        <div class="d-flex flex-row justify-content-between align-items-center flex-wrap mt-2">
-                            <p class="card-text text-body-secondary mb-0 col-8">{{ item.quantity }} x
-                                £{{ item.product.price }}
-                            </p>
-                            <p class="card-text text-body-secondary mb-0 px-2 col-4">Quantity</p>
-                            <p class="card-text lb-item-text mb-0 col-8">
-                                <strong>£{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
-                            <form class="lb-drop-form col-4" method="POST" action="{% url 'update_bag' item.item_id %}">
-                                {% csrf_token %}
-                                <select class="form-select mx-1 lb-drop-option" name="bag-quantity">
-                                    <option {% if item.quantity == 1 %} selected {% endif %}>1
-                                    </option>
-                                    <option {% if item.quantity == 2 %} selected {% endif %}>2
-                                    </option>
-                                    <option {% if item.quantity == 3 %} selected {% endif %}>3
-                                    </option>
-                                    <option {% if item.quantity == 4 %} selected {% endif %}>4
-                                    </option>
-                                    <option {% if item.quantity == 5 %} selected {% endif %}>5
-                                    </option>
-                                </select>
-                                {% if item.shade %}
-                                <input type="hidden" name="shade" value="{{ item.shade }}">
-                                {% endif %}
-                            </form>
-                            <a class="text-body-secondary lb-hover-underline update-item mt-1"><small>Update</small></a>
-                            <a class="text-body-secondary lb-hover-underline remove-item mt-1"
-                                id="remove_{{ item.item_id }}"
-                                data-product_shade="{{ item.shade }}"><small>Remove</small></a>
-                        </div>
+                <h5 class="mt-4">Payment</h5>
+                <div id="card-element"></div>
+                <div class="text-danger" id="card-errors"></div>
+
+                <div>
+                    <a class="btn lb-submit-order" href="">Submit Order</a>
+                    <a class="btn lb-edit-bag" href="">Edit Bag</a>
+                    <p class="text-body-secondary mx-1">By submitting you agree to your card being charged</p>
+                </div>
+            </form>
+        </div>
+        <div class="col-4">
+            <h5>Order Summary ({{ product_count }})</h5>
+            <div class="col-12 card mb-3">
+                {% for item in bag_items %}
+                <div class="row g-0">
+                    <div class="card-body py-2 px-3">
+                        <p class="card-title m-0">{{ item.product.name }}</p>
+                        {% if item.shade %}
+                        <p class="card-text m-0"><small class="text-body-secondary">Shade: {{ item.shade }}</small>
+                        </p>
+                        {% endif %}
+                        <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
+                            <span><small class="text-body-secondary">Quantity: {{ item.quantity }}</small></span>
+                            <span><strong>£{{ item.product.price | calc_subtotal:item.quantity }}</strong></span>
+                        </p>
                     </div>
                 </div>
+                {% endfor %}
+                <hr>
+                <div class="row g-0">
+                    <div class="card-body py-2 px-3">
+                        <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
+                            <span><small class="text-body-secondary">Subtotal</small></span>
+                            <span><strong>£{{ total | floatformat:2 }}</strong></span>
+                        </p>
+                        <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
+                            <span><small class="text-body-secondary">Delivery</small></span>
+                            <span><strong>£{{ delivery | floatformat:2 }}</strong></span>
+                        </p>
+                    </div>
+                </div>
+                <h5 class="text-body-secondary text-end px-3 pt-2"><strong>Total
+                        £{{ grand_total | floatformat:2 }}</strong>
+                </h5>
             </div>
+
         </div>
-        {% endfor %}
     </div>
 </div>
 

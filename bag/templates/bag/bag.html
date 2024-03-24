@@ -64,8 +64,12 @@
         </div>
         {% endfor %}
         {% if bag_items %}
+
+
         <div class="card col-8 col-xxl-6">
-            <p class="text-center my-1 mx-3">+ Delivery: £{{ delivery|floatformat:2 }}</p>
+            <p class="card-text text-center my-1 mx-3 text-body-secondary">
+                Delivery: <strong>£{{ delivery | floatformat:2 }}</strong>
+            </p>
         </div>
         {% if total_from_discount < 0 %}
         <h5 class="lb-noto m-2">Woohoo! You got {{ discount|floatformat:2 }} off</h5>

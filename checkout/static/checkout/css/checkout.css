@@ -18,3 +18,12 @@
     border-color: #000;
     background-color: #FFECEB;
 }
+
+.stripe-style-input {
+    margin: 5px 0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #FF9C83;
+}

@@ -1,8 +1,8 @@
-var stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);
-var client_secret = $('#id_client_secret').text().slice(1, -1);
-var stripe = Stripe(stripe_public_key);
-var elements = stripe.elements();
-var style = {
+const stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+const clientSecret = $('#id_client_secret').text().slice(1, -1);
+const stripe = Stripe(stripePublicKey);
+const elements = stripe.elements();
+const style = {
     base: {
         color: "#32325d",
         fontFamily: 'Arial, sans-serif',
@@ -18,16 +18,16 @@ var style = {
         iconColor: "#dc3545"
     }
 };
-var card = elements.create('card', {
+const card = elements.create('card', {
     style: style
 });
 card.mount('#card-element');
 
 card.addEventListener('change', function (event) {
-    var errorDiv = document.getElementById('card-errors');
+    const errorDiv = document.getElementById('card-errors');
     if (event.error) {
         console.log(event.error.message)
-        var html = `
+        const html = `
             <span class="icon" role="alert">
                 <i class="fas fa-times"></i>
             </span>
@@ -39,4 +39,46 @@ card.addEventListener('change', function (event) {
     } else {
         errorDiv.textContent = '';
     }
+});
+
+
+// When form is submitted
+const form = document.getElementById('payment-form');
+
+form.addEventListener('submit', function (ev) {
+    console.log('0')
+    ev.preventDefault();
+    console.log('1')
+    card.update({
+        'disabled': true
+    });
+    $('#submit-button').attr('disabled', true);
+    console.log('2')
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,
+        }
+    }).then(function (result) {
+        console.log('3')
+        if (result.error) {
+            console.log('4')
+            const errorDiv = document.getElementById('card-errors');
+            const html = `
+                <span class="icon" role="alert">
+                <i class="fas fa-times"></i>
+                </span>
+                <span>${result.error.message}</span>`;
+            $(errorDiv).html(html);
+            card.update({
+                'disabled': false
+            });
+            $('#submit-button').attr('disabled', false);
+        } else {
+            console.log('5')
+            if (result.paymentIntent.status === 'succeeded') {
+                console.log('6')
+                form.submit();
+            }
+        }
+    });
 });

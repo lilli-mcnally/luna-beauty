@@ -1,4 +1,5 @@
 import uuid
+import decimal
 
 from django.db import models
 from django.db.models import Sum
@@ -29,13 +30,13 @@ class Order(models.Model):
     def update_total(self):
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
         self.delivery_cost = settings.DELIVERY
-        self.grand_total = self.order_total + self.delivery_cost
+        self.grand_total = self.order_total + decimal.Decimal(self.delivery_cost)
         self.save()
 
 
     def save(self, *args, **kwargs):
         if not self.order_number:
-            self.order_number = self_generate_order_number()
+            self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
     
     def __str__(self):

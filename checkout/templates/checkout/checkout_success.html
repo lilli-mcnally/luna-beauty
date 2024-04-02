@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="col-12 mt-2 d-flex align-items-center justify-content-around">
+    <h1 class="col-4 text-center my-3 py-2 lb-title">Order Successful</h1>
+</div>
+<div class="col-12 mt-2 d-flex align-items-center justify-content-around">
+    <p class="text-body-secondary">Order Number: {{ order.order_number }}</p>
+</div>
+<div class="col-12 mt-2 d-flex align-items-center justify-content-around">
+    <p class="text-body-secondary">A confirmation email has been sent to {{ order.email }}</p>
+</div>
+
+<div class="col-12 mt-2 d-flex align-items-center justify-content-around">
+    <div class="col-4">
+        <h5>Order Summary ({{ product_count }})</h5>
+        <div class="col-12 card mb-3">
+            {% for item in bag_items %}
+            <div class="row g-0">
+                <div class="card-body py-2 px-3">
+                    <p class="card-title m-0">{{ item.product.name }}</p>
+                    {% if item.shade %}
+                    <p class="card-text m-0"><small class="text-body-secondary">Shade: {{ item.shade }}</small>
+                    </p>
+                    {% endif %}
+                    <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
+                        <span><small class="text-body-secondary">Quantity: {{ item.quantity }}</small></span>
+                        <span><strong>£</strong></span>
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+            <hr>
+            <div class="row g-0">
+                <div class="card-body py-2 px-3">
+                    <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
+                        <span><small class="text-body-secondary">Subtotal</small></span>
+                        <span><strong>£{{ order.order_total | floatformat:2 }}</strong></span>
+                    </p>
+                    <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
+                        <span><small class="text-body-secondary">Delivery</small></span>
+                        <span><strong>£{{ order.delivery_cost | floatformat:2 }}</strong></span>
+                    </p>
+                    {% if discount|floatformat:2 != 0 %}
+                    <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
+                        <span><small class="text-danger">10% off</small></span>
+                        <span><strong class="text-danger">- £{{ discount|floatformat:2 }}</strong></span>
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+            <h5 class="text-body-secondary text-end px-3 pt-2"><strong>Total
+                    £{{ order.grand_total | floatformat:2 }}</strong>
+            </h5>
+        </div>
+    </div>
+</div>
+{% endblock %}

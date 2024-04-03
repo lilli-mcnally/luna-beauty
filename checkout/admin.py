@@ -14,6 +14,7 @@ class OrderAdmin(admin.ModelAdmin):
         'delivery_cost',
         'order_total',
         'grand_total',
+        'discount',
         )
 
     fields = (
@@ -32,6 +33,7 @@ class OrderAdmin(admin.ModelAdmin):
         'delivery_cost',
         'order_total',
         'grand_total',
+        'discount',
         )
 
     list_display = (
@@ -42,6 +44,7 @@ class OrderAdmin(admin.ModelAdmin):
         'email',
         'delivery_cost',
         'order_total',
+        'discount',
         'grand_total',
     )
 

@@ -74,16 +74,16 @@
                             <span><small class="text-body-secondary">Subtotal</small></span>
                             <span><strong>£{{ total | floatformat:2 }}</strong></span>
                         </p>
-                        <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
-                            <span><small class="text-body-secondary">Delivery</small></span>
-                            <span><strong>£{{ delivery | floatformat:2 }}</strong></span>
-                        </p>
-                        {% if discount|floatformat:2 != 0 %}
+                        {% if discount|floatformat:2 > 0|floatformat:2 %}
                         <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
                             <span><small class="text-danger">10% off</small></span>
                             <span><strong class="text-danger">- £{{ discount|floatformat:2 }}</strong></span>
                         </p>
                         {% endif %}
+                        <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
+                            <span><small class="text-body-secondary">Delivery</small></span>
+                            <span><strong>£{{ delivery | floatformat:2 }}</strong></span>
+                        </p>
                     </div>
                 </div>
                 <h5 class="text-body-secondary text-end px-3 pt-2"><strong>Total

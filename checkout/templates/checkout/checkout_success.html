@@ -4,18 +4,25 @@
 <div class="col-12 mt-2 d-flex align-items-center justify-content-around">
     <h1 class="col-4 text-center my-3 py-2 lb-title">Order Successful</h1>
 </div>
-<div class="col-12 mt-2 d-flex align-items-center justify-content-around">
-    <p class="text-body-secondary">Order Number: {{ order.order_number }}</p>
+<div class="col-12 mt-2 d-flex align-items-center justify-content-around flex-column">
+    <p class="text-body-secondary mb-0">Order Number: {{ order.order_number }}</p>
+    <p class="text-body-secondary">A confirmation email has been sent to {{ order.email }}</p>
 </div>
 <div class="col-12 mt-2 d-flex align-items-center justify-content-around">
-    <p class="text-body-secondary">A confirmation email has been sent to {{ order.email }}</p>
+
 </div>
 
 <div class="col-12 mt-2 d-flex align-items-center justify-content-around">
     <div class="col-4">
         <h5>Order Summary ({{ product_count }})</h5>
         <div class="col-12 card mb-3">
-            {% for item in bag_items %}
+            <div class="card-body py-2 px-3">
+                <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
+                    <span><small class="text-body-secondary">Order Date</small></span>
+                    <span><small class="text-body-secondary">{{ order.date }}</small></span>
+                </p>
+            </div>
+            {% for item in order.lineitems.all %}
             <div class="row g-0">
                 <div class="card-body py-2 px-3">
                     <p class="card-title m-0">{{ item.product.name }}</p>
@@ -25,7 +32,7 @@
                     {% endif %}
                     <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
                         <span><small class="text-body-secondary">Quantity: {{ item.quantity }}</small></span>
-                        <span><strong>£</strong></span>
+                        <span><strong>£{{ item.product.price }}</strong></span>
                     </p>
                 </div>
             </div>
@@ -37,16 +44,16 @@
                         <span><small class="text-body-secondary">Subtotal</small></span>
                         <span><strong>£{{ order.order_total | floatformat:2 }}</strong></span>
                     </p>
-                    <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
-                        <span><small class="text-body-secondary">Delivery</small></span>
-                        <span><strong>£{{ order.delivery_cost | floatformat:2 }}</strong></span>
-                    </p>
-                    {% if discount|floatformat:2 != 0 %}
+                    {% if order.discount|floatformat:2 > 0|floatformat:2 %}
                     <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
                         <span><small class="text-danger">10% off</small></span>
                         <span><strong class="text-danger">- £{{ order.discount|floatformat:2 }}</strong></span>
                     </p>
                     {% endif %}
+                    <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
+                        <span><small class="text-body-secondary">Delivery</small></span>
+                        <span><strong>£{{ order.delivery_cost | floatformat:2 }}</strong></span>
+                    </p>
                 </div>
             </div>
             <h5 class="text-body-secondary text-end px-3 pt-2"><strong>Total
@@ -55,4 +62,51 @@
         </div>
     </div>
 </div>
+
+<div class="col-12 mt-2 d-flex align-items-center justify-content-around">
+    <div class="col-4">
+        <h5>Delivery</h5>
+        <div class="col-12 card mb-3">
+            <div class="row g-0">
+                <div class="card-body py-2 px-3">
+                    <p class="card-text m-0 d-flex justify-content-between">
+                        <span><small>Name</small></span>
+                        <span><small>{{ order.first_name }} {{ order.last_name }}</small></span>
+                    </p>
+                    <p class="card-text m-0 d-flex justify-content-between">
+                        <span><small>Street Address 1</small></span>
+                        <span><small>{{ order.street_address1 }}</small></span>
+                    </p>
+                    {% if order.street_address2 != None %}
+                    <p class="card-text m-0 d-flex justify-content-between">
+                        <span><small>Street Address 2</small></span>
+                        <span><small>{{ order.street_address2 }}</small></span>
+                    </p>
+                    {% endif %}
+                    <p class="card-text m-0 d-flex justify-content-between">
+                        <span><small>Town or City</small></span>
+                        <span><small>{{ order.town_or_city }}</small></span>
+                    </p>
+                    {% if order.county != None %}
+                    <p class="card-text m-0 d-flex justify-content-between">
+                        <span><small>County</small></span>
+                        <span><small>{{ order.county }}</small></span>
+                    </p>
+                    {% endif %}
+                    {% if order.postcode != None %}
+                    <p class="card-text m-0 d-flex justify-content-between">
+                        <span><small>Postcode</small></span>
+                        <span><small>{{ order.postcode }}</small></span>
+                    </p>
+                    {% endif %}
+                    <p class="card-text m-0 d-flex justify-content-between">
+                        <span><small>Country</small></span>
+                        <span><small>{{ order.country }}</small></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

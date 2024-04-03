@@ -46,22 +46,17 @@ card.addEventListener('change', function (event) {
 const form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function (ev) {
-    console.log('0')
     ev.preventDefault();
-    console.log('1')
     card.update({
         'disabled': true
     });
     $('#submit-button').attr('disabled', true);
-    console.log('2')
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
         }
     }).then(function (result) {
-        console.log('3')
         if (result.error) {
-            console.log('4')
             const errorDiv = document.getElementById('card-errors');
             const html = `
                 <span class="icon" role="alert">
@@ -74,9 +69,7 @@ form.addEventListener('submit', function (ev) {
             });
             $('#submit-button').attr('disabled', false);
         } else {
-            console.log('5')
             if (result.paymentIntent.status === 'succeeded') {
-                console.log('6')
                 form.submit();
             }
         }

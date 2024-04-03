@@ -11,6 +11,7 @@ def bag_contents(request):
     discount = 0
     total_from_discount = 0
     bag = request.session.get('bag', {})
+    delivery = Decimal(settings.DELIVERY)
 
     for item_id, item_data in bag.items():
         if isinstance(item_data, int):
@@ -33,16 +34,14 @@ def bag_contents(request):
                     'product': product,
                     'shade': shade,
                 })
-
     if total >= settings.DISCOUNT_THRESHOLD:
         discount = Decimal((total / 100) * settings.DISCOUNT_PERCENTAGE)
-        grand_total = total - discount
+        grand_total = (total - discount) + delivery
     else:
-        grand_total = total
+        grand_total = total + delivery
 
-    total_from_discount = Decimal(settings.DISCOUNT_THRESHOLD - grand_total)
+    total_from_discount = Decimal(settings.DISCOUNT_THRESHOLD - total)
     
-
     context = {
     'bag_items': bag_items,
     'total': total,
@@ -51,7 +50,7 @@ def bag_contents(request):
     'discount_percentage': settings.DISCOUNT_PERCENTAGE,
     'discount': discount,
     'grand_total': grand_total,
-    'delivery': settings.DELIVERY,
+    'delivery': delivery,
     'total_from_discount': total_from_discount,
     }
 

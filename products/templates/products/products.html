@@ -72,6 +72,9 @@
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
+    $(document).ready(function () {
+        $('#lb-back-top').css('display', 'none')
+    })
     $(window).scroll(function () {
         scroll = $(window).scrollTop();
 

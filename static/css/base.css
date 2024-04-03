@@ -129,7 +129,8 @@ header {
 }
 
 .lb-eyeshadow-heading-one,
-.lb-eyeshadow-heading-two {
+.lb-eyeshadow-heading-two,
+.lb-italics {
     font-style: italic;
 }
 

@@ -29,7 +29,27 @@
     border-color: #FF9C83;
 }
 
-/* Stripe CSS */
+#lb-loading {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(255, 236, 235, 0.8);
+    z-index: 9999;
+}
+
+.lb-load-span {
+    margin: 0;
+    height: 100%;
+}
+
+#lb-load-moon {
+    font-size: 100px;
+}
+
+/* ------- Stripe CSS ----- */
 
 /* Variables */
 * {

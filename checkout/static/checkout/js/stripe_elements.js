@@ -52,9 +52,37 @@ form.addEventListener('submit', function (ev) {
     });
     $('#submit-button').attr('disabled', true);
     $('#lb-loading').fadeToggle(100);
+
+    const saveInfo = Boolean($('#id-save-info').attr('checked'));
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
+            billing_details: {
+                first_name: $.trim(form.first_name.value),
+                last_name: $.trim(form.last_name.value),
+                email: $.trim(form.email.value),
+                phone: $.trim(form.phone.value),
+                address: {
+                    street_address1: $.trim(form.street_address1.value),
+                    street_address2: $.trim(form.street_address2.value),
+                    town_or_city: $.trim(form.town_or_city.value),
+                    county: $.trim(form.county.value),
+                    country: $.trim(form.country.value),
+                }
+            }
+        },
+        shipping: {
+            first_name: $.trim(form.first_name.value),
+            last_name: $.trim(form.last_name.value),
+            phone: $.trim(form.phone.value),
+            address: {
+                street_address1: $.trim(form.street_address1.value),
+                street_address2: $.trim(form.street_address2.value),
+                town_or_city: $.trim(form.town_or_city.value),
+                county: $.trim(form.county.value),
+                postcode: $.trim(form.postcode.value),
+                country: $.trim(form.country.value),
+            }
         }
     }).then(function (result) {
         if (result.error) {

@@ -49,6 +49,16 @@
     font-size: 100px;
 }
 
+select,
+select option {
+    color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #6b6d70;
+}
+
 /* ------- Stripe CSS ----- */
 
 /* Variables */

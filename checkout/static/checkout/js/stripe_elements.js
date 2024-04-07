@@ -53,55 +53,67 @@ form.addEventListener('submit', function (ev) {
     $('#submit-button').attr('disabled', true);
     $('#lb-loading').fadeToggle(100);
 
-    const saveInfo = Boolean($('#id-save-info').attr('checked'));
-    stripe.confirmCardPayment(clientSecret, {
-        payment_method: {
-            card: card,
-            billing_details: {
-                first_name: $.trim(form.first_name.value),
-                last_name: $.trim(form.last_name.value),
-                email: $.trim(form.email.value),
+    const saveInfo = Boolean($('#lb-save-details').attr('checked'));
+    const csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    const postData = {
+        'csrfmiddlewaretoken': csrfToken,
+        'client_secret': clientSecret,
+        'safe_info': saveInfo,
+    }
+    const url = '/checkout/cache_checkout_data/';
+
+    $.post(url, postData).done(function () {
+        const firstName = $.trim(form.first_name.value)
+        const lastName = $.trim(form.last_name.value)
+        stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: card,
+                billing_details: {
+                    name: firstName.concat(" ", lastName),
+                    email: $.trim(form.email.value),
+                    address: {
+                        line1: $.trim(form.street_address1.value),
+                        line2: $.trim(form.street_address2.value),
+                        city: $.trim(form.town_or_city.value),
+                        state: $.trim(form.county.value),
+                        country: $.trim(form.country.value),
+                    }
+                }
+            },
+            shipping: {
+                name: firstName.concat(" ", lastName),
                 phone: $.trim(form.phone.value),
                 address: {
-                    street_address1: $.trim(form.street_address1.value),
-                    street_address2: $.trim(form.street_address2.value),
-                    town_or_city: $.trim(form.town_or_city.value),
-                    county: $.trim(form.county.value),
+                    line1: $.trim(form.street_address1.value),
+                    line2: $.trim(form.street_address2.value),
+                    city: $.trim(form.town_or_city.value),
+                    state: $.trim(form.county.value),
                     country: $.trim(form.country.value),
                 }
             }
-        },
-        shipping: {
-            first_name: $.trim(form.first_name.value),
-            last_name: $.trim(form.last_name.value),
-            phone: $.trim(form.phone.value),
-            address: {
-                street_address1: $.trim(form.street_address1.value),
-                street_address2: $.trim(form.street_address2.value),
-                town_or_city: $.trim(form.town_or_city.value),
-                county: $.trim(form.county.value),
-                postcode: $.trim(form.postcode.value),
-                country: $.trim(form.country.value),
+        }).then(function (result) {
+            if (result.error) {
+                const errorDiv = document.getElementById('card-errors');
+                const html = `
+                    <span class="icon" role="alert">
+                    <i class="fas fa-times"></i>
+                    </span>
+                    <span>${result.error.message}</span>`;
+                $(errorDiv).html(html);
+                $('#lb-loading').fadeToggle(100);
+                card.update({
+                    'disabled': false
+                });
+                $('#submit-button').attr('disabled', false);
+            } else {
+                if (result.paymentIntent.status === 'succeeded') {
+                    form.submit();
+                }
             }
-        }
-    }).then(function (result) {
-        if (result.error) {
-            const errorDiv = document.getElementById('card-errors');
-            const html = `
-                <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
-                </span>
-                <span>${result.error.message}</span>`;
-            $(errorDiv).html(html);
-            $('#lb-loading').fadeToggle(100);
-            card.update({
-                'disabled': false
-            });
-            $('#submit-button').attr('disabled', false);
-        } else {
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
-            }
-        }
-    });
+        });
+    }).fail(function () {
+        // Reload page to show the error from Django messages
+        location.reload();
+    })
+
 });

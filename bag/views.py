@@ -19,7 +19,6 @@ def add_to_bag(request, item_id):
     bag = request.session.get('bag', {})
 
     if shade:
-        print(shade)
         if item_id in list(bag.keys()):
             if shade in bag[item_id]['items_by_shade'].keys():
                 bag[item_id]['items_by_shade'][shade] += quantity

@@ -58,18 +58,17 @@ form.addEventListener('submit', function (ev) {
     const postData = {
         'csrfmiddlewaretoken': csrfToken,
         'client_secret': clientSecret,
-        'safe_info': saveInfo,
+        'save_info': saveInfo,
     }
     const url = '/checkout/cache_checkout_data/';
 
     $.post(url, postData).done(function () {
-        const firstName = $.trim(form.first_name.value)
-        const lastName = $.trim(form.last_name.value)
         stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: card,
                 billing_details: {
-                    name: firstName.concat(" ", lastName),
+                    name: $.trim(form.full_name.value),
+                    phone: $.trim(form.phone.value),
                     email: $.trim(form.email.value),
                     address: {
                         line1: $.trim(form.street_address1.value),
@@ -81,7 +80,7 @@ form.addEventListener('submit', function (ev) {
                 }
             },
             shipping: {
-                name: firstName.concat(" ", lastName),
+                name: $.trim(form.full_name.value),
                 phone: $.trim(form.phone.value),
                 address: {
                     line1: $.trim(form.street_address1.value),

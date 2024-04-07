@@ -18,8 +18,7 @@
             <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="py-2">
                 {% csrf_token %}
                 <h5>Details</h5>
-                {{ order_form.first_name | as_crispy_field }}
-                {{ order_form.last_name | as_crispy_field }}
+                {{ order_form.full_name | as_crispy_field }}
                 {{ order_form.email | as_crispy_field }}
                 {{ order_form.phone | as_crispy_field }}
                 {{ order_form.street_address1 | as_crispy_field }}
@@ -41,6 +40,7 @@
                 <h5 class="mt-4">Payment</h5>
                 <div id="card-element"></div>
                 <div class="text-danger" id="card-errors"></div>
+                <input type="hidden" value="{{ client_secret }}" name="client_secret">
 
                 <div class="mt-3">
                     <button class="btn lb-submit-order" type="submit" id="submit-button">Submit Order</button>

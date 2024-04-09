@@ -54,8 +54,6 @@ and then amending my discount using:
 
 `discount = Decimal((total / 100) * settings.DISCOUNT_PERCENTAGE)`
 
-I used the 
-
 #### Stripe
 I initially created my checkout form to have fields for “First Name” and “Last Name”. However, while trying to get my Stripe Webhooks working, I had an error come up to say “Received unknown parameters “first_name”, “last_name”. I realised this was because [Stripe](https://docs.stripe.com/js/elements_object/create_payment_element#payment_element_create-options-business) was expecting one name field to come through, not two. I initially fixed this by using the concatenate function in Javascipt to put the first name and last name fields together. However, I ended up deciding the easier way to fix this issue was to amend the Checkout Model to only have a field for “Name”.
 
@@ -81,3 +79,7 @@ const lbToastList = $('.toast');
         toast.show()
     }
  ```
+
+## Unfixed Bugs
+
+There are no unfixed bugs to my knowledge.

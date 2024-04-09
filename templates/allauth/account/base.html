@@ -1,15 +1,18 @@
 {% extends "base.html" %}
 
 <div class="col-12 mt-2 d-flex align-items-center justify-content-around"></div>
-{% block title %}
-
+{% block head_title %}
 {% endblock %}
 </div>
 
 {% block content %}
 <div class="d-flex my-3 justify-content-center align-items-center">
-    <div class="col-10 d-flex flex-column align-items-center">
+    <div class="col-4 d-flex flex-column align-items-center">
         {% block inner_content %}
+
+        <div class="col-12 mt-2 d-flex align-items-center justify-content-around">
+            {% block lb-title %}{% endblock %}
+        </div>
         {% endblock %}
     </div>
 </div>

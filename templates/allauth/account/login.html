@@ -7,7 +7,7 @@
 
 {% block inner_content %}
 
-<h1>{% trans "Sign In" %}</h1>
+{% block lb-title %}<h1 class="col-4 text-center my-3 py-2 lb-title">{% trans "Sign In" %}</h1>{% endblock %}
 
 {% get_providers as socialaccount_providers %}
 
@@ -42,5 +42,4 @@
   <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
   <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
 </form>
-
 {% endblock %}

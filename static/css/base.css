@@ -300,3 +300,21 @@ header {
 .remove-item {
     right: 16px
 }
+
+/* Allauth */
+
+.lb-underline {
+    color: #000
+}
+
+.lb-buttons {
+    background-color: #FF9C83;
+    color: #000;
+    border: 1px solid #FF9C83;
+    border-radius: 3px;
+}
+
+.lb-buttons:hover {
+    background-color: rgb(255, 255, 255, 0.3);
+    border: 1px solid #000;
+}

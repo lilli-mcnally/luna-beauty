@@ -1,21 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import UserProfile
-from .forms import UserProfileForm
 
 
 def profile(request):
-    template = 'profiles/profile.html'
-    context = {}
-
-    form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
-
-
+    profile = get_object_or_404(UserProfile, user=request.user)
     template = 'profiles/profile.html'
     context = {
-        'form': form,
-        'orders': orders
+        'profile': profile,
     }
 
     return render(request, template, context)

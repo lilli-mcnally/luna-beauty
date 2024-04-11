@@ -270,6 +270,15 @@ header {
     border: 1px solid #FF9C83;
 }
 
+.lb-shade-colour {
+    height: 25px;
+    width: 25px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+
 /* Shopping Bag */
 
 .lb-bd-pink {

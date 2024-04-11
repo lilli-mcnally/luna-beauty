@@ -39,6 +39,17 @@
                         href="{% url 'products' %}"></input>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}"></input>
                 </form>
+                {% if product.shades %}
+                <div class="d-flex flex-row">
+                    {% for shade in product.shades %}
+                    <div class="d-flex justify-content-center align-items-center mx-2 lb-shade-label">
+                        <span class="lb-shade-colour me-1"></span>
+                        <p class="m-0"> {{ shade }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
                 <div class="d-flex align-items-center mt-4">
                     <p class="md-0">{{ product.description }}</p>
                 </div>
@@ -105,7 +116,6 @@
         if ($('#shade-selector')[0].value != "Choose your shade") {
             $('.shade-input-button')[0].value = $('#shade-selector')[0].value;
         } else {
-            // $('.shade-input-button')[0].value = ""
             $('input[name="shade"]').val("");
         }
     });

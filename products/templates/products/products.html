@@ -2,6 +2,10 @@
 {% load static %}
 {% load mathfilters %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="lb-offer-clouds lb-cloud-mini col-12 mt-2 d-flex align-items-center justify-content-around">
     <h3>Spend £{{ discount_threshold }} to get {{ discount_percentage }}% off!</h3>
@@ -78,7 +82,7 @@
                     {% endif %}
                     <div class="d-flex justify-content-center">
                         <a class="btn lb-btn-offer lb-buy-product px-5"
-                            href="{% url 'product_detail' product.id %}">Buy</a>
+                            href="{% url 'product_detail' product.id %}">View product</a>
                     </div>
                 </div>
             </div>

@@ -26,7 +26,6 @@ card.mount('#card-element');
 card.addEventListener('change', function (event) {
     const errorDiv = document.getElementById('card-errors');
     if (event.error) {
-        console.log(event.error.message)
         const html = `
             <span class="icon" role="alert">
                 <i class="fas fa-times"></i>
@@ -53,7 +52,7 @@ form.addEventListener('submit', function (ev) {
     $('#submit-button').attr('disabled', true);
     $('#lb-loading').fadeToggle(100);
 
-    const saveInfo = Boolean($('#lb-save-details').attr('checked'));
+    const saveInfo = Boolean($('#id-save-info').attr('checked'));
     const csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     const postData = {
         'csrfmiddlewaretoken': csrfToken,

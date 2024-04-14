@@ -13,7 +13,7 @@
 
 <div class="d-flex my-3 justify-content-center align-items-center">
     <div class="col-8 d-flex flex-row justify-content-between">
-        <div class="col-7">
+        <div class="col-5">
             <form action="{% url 'profile' %}" method="POST" id="lb-update-profile" class="py-2">
                 <h5>Delivery Information</h5>
                 {% csrf_token %}
@@ -23,9 +23,65 @@
                 </div>
             </form>
         </div>
-        <div class="col-4">
+        <div class="col-6">
             <h5>Order History</h5>
-            {{ orders }}
+            <div class="col-12 card mb-3">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="lb-table-corner"></th>
+                            <th>Order Number</th>
+                            <th>Date</th>
+                            <th class="lb-table-corner">Items</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        {% if not forloop.last %}
+                        <tr>
+                            <td><i class="fa-regular fa-moon me-2"></i></td>
+                            <td>
+                                <a title="{{ order.order_number }}">{{ order.order_number|truncatechars:10 }}</a>
+                                <!-- href="{ url 'order_history', order.order_number }" -->
+                            </td>
+                            <td>{{ order.date }}</td>
+                            <td>
+                                <ul>
+                                    {% for item in order.lineitems.all %}
+                                    <li class="list-unstyled">
+                                        {% if item.product.shade %}
+                                        {{ item.product.shade }}{% endif %}{{ item.product.name }}
+                                        x{{ item.quantity }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr id="lb-last-order">
+                            <td class="lb-table-corner"><i class="fa-regular fa-moon me-2"></i></td>
+                            <td>
+                                <a title="{{ order.order_number }}">{{ order.order_number|truncatechars:10 }}</a>
+                                <!-- href="{ url 'order_history', order.order_number }" -->
+                            </td>
+                            <td>{{ order.date }}</td>
+                            <td class="lb-table-corner">
+                                <ul>
+                                    {% for item in order.lineitems.all %}
+                                    <li class="list-unstyled">
+                                        {% if item.product.shade %}
+                                        {{ item.product.shade }}{% endif %}{{ item.product.name }}
+                                        x{{ item.quantity }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

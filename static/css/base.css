@@ -316,6 +316,17 @@ header {
     right: 16px
 }
 
+.lb-back-button {
+    border: 1px solid #000;
+    position: absolute;
+    left: 100px;
+}
+
+.lb-back-button:hover {
+    color: #FF9C83;
+    border: 1px solid #FF9C83;
+}
+
 /* Allauth */
 
 .lb-underline {
@@ -332,30 +343,4 @@ header {
 .lb-buttons:hover {
     background-color: rgb(255, 255, 255, 0.3);
     border: 1px solid #000;
-}
-
-/* Profile */
-
-.stripe-style-input {
-    margin: 5px 0;
-}
-
-.stripe-style-input:focus {
-    box-shadow: none;
-    border-color: #FF9C83;
-}
-
-select:invalid,
-select option[value=""] {
-    color: #6b6d70;
-}
-
-#id_default_country,
-#id_default_country option:not(:first-child) {
-    color: #000;
-
-}
-
-#id_default_country option:first-child {
-    color: #6b6d70;
 }

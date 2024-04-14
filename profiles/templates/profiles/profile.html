@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'profiles/css/profiles.css' %}">
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
 
@@ -10,15 +10,29 @@
 <div class="col-12 mt-2 d-flex align-items-center justify-content-around">
     <h1 class="col-4 text-center my-3 py-2 lb-title">Profile</h1>
 </div>
-{{ profile }}
 
+<div class="d-flex my-3 justify-content-center align-items-center">
+    <div class="col-8 d-flex flex-row justify-content-between">
+        <div class="col-7">
+            <form action="{% url 'profile' %}" method="POST" id="lb-update-profile" class="py-2">
+                <h5>Delivery Information</h5>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="mt-3">
+                    <button class="btn lb-btn-offer" type="submit" id="submit-button">Update Profile</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4">
+            <h5>Order History</h5>
+            {{ orders }}
+        </div>
+    </div>
+</div>
 {% endblock %}
-<!-- 
+
 {% block postloadjs %}
 {{ block.super }}
-{{ stripe_public_key|json_script:"id_stripe_public_key" }}
-{{ client_secret|json_script:"id_client_secret" }}
-<script src="{% static 'checkout/js/stripe_elements.js' %}"></script> -->
 
-
+<script type="text/javascript" src="{% static 'profiles/js/country.js' %}"></script>
 {% endblock %}

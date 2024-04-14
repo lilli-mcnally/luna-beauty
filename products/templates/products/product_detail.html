@@ -42,8 +42,9 @@
                 {% if product.shades %}
                 <div class="d-flex flex-row">
                     {% for shade in product.shades %}
-                    <div class="d-flex justify-content-center align-items-center mx-2 lb-shade-label">
-                        <span class="lb-shade-colour me-1"></span>
+                    <div id="lb-shade-group"
+                        class="d-flex justify-content-center align-items-center mx-2 lb-shade-label">
+                        <span id="{{ shade | lower }}" class="lb-shade-colour me-1"></span>
                         <p class="m-0"> {{ shade }}</p>
                     </div>
                     {% endfor %}
@@ -55,7 +56,6 @@
                 </div>
                 <a class="btn lb-see-category" href="{% url 'products' %}?category={{ product.category }}">See more in
                     {{ product.category.friendly_name }}</a>
-
             </div>
         </div>
         <div class="row justify-content-end">
@@ -119,5 +119,10 @@
             $('input[name="shade"]').val("");
         }
     });
+    $('.lb-shade-colour').each(function () {
+        let oldShade = (($(this).attr('id')).split(" ").join("-"))
+        let newShade = "lb-" + oldShade
+        $(this).attr('id', newShade)
+    })
 </script>
 {% endblock %}

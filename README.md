@@ -80,6 +80,16 @@ const lbToastList = $('.toast');
     }
  ```
 
+ #### Shade ID
+
+I was able to insert the shade straight into the ID of a span using Django templating, but the ID's still had spaces and capital letters since this is what is in the database. I started by adding `| lower` to the ID which sorted the case issue. Then I used jQuery to iterate through the spans, using the `.each()` function, found on the [jQuery documentation](https://api.jquery.com/each/). Lastly, I was able to use `.split()` and `.join()` to replace the spaces with hyphens. I found out how to do this from a helpful post on [Stack Overflow](https://stackoverflow.com/questions/1983648/replace-spaces-with-dashes-and-make-all-letters-lower-case).
+
+After this, the shade's ID's were showing correctly - `#003 Moon` was now `#003-moon` - however I then encountered another issue. CSS ID's can't start with a number, so I moved the code I'd written into a variable called `oldShade`. Then, I created a new variable called `newShade` and set it equal to `"lb-" + oldShade` which fixed this issue.
+
+#### Shades Preview
+
+I wanted to add a couple of the shade to the product page, and then a third circle with the number of how many more shades availble there are. I tried to use `forloop.counter` in Django templating - as suggested in a [Stack Overflow](https://stackoverflow.com/questions/8659560/django-template-increment-the-value-of-a-variable) post, but I couldn't see an easy way to set a variable, then use `+=1` while iterating through the shades. Instead, I used `{% if forloop.first or forloop.last %}` to show two example shades. I also found a very interesting page on [Pypi](https://pypi.org/project/django-mathfilters/) that explained Django Math Filters. I was able to use Math Filters to subtract 2 from the length of the shades array, to show the user how many more shades Luna Beauty offers in for that product.
+
 ## Unfixed Bugs
 
 There are no unfixed bugs to my knowledge.

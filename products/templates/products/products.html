@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load mathfilters %}
 
 {% block content %}
 <div class="lb-offer-clouds lb-cloud-mini col-12 mt-2 d-flex align-items-center justify-content-around">
@@ -51,11 +52,30 @@
                         <img src="{{ product.image.url }}" class="card-img-top h-100 lb-images border-rad"
                             alt="{{ product.name }}">
                     </div>
-                    <div class="card-body">
+                    <div class="card-body d-flex justify-content-end flex-column">
                         <h5 class="card-title text-center">{{ product.name }}</h5>
                         <p class="card-text text-center"><strong>£{{ product.price }}</strong> | {{ product.rating }} <i
                                 class="fa-solid fa-star"></i>
                     </div>
+                    {% if product.shades %}
+                    <div class="d-flex flex-row justify-content-center align-items-center mb-3">
+                        {% for shade in product.shades %}
+                        {% if forloop.first or forloop.last %}
+                        <div id="lb-shade-group"
+                            class="d-flex justify-content-center align-items-center mx-2 lb-shade-label">
+                            <span id="{{ shade | lower }}" class="lb-shade-colour me-1"></span>
+
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                        {% if product.shades|length > 2 %}
+                        <span class="lb-shade-empty p-0 d-flex justify-content-center align-items-center">
+                            <p class="d-flex justify-content-center align-items-center m-0">
+                                +{{ product.shades|length|sub:2 }}</p>
+                        </span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
                     <div class="d-flex justify-content-center">
                         <a class="btn lb-btn-offer lb-buy-product px-5"
                             href="{% url 'product_detail' product.id %}">Buy</a>
@@ -112,7 +132,12 @@
 
             window.location.replace(currentUrl);
         }
-    })
+    });
+    $('.lb-shade-colour').each(function () {
+        let oldShade = (($(this).attr('id')).split(" ").join("-"))
+        let newShade = "lb-" + oldShade
+        $(this).attr('id', newShade)
+    });
 </script>
 
 {% endblock %}

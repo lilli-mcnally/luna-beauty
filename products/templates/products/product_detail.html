@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="lb-offer-clouds lb-cloud-mini col-12 mt-2 d-flex align-items-center justify-content-around">
     <h3>Spend £{{ discount_threshold }} to get {{ discount_percentage }}% off!</h3>
 </div>
-<div class="row my-3 justify-content-center">
+<div class="row my-3 mx-0 justify-content-center">
     <div class="col-10">
         <a class="btn lb-see-category m-2" href="{% url 'products' %}"><i class="fa-solid fa-angles-left"></i> Back to
             all
@@ -83,11 +87,11 @@
 <div class="lb-eyeshadow-promo lb-cloud-mini col-12 mt-2 d-flex align-items-center justify-content-around">
     <h3 class="text-white">You might also like...</h3>
 </div>
-<div class="row my-2 justify-content-center">
+<div class="row my-2 mx-0 justify-content-center">
     <div class="col-10">
         <div class="row row-cols-1 row-cols-md-4 g-4">
             {% for s in similar_products %}
-            <div class="col">
+            <div>
                 <div class="card h-100 p-2 border-rad">
                     <div class="lb-product-image d-flex justify-content-center">
                         <img src="{{ s.image.url }}" class="card-img-top h-100 lb-images" alt="{{ s.name }}">

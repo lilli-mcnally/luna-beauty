@@ -67,9 +67,10 @@
 
     {% block page_header %}
     {% endblock %}
-
-    {% block content %}
-    {% endblock %}
+    <div class="lb-content">
+        {% block content %}
+        {% endblock %}
+    </div>
 
     {% block postloadjs %}
     <script type="text/javascript">

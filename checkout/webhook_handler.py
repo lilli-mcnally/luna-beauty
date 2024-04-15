@@ -2,6 +2,7 @@ from django.http import HttpResponse
 
 from .models import Order, OrderLineItem
 from products.models import Product
+from profiles.models import UserProfile
 
 import json
 import time
@@ -35,6 +36,20 @@ class StripeWH_Handler:
             if value == "":
                 shipping_details.address[field] = None
 
+        profile = None
+        username = intent.metadata.username
+        if username != 'AnonymousUser':
+            profile = UserProfile.objects.get(user__username=username)
+            if save_info:
+                profile.default_phone=shipping_details.phone
+                profile.default_street_address1=shipping_details.address.line1
+                profile.default_street_address2=shipping_details.address.line2
+                profile.default_town_or_city=shipping_details.address.city
+                profile.default_county=shipping_details.address.state
+                profile.default_postcode=shipping_details.address.postal_code
+                profile.default_country=shipping_details.address.country
+                profile.save()
+
         order_exists = False
         attempt = 1
 
@@ -42,14 +57,15 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,
+                    user_profile=profile,
                     email__iexact=billing_details.email,
                     phone__iexact=shipping_details.phone,
                     street_address1__iexact=shipping_details.address.line1,
                     street_address2__iexact=shipping_details.address.line2,
                     town_or_city__iexact=shipping_details.address.city,
                     county__iexact=shipping_details.address.state,
-                    country__iexact=shipping_details.address.country,
                     postcode__iexact=shipping_details.address.postal_code,
+                    country__iexact=shipping_details.address.country,
                     grand_total=grand_total,
                     original_bag=bag,
                     stripe_pid=pid,

@@ -1,0 +1,1 @@
+Thank you for your order! Your Order Number is {{ order.order_number }}

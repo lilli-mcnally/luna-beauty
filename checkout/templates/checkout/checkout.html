@@ -28,7 +28,7 @@
                 {{ order_form.postcode | as_crispy_field }}
                 {{ order_form.country | as_crispy_field }}
                 {% if user.is_authenticated %}
-                <input type="checkbox" id="id-save-info" name="id-save-info" checked>
+                <input type="checkbox" id="id-save-info" name="save-info" checked>
                 <label for="id-save-info">Save details to profile</label>
                 {% else %}
                 <label for="id-save-info">

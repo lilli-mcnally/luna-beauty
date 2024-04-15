@@ -8,6 +8,7 @@ from django_countries.fields import CountryField
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
+    default_name = models.CharField(max_length=100, null=True, blank=True)
     default_phone = models.CharField(max_length=100, null=True, blank=True)
     default_street_address1 = models.CharField(max_length=100, null=True, blank=True)
     default_street_address2 = models.CharField(max_length=100, null=True, blank=True)

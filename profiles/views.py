@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 
 from .models import UserProfile
@@ -28,10 +28,10 @@ def profile(request):
     return render(request, template, context)
 
 def order_history(request, order_number):
-    order = get_object_or_404(Order, order_number)
+    order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
-        f'Order { order.number }: You are currently viewing a past order. A confirmation email was sent to you on { order.date }'
+        f'Order { order.order_number }: You are currently viewing a past order. A confirmation email was sent to you on { order.date }'
     ))
 
     template = 'checkout/checkout_success.html'

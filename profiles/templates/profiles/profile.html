@@ -26,11 +26,10 @@
         <div class="col-6">
             <h5>Order History</h5>
             <div class="col-12 card mb-3">
-                <table class="table">
+                <table class="table text-center">
                     <thead>
                         <tr>
-                            <th class="lb-table-corner"></th>
-                            <th>Order Number</th>
+                            <th class="lb-table-corner">Order Number</th>
                             <th>Date</th>
                             <th class="lb-table-corner">Items</th>
                         </tr>
@@ -39,10 +38,9 @@
                         {% for order in orders %}
                         {% if not forloop.last %}
                         <tr>
-                            <td><i class="fa-regular fa-moon me-2"></i></td>
                             <td>
-                                <a title="{{ order.order_number }}">{{ order.order_number|truncatechars:10 }}</a>
-                                <!-- href="{ url 'order_history', order.order_number }" -->
+                                <a href="{% url 'order_history' order.order_number %}"
+                                    title="{{ order.order_number }}">{{ order.order_number|truncatechars:10 }}</a>
                             </td>
                             <td>{{ order.date }}</td>
                             <td>
@@ -59,10 +57,9 @@
                         </tr>
                         {% else %}
                         <tr id="lb-last-order">
-                            <td class="lb-table-corner"><i class="fa-regular fa-moon me-2"></i></td>
                             <td>
-                                <a title="{{ order.order_number }}">{{ order.order_number|truncatechars:10 }}</a>
-                                <!-- href="{ url 'order_history', order.order_number }" -->
+                                <a href="{% url 'order_history' order.order_number %}"
+                                    title="{{ order.order_number }}">{{ order.order_number|truncatechars:10 }}</a>
                             </td>
                             <td>{{ order.date }}</td>
                             <td class="lb-table-corner">

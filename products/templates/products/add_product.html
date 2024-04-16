@@ -13,8 +13,8 @@
             <form method="POST" action="{% url 'add_product' %}" class="form my-3" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <button class="btn lb-submit-order" type="submit">Submit</button>
-                <a class="btn lb-edit-bag" href="{% url 'products' %}">Cancel</a>
+                <button class="btn lb-submit-order mt-2" type="submit">Submit</button>
+                <a class="btn lb-edit-bag mt-2" href="{% url 'products' %}">Cancel</a>
             </form>
         </div>
     </div>

@@ -344,3 +344,26 @@ header {
     background-color: rgb(255, 255, 255, 0.3);
     border: 1px solid #000;
 }
+
+/* Product Admin */
+
+.lb-submit-order {
+    background-color: #FF9C83;
+    border-color: #FF9C83;
+}
+
+.lb-submit-order:hover {
+    background-color: #FF9C83;
+    border-color: #000;
+}
+
+.lb-edit-bag {
+    background-color: #FFECEB;
+    border-color: #FFECEB;
+
+}
+
+.lb-edit-bag:hover {
+    border-color: #000;
+    background-color: #FFECEB;
+}

@@ -85,9 +85,16 @@
                         {% endif %}
                     </div>
                     {% endif %}
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
                         <a class="btn lb-btn-offer lb-buy-product px-5"
                             href="{% url 'product_detail' product.id %}">View product</a>
+
+                        {% if request.user.is_superuser %}
+                        <a class="btn lb-btn-offer lb-buy-product px-5 mt-2"
+                            href="{% url 'edit_product' product.id %}">Edit product</a>
+                        <a class="btn lb-btn-offer lb-buy-product px-5 mt-2"
+                            href="{% url 'delete_product' product.id %}">Delete product</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

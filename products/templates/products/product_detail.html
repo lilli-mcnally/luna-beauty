@@ -47,6 +47,12 @@
                         href="{% url 'products' %}"></input>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}"></input>
                 </form>
+                {% if request.user.is_superuser %}
+                <a class="btn lb-add-bag px-1 py-2 mx-1 mb-3" href="{% url 'edit_product' product.id %}">Edit
+                    product</a>
+                <a class="btn lb-add-bag px-1 py-2 mx-1 mb-3" href="{% url 'delete_product' product.id %}">Delete
+                    product</a>
+                {% endif %}
                 {% if product.shades %}
                 <div class="d-flex flex-row">
                     {% for shade in product.shades %}

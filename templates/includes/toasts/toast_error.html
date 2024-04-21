@@ -1,11 +1,12 @@
-<div class="toast custom-toast border" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
     <div class="toast-header toast-capper text-bg-danger">
-        <img class="rounded me-2">
-        <strong class="me-auto">Error</strong>
+        <strong class="me-auto"><i class="fa-solid fa-circle-xmark"></i> Error</strong>
         <button type="button" class="btn-close" data-bs-dismiss="toast" data-dismiss="toast"
             aria-label="Close"></button>
     </div>
-    <div class="toast-body">
-        {{ message }}
+    <div class="d-flex flex-row p-2">
+        <div id="success-other" class="toast-body">
+            {{ message }}
+        </div>
     </div>
 </div>

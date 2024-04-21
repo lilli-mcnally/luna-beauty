@@ -1,11 +1,12 @@
-<div class="toast custom-toast border" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
     <div class="toast-header toast-capper text-bg-warning">
-        <img class="rounded me-2">
-        <strong class="me-auto">Warning</strong>
+        <strong class="me-auto"><i class="fa-solid fa-triangle-exclamation"></i> Warning</strong>
         <button type="button" class="btn-close" data-bs-dismiss="toast" data-dismiss="toast"
             aria-label="Close"></button>
     </div>
-    <div class="toast-body">
-        {{ message }}
+    <div class="d-flex flex-row p-2">
+        <div id="success-other" class="toast-body">
+            {{ message }}
+        </div>
     </div>
 </div>

@@ -75,7 +75,7 @@
                 Delivery: <strong>£{{ delivery | floatformat:2 }}</strong>
             </p>
         </div>
-        {% if total_from_discount < 0 %}
+        {% if total_from_discount <= 0 %}
         <h5 class="m-2">Woohoo! You got £{{ discount|floatformat:2 }} off!</h5>
         {% else %}
         <h5 class="m-2">Spend £{{ total_from_discount }} to get {{ discount_percentage }}%

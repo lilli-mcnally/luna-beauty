@@ -9,6 +9,7 @@ def bag_contents(request):
     total = 0
     product_count = 0
     discount = 0
+    discounted_total = 0
     total_from_discount = 0
     bag = request.session.get('bag', {})
     delivery = Decimal(settings.DELIVERY)
@@ -36,8 +37,10 @@ def bag_contents(request):
                 })
     if total >= settings.DISCOUNT_THRESHOLD:
         discount = Decimal((total / 100) * settings.DISCOUNT_PERCENTAGE)
-        grand_total = (total - discount) + delivery
+        discounted_total = total - discount
+        grand_total = discounted_total + delivery
     else:
+        discounted_total = total
         grand_total = total + delivery
 
     total_from_discount = Decimal(settings.DISCOUNT_THRESHOLD - total)
@@ -49,6 +52,7 @@ def bag_contents(request):
     'discount_threshold': settings.DISCOUNT_THRESHOLD,
     'discount_percentage': settings.DISCOUNT_PERCENTAGE,
     'discount': discount,
+    'discounted_total': discounted_total,
     'grand_total': grand_total,
     'delivery': delivery,
     'total_from_discount': total_from_discount,

@@ -82,7 +82,10 @@
 
         <div class="card col-8 col-xxl-6">
             <p class="card-text text-center my-1 mx-3 text-body-secondary">
-                Delivery: <strong>£{{ delivery | floatformat:2 }}</strong>
+                Delivery cost: <strong>£{{ delivery | floatformat:2 }}</strong>
+            </p>
+            <p class="card-text text-center my-1 mx-3 text-body-secondary"> <i class="fa-solid fa-truck"></i>
+                Orders take 2-3 working days to be delivered
             </p>
         </div>
         {% if total_from_discount <= 0 %}

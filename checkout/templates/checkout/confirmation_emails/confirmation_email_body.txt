@@ -19,15 +19,15 @@ Your order will be sent to:
     {% if item.shade %}
     Shade: {{ item.shade }}
     {% endif %}
-    {{ item.quantity }} x £{{ item.product.price }}
+    {{ item.quantity }} x £{{ item.product.price|floatformat:2 }}
 {% endfor %}
 
 
-Subtotal: £{{ order.order_total }}
-Discount: £{{ order.discount }}
-Delivery: £{{ order.delivery_cost }}
+Subtotal: £{{ order.order_total|floatformat:2 }}
+Discount: £{{ order.discount|floatformat:2 }}
+Delivery: £{{ order.delivery_cost|floatformat:2 }}
 ----------------------------------
-Total: £{{ order.grand_total }}
+Total: £{{ order.grand_total|floatformat:2 }}
 
 Got a questions? Not recieved your order? Get in touch at {{ contact_email }}
 

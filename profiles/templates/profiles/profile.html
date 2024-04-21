@@ -25,6 +25,7 @@
         </div>
         <div class="col-6">
             <h5>Order History</h5>
+            {% if orders %}
             <div class="col-12 card mb-3">
                 <table class="table text-center">
                     <thead>
@@ -79,6 +80,9 @@
                     </tbody>
                 </table>
             </div>
+            {% else %}
+            <p class="text-body-secondary">You have no previous orders</p>
+            {% endif %}
         </div>
     </div>
 </div>

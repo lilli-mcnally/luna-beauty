@@ -9,7 +9,11 @@
     <div class="d-flex flex-row p-2">
         {% for item in bag_items %}
         {% if item.product.name in message.message %}
+        {% if item.product.image %}
         <img class="h-100 col-4" src="{{ item.product.image.url }}">
+        {% else %}
+        <img class="h-100 col-4" src="{{ MEDIA_URL }}image-preview.webp">
+        {% endif %}
         <div id="success-bag" class="col-8 p-3 d-flex flex-column justify-content-center">
             <p class="card-title">{{ message }}</p>
         </div>

@@ -50,7 +50,7 @@
                     </li>
                     {% if request.user.is_superuser %}
                     <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
-                        <a class="nav-link" href="#">Manage Products</a>
+                        <a class="nav-link" href="{% url 'add_product' %}">Manage Products</a>
                     </li>
                     {% endif %}
                     {% else %}

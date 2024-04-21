@@ -17,7 +17,11 @@
         <div class="col-8 col-xxl-6 card mb-3">
             <div class="row g-0">
                 <div class="col-md-3 d-flex align-items-center justify-content-center bg-white lb-bd-pink">
+                    {% if item.product.image %}
                     <img src="{{ item.product.image.url }}" class="img-fluid rounded-start">
+                    {% else %}
+                    <img src="{{ MEDIA_URL }}image-preview.webp" class="img-fluid rounded-start">
+                    {% endif %}
                 </div>
                 <div class="col-md-9">
                     <div class="card-body">

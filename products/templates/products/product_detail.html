@@ -17,7 +17,11 @@
             Up</a>
         <div class="row border-rad">
             <div class="lb-detail-image d-flex justify-content-center align-items-center col-4">
+                {% if product.image %}
                 <img src="{{ product.image.url }}" class="card-img-top border-rad" alt="{{ product.name }}">
+                {% else %}
+                <img src="{{ MEDIA_URL }}image-preview.webp" class="card-img-top border-rad" alt="{{ product.name }}">
+                {% endif %}
             </div>
             <div class="card card-body p-4 col-8 align-items-center">
                 <h3 class="lb-noto lb-text-title text-center m-2">
@@ -94,7 +98,12 @@
             <div>
                 <div class="card h-100 p-2 border-rad">
                     <div class="lb-product-image d-flex justify-content-center">
+                        {% if s.image %}
                         <img src="{{ s.image.url }}" class="card-img-top h-100 lb-images" alt="{{ s.name }}">
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}image-preview.webp" class="card-img-top h-100 lb-images"
+                            alt="{{ s.name }}">
+                        {% endif %}
                     </div>
                     <div class="card-body">
                         <h5 class="card-title text-center">{{ s.name }}</h5>

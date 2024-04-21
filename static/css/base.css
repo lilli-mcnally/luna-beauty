@@ -367,3 +367,40 @@ header {
     border-color: #000;
     background-color: #FFECEB;
 }
+
+/* Media Queries */
+
+@media (min-width: 2000px) {
+
+    .btn,
+    input,
+    p,
+    li,
+    .form-control {
+        font-size: 20px;
+    }
+
+    i {
+        font-size: 22px;
+    }
+
+    h5,
+    .nav-link,
+    .nav-link i {
+        font-size: 28px;
+    }
+
+    .lb-eyeshadow-heading-one,
+    .lb-eyeshadow-heading-two i {
+        font-size: 50px;
+    }
+
+}
+
+
+@media (max-width: 1200px) {
+    .lb-eyeshadow-heading-one {
+        font-size: 30px;
+    }
+
+}

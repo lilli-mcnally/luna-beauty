@@ -28,8 +28,10 @@
                 {{ order_form.postcode | as_crispy_field }}
                 {{ order_form.country | as_crispy_field }}
                 {% if user.is_authenticated %}
-                <input type="checkbox" id="id-save-info" name="save-info" checked>
-                <label for="id-save-info">Save details to profile</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
+                    <label class="form-check-label" for="id-save-info">Save details to profile</label>
+                </div>
                 {% else %}
                 <label for="id-save-info">
                     <a href="{% url 'account_login' %}">Sign In</a> or

@@ -40,7 +40,6 @@ card.addEventListener('change', function (event) {
     }
 });
 
-
 // When form is submitted
 const form = document.getElementById('payment-form');
 

@@ -52,6 +52,16 @@
                                     </option>
                                     <option {% if item.quantity == 5 %} selected {% endif %}>5
                                     </option>
+                                    <option {% if item.quantity == 6 %} selected {% endif %}>6
+                                    </option>
+                                    <option {% if item.quantity == 7 %} selected {% endif %}>7
+                                    </option>
+                                    <option {% if item.quantity == 8 %} selected {% endif %}>8
+                                    </option>
+                                    <option {% if item.quantity == 9 %} selected {% endif %}>9
+                                    </option>
+                                    <option {% if item.quantity == 10 %} selected {% endif %}>10
+                                    </option>
                                 </select>
                                 {% if item.shade %}
                                 <input type="hidden" name="shade" value="{{ item.shade }}">

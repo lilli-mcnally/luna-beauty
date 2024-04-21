@@ -21,18 +21,26 @@ def add_to_bag(request, item_id):
     if shade:
         if item_id in list(bag.keys()):
             if shade in bag[item_id]['items_by_shade'].keys():
-                bag[item_id]['items_by_shade'][shade] += quantity
-                messages.success(request, f'{product.name} - {shade}  was added to your bag')
+                if bag[item_id]['items_by_shade'][shade] >= 10:
+                    messages.error(request, f'Only 10 of the same item can be purchase in one order.')
+                    return redirect(redirect_url)
+                else:
+                    bag[item_id]['items_by_shade'][shade] += quantity
+                    messages.success(request, f'{product.name} - {shade}  was added to your bag')
             else:
                 bag[item_id]['items_by_shade'][shade] = quantity
                 messages.success(request, f'{product.name} - {shade}  was added to your bag')
         else:
-            bag[item_id] = {'items_by_shade': {shade: quantity}}
-            messages.success(request, f'{product.name} - {shade}  was added to your bag')
+                bag[item_id] = {'items_by_shade': {shade: quantity}}
+                messages.success(request, f'{product.name} - {shade}  was added to your bag')
     else:
         if item_id in list(bag.keys()):
-            bag[item_id] += quantity
-            messages.success(request, f'{product.name} was added to your bag')
+            if bag[item_id] >= 10:
+                messages.error(request, f'Only 10 of the same item can be purchase in one order.')
+                return redirect(redirect_url)
+            else:
+                bag[item_id] += quantity
+                messages.success(request, f'{product.name} was added to your bag')
         else: 
             bag[item_id] = quantity
             messages.success(request, f'{product.name} was added to your bag')

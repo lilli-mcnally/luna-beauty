@@ -3,53 +3,54 @@
 
 {% block content %}
 <div class="mt-2">
-    <div class="lb-eyeshadow-container d-flex col-12">
-        <div class="lb-eyeshadow-face flex-fill"></div>
-        <div class="lb-eyeshadow-promo d-flex flex-column col-3 py-3 px-3">
+    <div class="lb-eyeshadow-container d-flex col-12 justify-content-center">
+        <div class="lb-eyeshadow-face flex-fill d-none d-lg-block"></div>
+        <div class="lb-eyeshadow-promo d-flex flex-column col-lg-3 col-sm-6 col-12 px-3 py-3">
             <div>
-                <h3 class="lb-eyeshadow-heading-one">
+                <h3 class="lb-eyeshadow-heading-one ms-md-4 text-center text-sm-start">
                     Find your
                 </h3>
-                <h3 class="lb-noto text-end lb-eyeshadow-heading-two">Flawless</h3>
+                <h3 class="lb-noto text-sm-end lb-eyeshadow-heading-two me-md-4 text-center">Flawless</h3>
             </div>
-            <div class="align-self-center mt-5 mx-3 text-center">
+            <div class="align-self-center mt-sm-5 mt-3 mx-3 text-center">
                 <p>From classic neutrals to rich spectrums, there's a shade to suit every skin tone</p>
             </div>
-            <button class="btn lb-btn-peach align-self-center mt-5">Shop Eyeshadow <i
+            <button class="btn lb-btn-peach align-self-center mt-sm-5 mt-3">Shop Eyeshadow <i
                     class="fa-solid fa-angles-right"></i></button>
         </div>
-        <div class="lb-eyeshadow-art flex-fill"></div>
+        <div class="lb-eyeshadow-art flex-fill d-none d-sm-block"></div>
     </div>
 
     <div class="lb-offer-clouds col-12 mt-2 d-flex align-items-center">
-        <div class="col-12 d-flex justify-content-around">
-            <button class="btn lb-btn-offer">Face <i class="fa-solid fa-angles-right"></i></button>
-            <button class="btn lb-btn-offer">Eyes <i class="fa-solid fa-angles-right"></i></button>
+        <div class="col-12 d-flex justify-content-around md-flex-column">
+            <button class="btn lb-btn-offer d-none d-md-block">Face <i class="fa-solid fa-angles-right"></i></button>
+            <button class="btn lb-btn-offer d-none d-lg-block">Eyes <i class="fa-solid fa-angles-right"></i></button>
             <h3>Spend £{{ discount_threshold }} to get {{ discount_percentage }}% off!</h3>
-            <button class="btn lb-btn-offer">Lips <i class="fa-solid fa-angles-right"></i></button>
-            <button class="btn lb-btn-offer">Cheeks <i class="fa-solid fa-angles-right"></i></button>
+            <button class="btn lb-btn-offer d-none d-md-block">Lips <i class="fa-solid fa-angles-right"></i></button>
+            <button class="btn lb-btn-offer d-none d-lg-block">Cheeks <i class="fa-solid fa-angles-right"></i></button>
         </div>
     </div>
 </div>
 
 <div class="d-flex my-2 justify-content-center">
-    <div class="col-sm-12 col-xl-10 p-xl-0 p-5">
-        <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
+    <div class="col-sm-8 col-md-8 col-xl-10 p-xl-0 px-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
             <div class="col p-md">
                 <div class="card h-100 border-rad d-flex flex-column justify-content-around" id="mac-promo">
                     <div class="d-flex flex-column mx-3 text-center">
-                        <h5 class="text-peach">MAC Matte Lipstick</h5>
-                        <p class="text-white">Colour-rich, classic and with a full-matte
+                        <h5 class="text-peach d-md-none">SHOP MAC</h5>
+                        <p class="text-white d-md-none">Shop the MAC look with bestselling Studio Fix foundation,
+                            brand-new Mineralize Blush, and our favourite Matte Lipstick</p>
+                        <h5 class="text-peach d-none d-md-block">MAC Matte Lipstick</h5>
+                        <p class="text-white d-none d-md-block">Colour-rich, classic and with a full-matte
                             finish </p>
-                        <hr class="text-white">
-                        <h5 class="text-peach">MAC Mineralize Blush</h5>
-                        <p class="text-white">Natural-looking, radiant colour </p>
-                        <hr class="text-white">
-                        <h5 class="text-peach">MAC Studio Fix</h5>
-                        <p class="text-white">Breathable, long-wearing and streak-free finish</p>
+                        <hr class="text-white d-none d-md-block">
+                        <h5 class="text-peach d-none d-md-block">MAC Mineralize Blush</h5>
+                        <p class="text-white d-none d-md-block">Natural-looking, radiant colour </p>
+                        <hr class="text-white d-none d-md-block">
+                        <h5 class="text-peach d-none d-md-block">MAC Studio Fix</h5>
+                        <p class="text-white d-none d-md-block">Breathable, long-wearing and streak-free finish</p>
                     </div>
-                    <a class="btn lb-btn-peach align-self-center" href="{% url 'products' %}">Shop Make Up <i
-                            class="fa-solid fa-angles-right"></i></a>
                 </div>
             </div>
             {% for product in products %}
@@ -76,11 +77,11 @@
     </div>
 </div>
 
-<div class="lb-eyeshadow-promo col-12 d-flex align-items-center mt-2 p-4 text-white">
-    <div class="col-12 d-flex flex-row justify-content-around">
+<div class="lb-eyeshadow-promo col-12 d-flex align-items-center mt-2 p-md-4 p-2 text-white">
+    <div class="col-12 d-flex justify-content-around align-items-center flex-column flex-sm-row">
         <div class="text-center col-4">
             <h3 class="lb-eyeshadow-heading-two text-peach"><i class="fa-solid fa-award"></i></h3>
-            <h3 class=" lb-noto lb-eyeshadow-heading-one">Quality brands</h3>
+            <h3 class=" lb-noto lb-eyeshadow-heading-one">Best brands</h3>
         </div>
         <div class="text-center col-4">
             <h3 class="lb-eyeshadow-heading-two text-peach"><i class="fa-solid fa-truck-fast"></i></h3>
@@ -88,7 +89,7 @@
         </div>
         <div class="text-center col-4">
             <h3 class="lb-eyeshadow-heading-two text-peach"><i class="fa-solid fa-money-bill-1-wave"></i></i></h3>
-            <h3 class=" lb-noto lb-eyeshadow-heading-one">Great prices</h3>
+            <h3 class="lb-noto lb-eyeshadow-heading-one">Great prices</h3>
         </div>
     </div>
 </div>

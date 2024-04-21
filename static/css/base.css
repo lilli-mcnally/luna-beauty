@@ -135,7 +135,6 @@ header {
 /* Eyeshadow Promotion */
 
 .lb-eyeshadow-container {
-    height: 400px;
     color: #fff;
 }
 
@@ -172,7 +171,7 @@ header {
 .lb-offer-clouds {
     background: url(/media/home-clouds.webp) no-repeat center center;
     background-size: cover;
-    height: 150px;
+    height: 100px;
 }
 
 .lb-btn-offer {
@@ -394,13 +393,19 @@ header {
     .lb-eyeshadow-heading-two i {
         font-size: 50px;
     }
-
 }
 
 
 @media (max-width: 1200px) {
     .lb-eyeshadow-heading-one {
         font-size: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .lb-eyeshadow-heading-one {
+        font-size: 24px;
     }
 
 }

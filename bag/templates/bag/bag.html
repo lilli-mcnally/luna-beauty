@@ -95,7 +95,7 @@
         <h5 class="m-2">Spend £{{ total_from_discount }} to get {{ discount_percentage }}%
             off!</h5>
         {% endif %}
-        <h4 class="lb-noto lb-eyeshadow-heading-two m-2" id="lb-total">Total: £{{ grand_total|floatformat:2 }}
+        <h4 class="lb-noto lb-eyeshadow-heading-two m-0 m-sm-2" id="lb-total">Total: £{{ grand_total|floatformat:2 }}
         </h4>
         <a class="btn lb-add-bag px-1 py-2 mx-1 my-3" href="{% url 'checkout' %}">Checkout</a>
         {% else %}

@@ -125,7 +125,7 @@ header {
 .lb-btn-peach {
     background-color: #FF9C83;
     border-radius: 3px;
-    border: 1px solid #000;
+    border: 1px solid #FF9C83;
     color: #000;
 }
 
@@ -181,6 +181,7 @@ header {
 .lb-btn-offer {
     background-color: #FF9C83;
     width: 150px;
+    border-radius: 3px;
 }
 
 .lb-btn-offer:hover {
@@ -276,6 +277,7 @@ header {
     align-items: center;
     justify-content: center;
     width: 300px;
+    border-radius: 3px;
 }
 
 .lb-add-bag:hover {
@@ -377,6 +379,7 @@ header {
 .lb-submit-order {
     background-color: #FF9C83;
     border-color: #FF9C83;
+    border-radius: 3px;
 }
 
 .lb-submit-order:hover {
@@ -387,7 +390,7 @@ header {
 .lb-edit-bag {
     background-color: #FFECEB;
     border-color: #FFECEB;
-
+    border-radius: 3px;
 }
 
 .lb-edit-bag:hover {

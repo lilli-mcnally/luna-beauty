@@ -19,7 +19,7 @@
     <div class="d-flex justify-content-center">
         <a class="btn col-1 lb-btn-offer px-2" id="lb-back-top">Back to top</a>
     </div>
-    <div class="col-8">
+    <div class="col-10 col-xxl-8">
         <div class="row my-2">
             <div class="col d-flex justify-content-between align-items-center">
                 <select id="sort-selector" class="form-select lb-products-dropdown m-0">
@@ -48,7 +48,7 @@
                 <p class="lb-products-dropdown text-end m-0">{{ products | length }} results</p>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
             {% for product in products %}
             <div class="col">
                 <div class="card h-100 p-2 border-rad">
@@ -86,13 +86,13 @@
                     </div>
                     {% endif %}
                     <div class="d-flex justify-content-center align-items-center flex-column">
-                        <a class="btn lb-btn-offer lb-buy-product px-5"
+                        <a class="btn lb-btn-offer lb-buy-product px-4"
                             href="{% url 'product_detail' product.id %}">View product</a>
 
                         {% if request.user.is_superuser %}
-                        <a class="btn lb-btn-offer lb-buy-product px-5 mt-2"
+                        <a class="btn lb-btn-offer lb-buy-product px-4 mt-2"
                             href="{% url 'edit_product' product.id %}">Edit product</a>
-                        <a class="btn lb-btn-offer lb-buy-product px-5 mt-2"
+                        <a class="btn lb-btn-offer lb-buy-product px-4 mt-2"
                             href="{% url 'delete_product' product.id %}">Delete product</a>
                         {% endif %}
                     </div>

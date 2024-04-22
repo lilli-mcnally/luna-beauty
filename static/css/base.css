@@ -374,16 +374,19 @@ header {
     input,
     p,
     li,
+    option,
+    select,
+    .form-select,
     .form-control {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     i {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     h5 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .lb-eyeshadow-heading-one,

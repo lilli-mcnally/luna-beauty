@@ -9,21 +9,22 @@
 <div class="lb-offer-clouds lb-cloud-mini col-12 mt-2 d-flex align-items-center justify-content-around">
     <h3>Spend £{{ discount_threshold }} to get {{ discount_percentage }}% off!</h3>
 </div>
-<div class="row my-3 mx-0 justify-content-center">
-    <div class="col-10">
+<div class="row mb-0 my-sm-3 mx-0 justify-content-center">
+    <div class="col-sm-10 col-12 pb-0 pt-2 px-2 p-sm-2">
         <a class="btn lb-see-category m-2" href="{% url 'products' %}"><i class="fa-solid fa-angles-left"></i> Back to
             all
             Make
             Up</a>
-        <div class="row border-rad">
-            <div class="lb-detail-image d-flex justify-content-center align-items-center col-4">
+        <div class="row border-rad flex-column flex-lg-row align-items-center">
+            <div
+                class="lb-detail-image d-flex justify-content-center align-items-center col-xxl-4 col-md-6 col-sm-8 col-12">
                 {% if product.image %}
                 <img src="{{ product.image.url }}" class="card-img-top border-rad" alt="{{ product.name }}">
                 {% else %}
                 <img src="{{ MEDIA_URL }}image-preview.webp" class="card-img-top border-rad" alt="{{ product.name }}">
                 {% endif %}
             </div>
-            <div class="card card-body p-4 col-8 align-items-center">
+            <div class="card card-body p-4 align-items-center col-xxl-8 col-lg-6 col-12" id="lb-info-card">
                 <h3 class="lb-noto lb-text-title text-center m-2">
                     {{ product.name }}</h3>
 
@@ -32,10 +33,10 @@
                 </p>
                 <h4 class="lb-noto lb-eyeshadow-heading-two m-2">£{{ product.price }}</h4>
                 <form action="{% url 'add_to_bag' product.id %}" method="POST"
-                    class="lb-shades-picker d-flex justify-content-center my-3">
+                    class="lb-shades-picker d-flex justify-content-center align-items-center my-3 flex-column flex-xl-row">
                     {% csrf_token %}
                     {% if product.shades %}
-                    <select class="form-select mx-1" id="shade-selector" name="shade">
+                    <select class=" form-select py-2 mx-1" id="shade-selector" name="shade">
                         <option selected>Choose your shade</option>
                         {% for shade in product.shades %}
                         <option value="{{ shade }}">{{ shade }}</option>
@@ -43,22 +44,16 @@
                     </select>
                     {% endif %}
                     <input type="hidden" name="quantity" value="1"></input>
-                    <input type="submit" value="Add to shopping bag" class="btn lb-add-bag px-1 py-2 mx-1"
+                    <input type="submit" value="Add to shopping bag" class="btn lb-add-bag px-1 py-2 mx-1 mt-2 mt-xl-0"
                         href="{% url 'products' %}"></input>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}"></input>
                 </form>
-                {% if request.user.is_superuser %}
-                <a class="btn lb-add-bag px-1 py-2 mx-1 mb-3" href="{% url 'edit_product' product.id %}">Edit
-                    product</a>
-                <a class="btn lb-add-bag px-1 py-2 mx-1 mb-3" href="{% url 'delete_product' product.id %}">Delete
-                    product</a>
-                {% endif %}
                 {% if product.shades %}
-                <div class="d-flex flex-row">
+                <div class="grid d-flex flex-row flex-wrap justify-content-center">
                     {% for shade in product.shades %}
                     <div id="lb-shade-group"
-                        class="d-flex justify-content-center align-items-center mx-2 lb-shade-label">
-                        <span id="{{ shade | lower }}" class="lb-shade-colour me-1"></span>
+                        class="d-flex justify-content-center align-items-center m-2 lb-shade-label">
+                        <div id="{{ shade | lower }}" class="lb-shade-colour me-1"></div>
                         <p class="m-0"> {{ shade }}</p>
                     </div>
                     {% endfor %}
@@ -68,12 +63,19 @@
                 <div class="d-flex align-items-center mt-4">
                     <p class="md-0">{{ product.description }}</p>
                 </div>
-                <a class="btn lb-see-category" href="{% url 'products' %}?category={{ product.category }}">See more in
+                <a class="btn lb-see-category" href="{% url 'products' %}?category={{ product.category }}">See more
+                    in
                     {{ product.category.friendly_name }}</a>
+                {% if request.user.is_superuser %}
+                <a class="btn lb-add-bag px-1 py-2 mx-1 my-3" href="{% url 'edit_product' product.id %}">Edit
+                    product</a>
+                <a class="btn lb-add-bag px-1 py-2 mx-1 mb-3" href="{% url 'delete_product' product.id %}">Delete
+                    product</a>
+                {% endif %}
             </div>
         </div>
         <div class="row justify-content-end">
-            <div class="d-flex flex-column col-8 p-0" id="lb-margin-top">
+            <div class="d-flex flex-column col-xxl-8 col-lg-6 col-12 p-0" id="lb-margin-top">
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
@@ -94,14 +96,14 @@
     </div>
 </div>
 
-<div class="lb-eyeshadow-promo lb-cloud-mini col-12 mt-2 d-flex align-items-center justify-content-around">
+<div class="lb-eyeshadow-promo lb-cloud-mini col-12 mt-0 mt-sm-2 d-flex align-items-center justify-content-around">
     <h3 class="text-white">You might also like...</h3>
 </div>
 <div class="row my-2 mx-0 justify-content-center">
     <div class="col-10">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
             {% for s in similar_products %}
-            <div>
+            <div class="d-flex justify-content-center">
                 <div class="card h-100 p-2 border-rad">
                     <div class="lb-product-image d-flex justify-content-center">
                         {% if s.image %}

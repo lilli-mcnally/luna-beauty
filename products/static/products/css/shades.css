@@ -2,8 +2,10 @@
 
 .lb-shade-colour,
 .lb-shade-empty {
-    height: 25px;
-    width: 25px;
+    max-height: 25px;
+    max-width: 25px;
+    min-height: 25px;
+    min-width: 25px;
     padding: 10px;
     border-radius: 50%;
 }

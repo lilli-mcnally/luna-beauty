@@ -36,6 +36,8 @@ body {
     border-color: #FFECEB;
     background-color: #FFECEB;
     border-width: 0;
+    max-width: 300px;
+    justify-self: center;
 }
 
 .message-container {
@@ -239,6 +241,10 @@ header {
 
 /* Product Details */
 
+#lb-info-card {
+    max-width: none;
+}
+
 .lb-text-title {
     font-weight: 200;
     font-size: 50px;
@@ -377,16 +383,18 @@ header {
     option,
     select,
     .form-select,
-    .form-control {
-        font-size: 18px;
-    }
-
-    i {
+    .form-control,
+    .accordion-body,
+    .accordion-button {
         font-size: 20px;
     }
 
-    h5 {
+    i {
         font-size: 22px;
+    }
+
+    h5 {
+        font-size: 24px;
     }
 
     .lb-eyeshadow-heading-one,
@@ -408,4 +416,15 @@ header {
         font-size: 24px;
     }
 
+}
+
+@media (max-width: 575px) {
+    .accordion-item {
+        border-left: none;
+        border-right: none;
+    }
+
+    #lb-info-card {
+        border-radius: 0;
+    }
 }

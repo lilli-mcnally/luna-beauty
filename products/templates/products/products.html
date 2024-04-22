@@ -12,7 +12,7 @@
 </div>
 
 <div class="col-12 mt-2 d-flex align-items-center justify-content-around">
-    <h1 class="col-4 text-center my-3 py-2 lb-title">Products</h1>
+    <h1 class="col-8 col-sm-6 col-xl-4 text-center my-3 py-2 lb-title">Products</h1>
 </div>
 
 <div class="d-flex my-3 justify-content-center">
@@ -50,7 +50,7 @@
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
             {% for product in products %}
-            <div class="col">
+            <div class="col d-flex justify-content-center">
                 <div class="card h-100 p-2 border-rad">
                     <div class="lb-product-image d-flex justify-content-center">
                         {% if product.image %}

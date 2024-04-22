@@ -2,31 +2,22 @@
 {% load static %}
 {% block content %}
 {% load bag_tools %}
-
 <div class="col-12 mt-2 d-flex align-items-center justify-content-around">
-    {% if from_profile %}
-    <a class="btn lb-back-button m-2" href="{% url 'profile' %}"><i class="fa-solid fa-angles-left"></i> Back to
-        Profile</a>
-    {% else %}
-    <a class="btn lb-back-button m-2" href="{% url 'products' %}"><i class="fa-solid fa-angles-left"></i> Back to
-        all
-        Make
-        Up</a>
-    {% endif %}
     <h1 class="col-8 col-sm-6 col-xl-4 text-center my-3 py-2 lb-title">Order Successful</h1>
 </div>
-<div class="col-12 mt-2 d-flex align-items-center justify-content-around flex-column">
-    <p class="text-body-secondary mb-0">Order Number: {{ order.order_number }}</p>
-    <p class="text-body-secondary">A confirmation email has been sent to {{ order.email }}</p>
-</div>
-<div class="col-12 mt-2 d-flex align-items-center justify-content-around">
 
-</div>
 
 <div class="col-12 mt-2 d-flex align-items-center justify-content-around">
-    <div class="col-4">
+    <div class="col-10 mt-2 d-flex align-items-center justify-content-around flex-column">
+        <p class="text-body-secondary mb-0 lb-break">Order Number: {{ order.order_number }}</p>
+        <p class="text-body-secondary">A confirmation email has been sent to {{ order.email }}</p>
+    </div>
+</div>
+
+<div class="col-12 mt-2 d-flex align-items-center justify-content-around">
+    <div class="col-11 col-sm-8 col-lg-6 col-xl-4">
         <h5>Order Summary</h5>
-        <div class="col-12 card mb-3">
+        <div class="col-12 card lb-orders-card mb-3">
             <div class="card-body py-2 px-3">
                 <p class="card-text m-0 text-body-secondary d-flex justify-content-between">
                     <span><small class="text-body-secondary">Order Date</small></span>
@@ -76,9 +67,9 @@
 </div>
 
 <div class="col-12 mt-2 d-flex align-items-center justify-content-around">
-    <div class="col-4">
+    <div class="col-11 col-sm-8 col-lg-6 col-xl-4">
         <h5>Delivery</h5>
-        <div class="col-12 card mb-3">
+        <div class="col-12 card lb-orders-card mb-3">
             <div class="row g-0">
                 <div class="card-body py-2 px-3">
                     <p class="card-text m-0 d-flex justify-content-between">
@@ -120,5 +111,16 @@
         </div>
     </div>
 </div>
+
+<div class="col-12 mt-2 d-flex align-items-center justify-content-around">
+    {% if from_profile %}
+    <a class="btn lb-see-category m-2" href="{% url 'profile' %}"><i class="fa-solid fa-angles-left"></i> Back to
+        Profile</a>
+    {% else %}
+    <a class="btn lb-see-category m-2" href="{% url 'products' %}"><i class="fa-solid fa-angles-left"></i> Back to all
+        Make Up</a>
+    {% endif %}
+</div>
+
 
 {% endblock %}

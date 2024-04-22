@@ -43,8 +43,11 @@ body {
 .message-container {
     position: fixed;
     top: 90px;
-    right: 20px;
+    right: 10px;
+    margin-left: 10px;
     z-index: 999999;
+    max-width: 300px;
+    word-break: break-all;
 }
 
 .custom-toast {
@@ -339,6 +342,12 @@ header {
     border: 1px solid #FF9C83;
 }
 
+/* Checkout Success */
+
+.lb-break {
+    word-break: break-all;
+}
+
 /* Allauth */
 
 .lb-underline {
@@ -408,6 +417,14 @@ header {
     .lb-eyeshadow-heading-one,
     .lb-eyeshadow-heading-two i {
         font-size: 50px;
+    }
+
+    .message-container {
+        max-width: none;
+    }
+
+    .toast {
+        font-size: 16px;
     }
 }
 

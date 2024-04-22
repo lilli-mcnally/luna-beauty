@@ -12,8 +12,9 @@
 </div>
 
 <div class="d-flex my-3 justify-content-center align-items-center">
-    <div class="col-8 d-flex flex-row justify-content-between">
-        <div class="col-5">
+    <div
+        class="col-12 col-sm-10 col-xxl-8 d-flex justify-content-xl-between align-items-center align-items-xl-start flex-column flex-xl-row">
+        <div class="col-10 col-sm-8 col-xl-5 me-md-2">
             <form action="{% url 'profile' %}" method="POST" id="lb-update-profile" class="py-2">
                 <h5>Delivery Information</h5>
                 {% csrf_token %}
@@ -23,16 +24,16 @@
                 </div>
             </form>
         </div>
-        <div class="col-6">
+        <div class="col-10 col-xl-7 ms-md-2 mt-4 mt-xl-0">
             <h5>Order History</h5>
             {% if orders %}
-            <div class="col-12 card mb-3">
-                <table class="table text-center">
+            <div class="col-12 card lb-orders-card mb-3">
+                <table class="table lb-table">
                     <thead>
                         <tr>
                             <th class="lb-table-corner">Order Number</th>
                             <th>Date</th>
-                            <th class="lb-table-corner">Items</th>
+                            <th class="lb-table-corner d-none d-md-table-cell">Items</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,12 +46,10 @@
                             </td>
                             <td>{{ order.date }}</td>
                             <td>
-                                <ul>
+                                <ul class="d-none d-md-table-cell">
                                     {% for item in order.lineitems.all %}
-                                    <li class="list-unstyled">
-                                        {% if item.product.shade %}
-                                        {{ item.product.shade }}{% endif %}{{ item.product.name }}
-                                        x{{ item.quantity }}
+                                    <li class="list-unstyled text-start">
+                                        {{ item.quantity }}x {{ item.product.name }}
                                     </li>
                                     {% endfor %}
                                 </ul>
@@ -64,12 +63,10 @@
                             </td>
                             <td>{{ order.date }}</td>
                             <td class="lb-table-corner">
-                                <ul>
+                                <ul class="d-none d-md-table-cell">
                                     {% for item in order.lineitems.all %}
                                     <li class="list-unstyled">
-                                        {% if item.product.shade %}
-                                        {{ item.product.shade }}{% endif %}{{ item.product.name }}
-                                        x{{ item.quantity }}
+                                        {{ item.quantity }}x {{ item.product.name }}
                                     </li>
                                     {% endfor %}
                                 </ul>

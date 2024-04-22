@@ -366,6 +366,12 @@ header {
     border: 1px solid #000;
 }
 
+/* Profile */
+.lb-table {
+    --bs-table-border-color: #FFECEB;
+}
+
+
 /* Product Admin */
 
 .lb-submit-order {

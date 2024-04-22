@@ -243,7 +243,8 @@ header {
 
 #lb-info-card,
 .lb-bag-card,
-#lb-delivery-card {
+#lb-delivery-card,
+.lb-orders-card {
     max-width: none;
 }
 
@@ -313,6 +314,12 @@ header {
 }
 
 .lb-hover-underline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.lb-underline-link {
+    color: #000;
     text-decoration: underline;
     cursor: pointer;
 }

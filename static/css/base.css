@@ -395,6 +395,10 @@ header {
     background-color: #FFECEB;
 }
 
+.clearablefileinput {
+    width: 83.33333333%;
+}
+
 /* Media Queries */
 
 @media (min-width: 2000px) {
@@ -405,6 +409,7 @@ header {
     li,
     option,
     select,
+    label,
     .form-select,
     .form-control,
     .accordion-body,

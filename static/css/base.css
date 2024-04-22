@@ -154,7 +154,7 @@ header {
 }
 
 .lb-eyeshadow-heading-two {
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .lb-eyeshadow-face {
@@ -241,8 +241,15 @@ header {
 
 /* Product Details */
 
-#lb-info-card {
+#lb-info-card,
+.lb-bag-card,
+#lb-delivery-card {
     max-width: none;
+}
+
+.lb-bag-card {
+    min-height: 200px;
+    justify-content: center;
 }
 
 .lb-text-title {
@@ -308,12 +315,6 @@ header {
 .lb-hover-underline:hover {
     text-decoration: underline;
     cursor: pointer;
-}
-
-.update-item,
-.remove-item {
-    position: absolute;
-    bottom: 10px;
 }
 
 .remove-item {
@@ -426,5 +427,9 @@ header {
 
     #lb-info-card {
         border-radius: 0;
+    }
+
+    #lb-total {
+        font-size: 35px;
     }
 }

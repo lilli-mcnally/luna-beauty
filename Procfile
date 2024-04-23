@@ -1,0 +1,1 @@
+web: gunicorn luna-beauty.wsgi:application

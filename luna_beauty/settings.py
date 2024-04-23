@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-e(7zyftgh96^lpdwgfwis0=7q4(48v%_^5c+)pgv7(gn@o@06@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['luna-beauty.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['luna-beauty-1a6fa7515eb8.herokuapp.com', 'localhost']
 
 
 # Application definition

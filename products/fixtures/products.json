@@ -10,7 +10,7 @@
             "price": 8.99,
             "category": 1,
             "rating": "5.0",
-            "image": "true-match.png",
+            "image": "true-match.webp",
             "shades": [
                 "1N",
                 "3N",
@@ -33,7 +33,7 @@
             "price": 12,
             "category": 1,
             "rating": "3.9",
-            "image": "halo-glow.png",
+            "image": "halo-glow.webp",
             "shades": [
                 "1",
                 "2",
@@ -58,7 +58,7 @@
             "price": 26.99,
             "category": 1,
             "rating": "4.2",
-            "image": "sheer-glow.png",
+            "image": "sheer-glow.webp",
             "shades": [
                 "L2 Mont Blanc",
                 "L5 Fiji",
@@ -82,7 +82,7 @@
             "price": 36.99,
             "category": 1,
             "rating": "4.3",
-            "image": "double-wear.png",
+            "image": "double-wear.webp",
             "shades": [
                 "1N0 Porcelain",
                 "2N1 Desert Beige",
@@ -107,7 +107,7 @@
             "price": 30,
             "category": 1,
             "rating": "4.8",
-            "image": "studio-fix.jpeg",
+            "image": "studio-fix.webp",
             "shades": [
                 "NC17",
                 "NW20",
@@ -131,7 +131,7 @@
             "price": 12,
             "category": 1,
             "rating": "3.7",
-            "image": "conceal-define.jpg",
+            "image": "conceal-define.webp",
             "shades": [
                 "F2",
                 "F3",
@@ -154,7 +154,7 @@
             "price": 9,
             "category": 3,
             "rating": "4.4",
-            "image": "glow-reviver.jpg",
+            "image": "glow-reviver.webp",
             "shades": [
                 "Pink Quartz",
                 "Honey Talks",
@@ -174,7 +174,7 @@
             "price": 20,
             "category": 3,
             "rating": "3.4",
-            "image": "matte-lipstick.jpg",
+            "image": "matte-lipstick.webp",
             "shades": [
                 "Marrakesh",
                 "Velvet Teddy",
@@ -194,7 +194,7 @@
             "price": 5.99,
             "category": 3,
             "rating": "4.1",
-            "image": "riche-satin.png",
+            "image": "riche-satin.webp",
             "shades": [
                 "235 Nude",
                 "258 Berry Blush",
@@ -214,7 +214,7 @@
             "price": 8,
             "category": 3,
             "rating": "4.9",
-            "image": "butter-gloss.png",
+            "image": "butter-gloss.webp",
             "shades": [
                 "Apple Crisp",
                 "Creme Brulee",
@@ -234,7 +234,7 @@
             "price": 7,
             "category": 3,
             "rating": "5.0",
-            "image": "lifter-gloss.png",
+            "image": "lifter-gloss.webp",
             "shades": [
                 "003 Moon",
                 "006 Reef",
@@ -254,7 +254,7 @@
             "price": 18,
             "category": 3,
             "rating": "4.8",
-            "image": "pop-plush.jpg",
+            "image": "pop-plush.webp",
             "shades": [
                 "Amaretto",
                 "Air Kiss",
@@ -274,7 +274,7 @@
             "price": 10.99,
             "category": 2,
             "rating": "3.9",
-            "image": "sky-high.jpg",
+            "image": "sky-high.webp",
             "shades": [
                 "Black",
                 "Blue"
@@ -293,7 +293,7 @@
             "price": 7,
             "category": 2,
             "rating": "4.7",
-            "image": "lash-n-roll.jpg",
+            "image": "lash-n-roll.webp",
             "shades": [
                 "Black"
             ]
@@ -311,7 +311,7 @@
             "price": 11.99,
             "category": 2,
             "rating": "4.1",
-            "image": "sensational-intense.jpg",
+            "image": "sensational-intense.webp",
             "shades": [
                 "Black"
             ]
@@ -329,7 +329,7 @@
             "price": 22.99,
             "category": 2,
             "rating": "4.8",
-            "image": "perversion.jpg",
+            "image": "perversion.webp",
             "shades": [
                 "Black"
             ]
@@ -346,7 +346,7 @@
             "price": 21,
             "category": 2,
             "rating": "3.4",
-            "image": "high-impact.jpg",
+            "image": "high-impact.webp",
             "shades": [
                 "Black",
                 "Brown"
@@ -363,7 +363,7 @@
             "price": 12.99,
             "category": 2,
             "rating": "4.5",
-            "image": "colorstay-palette.png",
+            "image": "colorstay-palette.webp",
             "shades": []
         }
     }, {
@@ -377,7 +377,7 @@
             "price": 17.99,
             "category": 2,
             "rating": "4.8",
-            "image": "rose-nudes.png",
+            "image": "rose-nudes.webp",
             "shades": []
         }
     }, {
@@ -391,7 +391,7 @@
             "price": 18.99,
             "category": 2,
             "rating": "3.1",
-            "image": "naked-mini.png",
+            "image": "naked-mini.webp",
             "shades": []
         }
     }, {
@@ -405,7 +405,7 @@
             "price": 14.99,
             "category": 2,
             "rating": "3.8",
-            "image": "pink-collection.png",
+            "image": "pink-collection.webp",
             "shades": []
         }
     }, {
@@ -419,7 +419,7 @@
             "price": 9.99,
             "category": 2,
             "rating": "4.2",
-            "image": "veiled-bronze.png",
+            "image": "veiled-bronze.webp",
             "shades": []
         }
     }, {
@@ -433,7 +433,7 @@
             "price": 12,
             "category": 2,
             "rating": "3.3",
-            "image": "warm-neutrals.png",
+            "image": "warm-neutrals.webp",
             "shades": []
         }
     }, {
@@ -447,7 +447,7 @@
             "price": 5.99,
             "category": 2,
             "rating": "4.7",
-            "image": "bite-size.jpg",
+            "image": "bite-size.webp",
             "shades": []
         }
     }, {
@@ -461,7 +461,7 @@
             "price": 17.50,
             "category": 4,
             "rating": "4.9",
-            "image": "dandelion.png",
+            "image": "dandelion.webp",
             "shades": []
         }
     }, {
@@ -475,7 +475,7 @@
             "price": 11.99,
             "category": 4,
             "rating": "5.0",
-            "image": "melon-dollar.png",
+            "image": "melon-dollar.webp",
             "shades": []
         }
     }, {
@@ -489,7 +489,7 @@
             "price": 21,
             "category": 4,
             "rating": "4.6",
-            "image": "clinique-blush.png",
+            "image": "clinique-blush.webp",
             "shades": []
         }
     }, {
@@ -503,7 +503,7 @@
             "price": 18,
             "category": 4,
             "rating": "3.9",
-            "image": "nude-blushlighter.png",
+            "image": "nude-blushlighter.webp",
             "shades": []
         }
     }, {
@@ -517,7 +517,7 @@
             "price": 5,
             "category": 4,
             "rating": "4.8",
-            "image": "primer-bronzer.jpg",
+            "image": "primer-bronzer.webp",
             "shades": []
         }
     }, {
@@ -531,7 +531,7 @@
             "price": 24.99,
             "category": 4,
             "rating": "5.0",
-            "image": "mineralize-blush.jpg",
+            "image": "mineralize-blush.webp",
             "shades": []
         }
     }, {
@@ -545,7 +545,7 @@
             "price": 18,
             "category": 4,
             "rating": "4.6",
-            "image": "nxy-pro-palette.jpg",
+            "image": "nxy-pro-palette.webp",
             "shades": []
         }
     }

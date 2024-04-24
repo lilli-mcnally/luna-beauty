@@ -1,3 +1,4 @@
+{% load i18n %}{% autoescape off %}
 Great News {{ order.full_name }}!
 
 Your order has been recieved by Luna Beauty and is ready to be processed. Once your order has been processed, delivery usually takes 2-3 working days. 
@@ -21,7 +22,7 @@ Your order will be sent to:
     {% endif %}
     {{ item.quantity }} x £{{ item.product.price|floatformat:2 }}
 {% endfor %}
-
+{% endautoescape %}
 
 Subtotal: £{{ order.order_total|floatformat:2 }}
 Discount: £{{ order.discount|floatformat:2 }}

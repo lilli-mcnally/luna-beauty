@@ -94,6 +94,10 @@ I wanted to add a couple of the shade to the product page, and then a third circ
 
 Most of my pages fill the page and push the footer to the bottom. However, after creating the Profile App I realised my footer was not sticking to the bottom of the page, regardless of the content height. I added a div with a class of "content" and used the [CSS Tricks](https://css-tricks.com/couple-takes-sticky-footer/) website to make sure my footer would stay at the very bottom of any page.
 
+#### Email Apostrophes
+
+I noticed when a user orders a product with an apostrophe in the name, such as "Lash 'n Roll" or L'Oréal, the confirmation email would have “L&#x27;Oreal" written on it instead. I researched and found a helpful page on [W3 Schools](https://www.w3schools.com/django/ref_tags_autoescape.php) where I found I could put `{% autoescape on %}` and `{% endautoescape %}`, and this would display the apostrophe as it should be.
+
 ## Unfixed Bugs
 
 There are no unfixed bugs to my knowledge.

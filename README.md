@@ -98,6 +98,12 @@ Most of my pages fill the page and push the footer to the bottom. However, after
 
 I noticed when a user orders a product with an apostrophe in the name, such as "Lash 'n Roll" or L'Oréal, the confirmation email would have “L&#x27;Oreal" written on it instead. I researched and found a helpful page on [W3 Schools](https://www.w3schools.com/django/ref_tags_autoescape.php) where I found I could put `{% autoescape on %}` and `{% endautoescape %}`, and this would display the apostrophe as it should be.
 
+#### Save Info
+
+My "Save Info" checkbox was working if a user wants to save their info to their account. However, if they unchecked the box, the profile details were still being overwritten. I put print statements before each time "save_info" was used, and found two were showing up as "True" when the checkbox was unchecked. I fixed these by adding `if save_info != "false":` to the handle_payment_intent_succeeded function in webhook_handler.py. However, this didn't fix the issue. I also tried calling the stripe_elements.js file in `{% block extra_js %}` instead of `{% block postload_js %}`, as suggested on [this post](https://app.slack.com/client/T0L30B202/C7HS3U3AP/1605302104.469800) in the Code Institute Slack community, but this didn't fix the issue either.
+
+I spoke to the Tutor Support team for Code Institute and found that the "save_info" session variable wasn't being deleted after the profile had previously been overwritten. I was able to fix this by adding `del request.session['save_info']` to the checkout_success function in views.py in the Checkout app, after the if statement to check whether "save_info" was true or false.
+
 ## Unfixed Bugs
 
 There are no unfixed bugs to my knowledge.

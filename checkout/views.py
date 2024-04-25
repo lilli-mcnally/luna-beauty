@@ -141,6 +141,7 @@ def checkout_success(request, order_number):
         order.save()
 
         if save_info:
+            del request.session['save_info']
             profile_data = {
                 'default_name': order.full_name,
                 'default_phone': order.phone,

@@ -15,7 +15,7 @@
             all
             Make
             Up</a>
-        <div class="row border-rad flex-column flex-lg-row align-items-center">
+        <div class="row border-rad flex-column flex-lg-row align-items-center lb-row">
             <div
                 class="lb-detail-image d-flex justify-content-center align-items-center col-xxl-4 col-md-6 col-sm-8 col-12">
                 {% if product.image %}
@@ -74,7 +74,7 @@
                 {% endif %}
             </div>
         </div>
-        <div class="row justify-content-end">
+        <div class="row justify-content-end lb-row">
             <div class="d-flex flex-column col-xxl-8 col-lg-6 col-12 p-0" id="lb-margin-top">
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
@@ -119,7 +119,7 @@
                             {{ s.rating }} <i class="fa-solid fa-star"></i>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <a class="btn lb-btn-offer lb-buy-product px-5" href="{% url 'product_detail' s.id %}">View
+                        <a class="btn lb-btn-offer lb-buy-product px-4" href="{% url 'product_detail' s.id %}">View
                             product</a>
                     </div>
                 </div>

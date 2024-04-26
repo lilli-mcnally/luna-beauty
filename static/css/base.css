@@ -302,6 +302,10 @@ header {
     border: 1px solid #FF9C83;
 }
 
+.lb-row {
+    --bs-gutter-x: 1rem;
+}
+
 /* Shopping Bag */
 
 .lb-bd-pink {

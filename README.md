@@ -135,4 +135,171 @@ I tried to commit my changes, but as I had committed from a different workspace,
 
 #### Django Testing (continued)
 
-The only unfixed bug of sorts is that due to using the ArrayField in models.py in the Proucts app, I am unable to use SQLite3 in Development mode. This means each time I need to access Development mode, if I create a new workspace I would need to add the PostgreSQL Database URL to my env.py.
+Due to using the ArrayField in models.py in the Proucts app, I am unable to use SQLite3 in Development mode. This means each time I need to access Development mode, if I create a new workspace I would need to add the PostgreSQL Database URL to my env.py.
+
+#### Shades
+
+Each shade in the products app has a corresponding ID. In shades.css I've created an individual background colour hex for each shade, to give users the most accurate colour choice when selecting their shade for foundations or lipsticks. However, currently there is no way for an Admin to add the hex to the shades.css, so this would need to be added the developer. As a future feature, I would like to change this so the Admin can add their shades, and the corresponding HEX colour could be added to shades.css.
+
+
+
+
+## Credits
+
+#### Technologies
+* [Django](https://www.djangoproject.com/)
+    * Project Framework
+
+* [SQLite3](https://www.sqlite.org/)
+    * Development Database
+
+* [ElephantSQL](https://www.elephantsql.com/)
+    * Production Database
+
+* [Heroku](https://heroku.com/)
+    * Deployment
+
+* [Figma](https://www.figma.com/)
+    * Wireframes
+    * Prototype
+
+* [Bootstrap](https://getbootstrap.com/)
+    * Grid styling
+    * Toast styling
+    * Navbar for all sized screens
+    * Buttons
+    * Checkbox
+    * Card Styling
+
+* [Font Awesome](https://fontawesome.com/)
+    * Social Media icons
+    * Button double arrows
+    * Bag icon on navbar
+    * Info, Success, Warning and Error toast icons
+
+* [Google Fonts](https://fonts.google.com/)
+    * Noto
+    * Jost
+
+* [Favicon Converter](https://favicon.io/favicon-converter/)
+    * Moon Favicon
+
+#### Code
+* [Random Number Generator](https://www.random.org/integers/?num=45&min=100000000&max=999999999&col=5&base=10&format=html&rnd=new)
+    * Creating Product SKU's
+    
+* [Stack Overflow](https://stackoverflow.com/)
+    * See [Fixed Bugs](#fixed-bugs) section
+
+#### Media
+* [Am I Responsive image](https://amiresponsive.blogspot.com/)
+* [Purple clouds behind the discount offer](https://www.pexels.com/photo/purple-sky-1287142/)
+* [Three eyeshadow palettes on the home page](https://www.pexels.com/photo/three-black-square-makeup-palettes-2639947/)
+* [Photo of a woman with make up on the home page](https://pixabay.com/photos/woman-portrait-face-skin-make-up-3096664/)
+* [Logo created by me on Canva](https://www.canva.com/en_gb/)
+* [Favicon created by me on Canva](https://www.canva.com/en_gb/)
+
+#### Product Images, Shades and Descriptions
+
+##### Face
+* L'Oréal Paris True Match Liquid Foundation
+    * [Boots](https://www.boots.com/loreal-paris-true-match-foundation-30ml-10200787)
+    * [Loreal Paris](https://www.loreal-paris.co.uk/true-match/foundation)
+
+* e.l.f. Halo Glow Liquid Filter
+    * [Boots](https://www.boots.com/elf-halo-glow-liquid-filter-10318554)
+    * [Beauty Bay](https://www.beautybay.com/p/elf-cosmetics/halo-glow-liquid-filter/ )
+
+* NARS Sheer Glow Foundation
+    * [Boots](https://www.boots.com/nars-sheer-glow-foundation-10286863)
+    * [Nars Cosmetics](https://www.narscosmetics.co.uk/en/sheer-glow-foundation/999NACSGLWF01.html?cgid=Discover&bvstate=pg:53/ct:r)
+
+* Estée Lauder Double Wear Stay-in-Place Foundation
+    * [Boots](https://www.boots.com/estee-lauder-double-wear-stay-in-place-makeup-spf-10-30ml-10249140)
+
+* MAC Studio Fix Fluid Spf15 Foundation
+    * [Beauty Bay](https://www.beautybay.com/p/mac-cosmetics/studio-fix-fluid-spf15-foundation/nw20/)
+
+* Makeup Revolution Conceal & Define Foundation
+    * [Beauty Bay](https://www.beautybay.com/p/makeup-revolution/conceal-and-define-foundation/f2/)
+
+##### Lips
+* e.l.f Glow Reviver Lip Oil
+    * [Beauty Bay](https://www.beautybay.com/p/elf-cosmetics/glow-reviver-lip-oil/honey-talks/)
+
+* MAC Matte Lipstick
+    * [Beauty Bay](https://www.beautybay.com/p/mac-cosmetics/matte-lipstick/marrakesh/)
+
+* L'Oreal Paris Color Riche Satin Lipstick
+    * [Boots](https://www.boots.com/loreal-paris-color-riche-satin-lipstick-10248257)
+    * [Loreal Paris](https://www.loreal-paris.co.uk/color-riche/satin/lipstick-303-rose-tendre)
+
+* NYX Professional Makeup Butter Lip Gloss
+    * [Boots](https://www.boots.com/nyx-professional-makeup-butter-gloss-10207772)
+    * [NXY Cosmetics](https://www.nyxcosmetics.co.uk/lips-makeup/lip-gloss/butter-gloss-lip-gloss/NYX_089.html?dwvar_NYX__089_color=Sorbet)
+
+* Maybelline Lifter Gloss Hydrating Lip Gloss
+    * [Boots](https://www.boots.com/maybelline-lifter-gloss-plumping-hydrating-lip-gloss-hyaluronic-acid-10292293)
+    * [Maybelline](https://www.maybelline.co.uk/all-products/lip-makeup/lip-gloss/lifter-gloss-lip-gloss-makeup-with-hyaluronic-acid?variant=Moon)
+
+* Clinique Pop Plush Creamy Lip Gloss
+    * [Beauty Bay](https://www.beautybay.com/p/clinique/pop-plush-creamy-lip-gloss/pink-gimlet/)
+
+##### Eyes
+
+* Maybelline Lash Sensational Sky High Mascara
+    * [Beauty Bay](https://www.beautybay.com/p/maybelline/lash-sensational-sky-high-mascara/lash-sensational-sky-high-mascara/)
+    * [Maybelline](https://www.maybelline.co.uk/all-products/eye-makeup/mascara/lash-sensational-sky-high-washable-mascara-makeup?variant=Blue+Mist)
+
+* e.l.f. Lash 'n Roll Curling Mascara
+    * [Beauty Bay](https://www.beautybay.com/p/elf-cosmetics/lash-n-roll-curling-mascara/)
+
+* Maybelline Lash Sensational Mascara Intense Black
+    * [Beauty Bay](https://www.beautybay.com/p/maybelline/lash-sensational-mascara-intense-black/)
+
+* Urban Decay Perversion Mascara
+    * [Beauty Bay](https://www.beautybay.com/p/urban-decay/perversion-mascara/)
+
+* Clinique High Impact Mascara
+    * [Beauty Bay](https://www.beautybay.com/p/clinique/high-impact-mascara/black/)
+    * [Clinique](https://www.clinique.co.uk/product/1606/5416/makeup/mascara/high-impacttm-mascara)
+
+* Revlon ColorStay Day to Night Eyeshadow Quad Pretty
+    * [Boots](https://www.boots.com/revlon-colorstay-16-hour-eyeshadow-palette-10137952)
+    * [Sainsburys](https://www.sainsburys.co.uk/gol-ui/product/revlon-colorstay-day-to-night-eyeshadow-quad-stunning-48g)
+
+* Max Factor Masterpiece Nude Eyeshadow Palette Rose Nudes
+    * [Boots](https://www.boots.com/max-factor-masterpiece-nude-eyeshadow-palette-rose-nudes-10298639)
+    * [Superdrug](https://www.superdrug.com/make-up/eye-makeup/eye-shadow/eye-shadow-palettes/max-factor-masterpiece-nude-palette-003-rose-nudes/p/807480)
+
+* Urban Decay Naked 3 Mini Eyeshadow Palette
+    * [Boots](https://www.boots.com/urban-decay-naked-3-mini-eyeshadow-palette-10318139)
+
+* No7 Limited Edition Pink Collection Eyeshadow Quad
+    * [Boots](https://www.boots.com/no7-limited-edition-pink-collection-eyeshadow-quad-10338258)
+
+* NYX Professional Makeup Ultimate Shadow Palette Vegan 16-Pan Warm Neutrals
+    * [Boots](https://www.boots.com/nyx-professional-make-up-ultimate-shadow-palette-vegan-16-pan---warm-neutrals-10334185)
+
+* e.l.f. Bite-Size Eyeshadow Palette I Love You A Latte
+    * [Beauty Bay](https://www.beautybay.com/p/elf-cosmetics/bite-size-eyeshadow-palette-i-love-you-a-latte/)
+
+* Max Factor Color Xpert Soft Touch Palette 004 - Veiled Bronze
+    * [Boots](https://www.boots.com/max-factor-color-xpert-soft-touch-palette-veiled-bronze-10290538)
+
+##### Cheeks
+
+* Benefit Mini Dandelion Baby-Pink Brightening Blush
+    * [Boots](https://www.boots.com/benefit-mini-dandelion-baby-pink-brightening-blush-2-5g-10315037)
+* L'Oreal Paris Blush of Paradise Melon Dollar Baby
+    * [Boots](https://www.boots.com/loreal-paris-blush-of-paradise-melon-dollar-baby-10295638)
+* Clinique Blushing Blush Powder Blush
+    * [Boots](https://www.boots.com/clinique-blushing-blush-powder-blush-6g-10047580)
+* bareMinerals Gen Nude Blushlighter
+    * [Boots](https://www.boots.com/bareminerals-gen-nude-blushlighter-10328161)
+* e.l.f. Primer-Infused Bronzer
+    * [Beauty Bay](https://www.beautybay.com/p/elf-cosmetics/primer-infused-bronzer/)
+* MAC Mineralize Blush Warm Soul
+    * [Beauty Bay](https://www.beautybay.com/p/mac-cosmetics/mineralize-blush/warm-soul/)
+* NXY Highlight and Contour Pro Palette
+    * [Beauty Bay](https://www.beautybay.com/p/nyx-professional-makeup/highlight-and-contour-pro-palette/)

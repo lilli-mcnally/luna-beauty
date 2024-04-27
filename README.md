@@ -1,4 +1,7 @@
 # Luna Beauty
+*A makeup ecommerce website where users can browse, filter and sort products. Features a working Checkout app and the ability to create and update a user profile.*
+
+![Am I Responsive](./static/README/am-i-responsive.PNG)
 
 ## Purpose and Value
 
@@ -41,7 +44,28 @@ Cons
 | Users are able to save their name and address to their account when checking out |  3  |  4  | :heavy_check_mark: |
 | Users can see their order on their profile or in their confirmation email |   4   |   4  | :heavy_check_mark:     |
 
-In the future I would like to add the option to review items. I'd also like to expand the range to include skincare, and add blog pages about recommendations for products.
+##### Future features
+* Add the option to review items
+* Expand the range to include skincare
+* Add blog pages about recommendations for products.
+* Add the option to log in using Facebook or Google
+* Add a Wishlist option to the profile
+
+## Wireframes
+* [Home Page](./static/README/home.PNG)
+* [Products Page](./static/README/products.PNG)
+* [Product Details Page](./static/README/product-info.PNG)
+* [Bag page](./static/README/basket.PNG)
+* [Checkout Page](./static/README/payment.PNG)
+* [Checkout Success Page](./static/README/order-successful.PNG)
+* [Profile Page](./static/README/profile.PNG)
+* [Login Page](./static/README/login.PNG)
+* [Sign Up Page](./static/README/sign-up.PNG)
+
+## Prototype
+* [Prototype Home Page](./static/README/prototype.PNG)
+
+
 
 ## Fixed Bugs
 
@@ -141,14 +165,30 @@ Due to using the ArrayField in models.py in the Proucts app, I am unable to use 
 
 Each shade in the products app has a corresponding ID. In shades.css I've created an individual background colour hex for each shade, to give users the most accurate colour choice when selecting their shade for foundations or lipsticks. However, currently there is no way for an Admin to add the hex to the shades.css, so this would need to be added the developer. As a future feature, I would like to change this so the Admin can add their shades, and the corresponding HEX colour could be added to shades.css.
 
+## Deployment
+I managed to deploy the website without any issues, and all my links worked perfectly. I used the following steps to achieve this:
 
-
+1. I created an account on Heroku for deploying the site, and ElephantSQL to host my database.
+2. I created the database on ElephantSQL using the "Create new instance", giving the project a name and selecting my plan and location.
+3. Then I created a requirements.txt file, and a Procfile, both of which are needed to deploy on Heroku.
+4. I used the "Create new app" button on Heroku and gave my project a name.
+5. I copied the URL from my ElephantSQL project and applied it as a Config Var under the Settings tab on Heroku.
+6. I added the rest of the variables from my env.py file to my Config Vars section on Heroku.
+7. I changed to the Deploy tab on Heroku, and clicked on Connect to Github.
+8. I enabled automatic deploys and deployed from the main branch.
+9. I built my database by migrating my models to PostgreSQL, then using `python3 manage.py loaddata` for `categories` and `products`.
+10. I created a new superuser, and an AWS Account.
+11. I used AWS to host my Media and Static files by using S3, and created Users, Groups and Policies before uploading the files to the relevant folder.
+10. I checked my project had successfuly deployed using the "Open App" button on Heroku.
 
 ## Credits
 
 #### Technologies
 * [Django](https://www.djangoproject.com/)
     * Project Framework
+
+* [Stripe](https://stripe.com/gb)
+    * Take payments in the Checkout app
 
 * [SQLite3](https://www.sqlite.org/)
     * Development Database
@@ -187,7 +227,7 @@ Each shade in the products app has a corresponding ID. In shades.css I've create
 #### Code
 * [Random Number Generator](https://www.random.org/integers/?num=45&min=100000000&max=999999999&col=5&base=10&format=html&rnd=new)
     * Creating Product SKU's
-    
+
 * [Stack Overflow](https://stackoverflow.com/)
     * See [Fixed Bugs](#fixed-bugs) section
 
@@ -198,6 +238,11 @@ Each shade in the products app has a corresponding ID. In shades.css I've create
 * [Photo of a woman with make up on the home page](https://pixabay.com/photos/woman-portrait-face-skin-make-up-3096664/)
 * [Logo created by me on Canva](https://www.canva.com/en_gb/)
 * [Favicon created by me on Canva](https://www.canva.com/en_gb/)
+* Prototype Images
+    * [Face with eyeshadow](https://www.pexels.com/photo/close-up-photo-of-woman-with-pink-eyeshadow-3912572/)
+    * [Close up of eyeshadow palette](https://pixabay.com/photos/makeup-palette-colorful-eyeshadow-1138857/)
+    * [Eyeshadow colours and brushes](https://www.pexels.com/photo/colored-powders-and-brush-1749452/)
+    * [Assorted lipgloss colours](https://www.pexels.com/photo/five-assorted-color-of-liquid-lipsticks-3373738/)
 
 #### Product Images, Shades and Descriptions
 
@@ -291,15 +336,25 @@ Each shade in the products app has a corresponding ID. In shades.css I've create
 
 * Benefit Mini Dandelion Baby-Pink Brightening Blush
     * [Boots](https://www.boots.com/benefit-mini-dandelion-baby-pink-brightening-blush-2-5g-10315037)
+
 * L'Oreal Paris Blush of Paradise Melon Dollar Baby
     * [Boots](https://www.boots.com/loreal-paris-blush-of-paradise-melon-dollar-baby-10295638)
+
 * Clinique Blushing Blush Powder Blush
     * [Boots](https://www.boots.com/clinique-blushing-blush-powder-blush-6g-10047580)
+
 * bareMinerals Gen Nude Blushlighter
     * [Boots](https://www.boots.com/bareminerals-gen-nude-blushlighter-10328161)
+
 * e.l.f. Primer-Infused Bronzer
     * [Beauty Bay](https://www.beautybay.com/p/elf-cosmetics/primer-infused-bronzer/)
+
 * MAC Mineralize Blush Warm Soul
     * [Beauty Bay](https://www.beautybay.com/p/mac-cosmetics/mineralize-blush/warm-soul/)
+
 * NXY Highlight and Contour Pro Palette
     * [Beauty Bay](https://www.beautybay.com/p/nyx-professional-makeup/highlight-and-contour-pro-palette/)
+
+## Acknowledgements
+* The fantastic Student Support Team at Code Institute
+* My City of Bristol College Tutors

@@ -104,6 +104,35 @@ My "Save Info" checkbox was working if a user wants to save their info to their 
 
 I spoke to the Tutor Support team for Code Institute and found that the "save_info" session variable wasn't being deleted after the profile had previously been overwritten. I was able to fix this by adding `del request.session['save_info']` to the checkout_success function in views.py in the Checkout app, after the if statement to check whether "save_info" was true or false.
 
+#### Django Testing
+
+After writing my Django tests in the Checkout and Product apps, I was having problems running the tests. I spoke to a member of the Code Institute support team and we figured out that I'm been running my database in PostgreSQL because the ArrayField in my Product app is not supported by SQLite3. I amended the models to:
+
+```
+    if 'DEVELOPMENT' in os.environ:
+        shades = models.TextField(max_length=200, null=True, blank=True)
+    else:
+        shades = ArrayField(models.CharField(max_length=200), null=True, blank=True)
+```
+
+I also commented out my Database URL in env.py, and deleted my migrations as they referenced the ArrayField. Once this was complete, I was able to migrate the changes in SQLite3. I wrote and ran my tests, which all came up as successful.
+
+Once I was done with testing, I deleted the migration file in the Products app, and uncommented the Database URL in env.py. I tried to migrate again but kept getting another error:
+
+`Migration checkout.0001_initial dependencies reference nonexistent parent node ('products', '0001_initial')`
+
+I searched the internet and struggled for a while with this issues. I tried creating a new workspace from the last commit, to see if I could replicate where the code went wrong. I added my testing documents to this new workspace and commit the changes, with the idea of writing the issue up in my fixed bugs. 
+
+I tried to migrated this new version, but when creating a superuser, an error came up that said:
+
+`django.db.utils.OperationalError: no such column: profiles_userprofile.default_name`
+
+After taking a break, I decided to try fixing the original file once more, as I'd realised I still had migrations that hadn't been deleted. I deleted all migrations and found I was then able to migrate properly, and I could run the SQLite3 database, and pass all the tests. I also found I'd got the development version of the project to work in port 8000.
+
+I tried to commit my changes, but as I had committed from a different workspace, I had to use `git pull original main`. There was a discrepancy between the two test.py files in the Product apps. The change was one had an extra blank line, so I used `git merge` to fix this issue, and was then able to commit my new changes.
+ 
 ## Unfixed Bugs
 
-There are no unfixed bugs to my knowledge.
+#### Django Testing (continued)
+
+The only unfixed bug of sorts is that due to using the ArrayField in models.py in the Proucts app, I am unable to use SQLite3 in Development mode. This means each time I need to access Development mode, if I create a new workspace I would need to add the PostgreSQL Database URL to my env.py.

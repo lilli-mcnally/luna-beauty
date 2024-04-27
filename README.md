@@ -65,6 +65,68 @@ Cons
 ## Prototype
 * [Prototype Home Page](./static/README/prototype.PNG)
 
+## Features
+
+#### Navbar and Footer
+
+The Navbar has the Luna Beauty logo, and links to the Home and Shopping Bag, and a dropdown for Makeup with filters for Face, Eyes, Cheeks and Lips. The Shopping bag has the grand total price next to it, if there is one. If there is no user logged in, the Navbar has a Log In and Register links. If the user is logged in there's a Profile link, and if they're a superuser, there's a Manage Products link. Underneath, there's a search bar for users to looks for products.
+
+The Footer features the same Face, Eyes, Lips and Cheeks links, along with Home and Shopping Bag. If there is no user logged in, the Navbar has a Log In and Register links. If the user is logged in there's a Profile link, and if they're a superuser, there's a Manage Products link. There are also Social Media links
+
+#### Home Page
+
+The Home Page features a promotional section for eyeshadow, then a offers section with links to the four make up filters. Underneath is a section for MAC make up.
+
+#### Products Page
+
+This page iterates through all the products, or the products of a certain category. There's a Sort By dropdown to sort by price, rating or alphabetically. The number of results is displayed in the top right and there's a back to top link that appears when the user scrolls.
+
+Each product has an image, the name, price and rating. If the product has shades, such as foundation, the first and last shade are shown, and then a third div has the number of additional shades. Underneath, there's a View Product button to take users to the Product Detail page.
+
+If the user logged in is a superuser, they'll also see the "Edit Product" and "Delete Product" links.
+
+#### Product Detail
+
+At the top there's the latest discount promotion, and a link back to all make up.
+
+Underneath is the product image on the left, and other information about the product on the right, including:
+* Name
+* Volume
+* Rating
+* Price
+* Shade Selector (if applicable)
+* Add to shopping bag link
+* Each shade, and their corresponding name
+* Description of the product
+* A button to see other products in this category
+* A dropdown with the products ingredients
+* If the user logged in is a superuser, they'll also see the "Edit Product" and "Delete Product" links.
+
+The bottom section is for similar products in that category that the user might like. If the user clicks to add a product to the bag, a Toast with the product name, image and price appears in the top right corner.
+
+#### Shopping Bag
+
+This page iterates through each product in the shopping bag and displays the image, name, shade, price and quantity. The quantity can also be updated or the product can be removed.Underneath is a div to tell the user the delivery cost, and how long it takes. Below is a section that tells the user how much they have to spend to qualify for a discount, or how much discount they've got, and finally underneath is the total, and a link to Checkout. If the bag is empty, the page will display a div that says there's nothing in their bag.
+
+#### Checkout
+
+The checkout page has the bag contents in a card to the right, with the total and discount at the bottom. On the left is a form for users to complete the shipping information. If they're not logged in, underneath are links to Create an Account or Sign In. If the user has an account, the form will pre-populate all fields from the database, and the user can choose to overwrite these fields with new information. They can also save their info, which will overwrite their profile address.
+
+At the bottom is a section for Stripe payments, and two buttons, one to got back and edit their bag, the other is to submit and order. Once Submit, a light pink overlay covers the screen and Font Awesome moon icon circles while the page loads.
+
+#### Checkout Success
+
+Once Checkout is complete, the users order number, and a message that a confirmation email has been sent is displayed. Under this is a card with their order summary, and finally under than is another card with their delivery information on. A success Toast in the corner confirms the order was successful, and at the very bottom is a link back to the Products page.
+
+#### Profile
+
+The profile page is similar to the Checkout page, with a form where users can complete their delivery information on the left. On the right is a card that shows their previous orders, with links to view more information about each order. If there are no previous orders, there is a message under the Order History title to say so.
+
+The link on each order line takes the user to the Checkout Success page, with a Toast to inform them they're looking at a previous order. There's also a link back to the user's profile.
+
+#### Allauth
+
+Additionally, there are all of the Django Allauth templates. These have been styled to fit the Luna Beauty website, but still have the same core components that Allauth presents.
 
 
 ## Fixed Bugs
@@ -216,6 +278,7 @@ I managed to deploy the website without any issues, and all my links worked perf
     * Button double arrows
     * Bag icon on navbar
     * Info, Success, Warning and Error toast icons
+    * Moon icon overlay
 
 * [Google Fonts](https://fonts.google.com/)
     * Noto

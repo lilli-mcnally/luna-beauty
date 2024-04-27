@@ -106,10 +106,14 @@
                 <div class="card h-100 p-2 border-rad">
                     <div class="lb-product-image d-flex justify-content-center">
                         {% if s.image %}
-                        <img src="{{ s.image.url }}" class="card-img-top h-100 lb-images" alt="{{ s.name }}">
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ s.image.url }}" class="card-img-top h-100 lb-images" alt="{{ s.name }}">
+                        </a>
                         {% else %}
-                        <img src="{{ MEDIA_URL }}image-preview.webp" class="card-img-top h-100 lb-images"
-                            alt="{{ s.name }}">
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ MEDIA_URL }}image-preview.webp" class="card-img-top h-100 lb-images"
+                                alt="{{ s.name }}">
+                        </a>
                         {% endif %}
                     </div>
                     <div class="card-body">

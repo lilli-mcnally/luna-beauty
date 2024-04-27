@@ -41,8 +41,8 @@
                         {% if not forloop.last %}
                         <tr>
                             <td>
-                                <a href="{% url 'order_history' order.order_number %}"
-                                    title="{{ order.order_number }}">{{ order.order_number|truncatechars:10 }}</a>
+                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}"
+                                    class="lb-underline-link">{{ order.order_number|truncatechars:10 }}</a>
                             </td>
                             <td>{{ order.date }}</td>
                             <td>
@@ -58,8 +58,8 @@
                         {% else %}
                         <tr id="lb-last-order">
                             <td>
-                                <a href="{% url 'order_history' order.order_number %}"
-                                    title="{{ order.order_number }}">{{ order.order_number|truncatechars:10 }}</a>
+                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}"
+                                    class="lb-underline-link">{{ order.order_number|truncatechars:10 }}</a>
                             </td>
                             <td>{{ order.date }}</td>
                             <td class="lb-table-corner">

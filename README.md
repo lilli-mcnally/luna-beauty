@@ -3,6 +3,68 @@
 
 ![Am I Responsive](./static/README/am-i-responsive.PNG)
 
+- [Purpose and Value](#purpose-and-value)
+  * [User Stories](#user-stories)
+  * [User Goals](#user-goals)
+  * [Website Goals](#website-goals)
+  * [Competitor Reviews](#competitor-reviews)
+    + [Beauty Bay](#beauty-bay)
+    + [Boots](#boots)
+- [Objectives](#objectives)
+      - [Future features](#future-features)
+- [Wireframes](#wireframes)
+- [Prototype](#prototype)
+- [Features](#features)
+    + [Navbar and Footer](#navbar-and-footer)
+    + [Home Page](#home-page)
+    + [Products Page](#products-page)
+    + [Product Detail](#product-detail)
+    + [Shopping Bag](#shopping-bag)
+    + [Checkout](#checkout)
+    + [Checkout Success](#checkout-success)
+    + [Profile](#profile)
+    + [Allauth](#allauth)
+- [Design](#design)
+    + [Colours](#colours)
+    + [Typography](#typography)
+    + [Imagery](#imagery)
+    + [Styling](#styling)
+  * [Backgrounds](#backgrounds)
+- [Responsive Design](#responsive-design)
+    + [4K Screens](#4k-screens)
+    + [Large Laptop](#large-laptop)
+    + [Laptop](#laptop)
+    + [Tablet](#tablet)
+    + [Mobile](#mobile)
+    + [Small Mobile](#small-mobile)
+- [Fixed Bugs](#fixed-bugs)
+    + [Delivery Cost](#delivery-cost)
+    + [Stripe](#stripe)
+    + [Products Model – Shade](#products-model---shade)
+    + [Back to Top Button](#back-to-top-button)
+    + [Toasts](#toasts)
+    + [Shade ID](#shade-id)
+    + [Shades Preview](#shades-preview)
+    + [Footer](#footer)
+    + [Email Apostrophes](#email-apostrophes)
+    + [Save Info](#save-info)
+    + [Django Testing](#django-testing)
+- [Unfixed Bugs](#unfixed-bugs)
+    + [Django Testing (continued)](#django-testing--continued-)
+    + [Shades](#shades)
+- [Deployment](#deployment)
+- [Testing](#testing)
+- [Credits](#credits)
+    + [Technologies](#technologies)
+    + [Code & Testing](#code---testing)
+    + [Media](#media)
+    + [Product Images, Shades and Descriptions](#product-images--shades-and-descriptions)
+      - [Face](#face)
+      - [Lips](#lips)
+      - [Eyes](#eyes)
+      - [Cheeks](#cheeks)
+- [Acknowledgements](#acknowledgements)
+
 ## Purpose and Value
 
 ### User Stories
@@ -37,7 +99,7 @@ Cons
 ## Objectives
 
 | Objective           | Importance | Viability / Feasibility | To be added |
-|------------|------------|-------------------------|--------|
+|------------|:------------:|:-------------------------:|:--------:|
 | Users can browse several products using card to display images and brief information |  4  |   5   |  :heavy_check_mark:  |
 | Users can choose a colour of a product and add it to their basket  |   5    |   5   | :heavy_check_mark: |
 | Users can leave and read reviews for products   |  3  |  2   |    |
@@ -297,6 +359,10 @@ I managed to deploy the website without any issues, and all my links worked perf
 11. I used AWS to host my Media and Static files by using S3, and created Users, Groups and Policies before uploading the files to the relevant folder.
 10. I checked my project had successfully deployed using the "Open App" button on Heroku.
 
+## Testing
+
+All testing has been writted up in a seperate [tests.md](./tests.md) file.
+
 ## Credits
 
 #### Technologies
@@ -343,6 +409,11 @@ I managed to deploy the website without any issues, and all my links worked perf
 
 * [CloudConvert](https://cloudconvert.com/png-to-webp)
     * Converted all PNG and JPEG files to WEBP
+
+* [Github Wiki TOC Generator](https://ecotrust-canada.github.io/markdown-toc/)
+    * Created a Table of Contents for README and tests.md
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 #### Code & Testing
 * [Random Number Generator](https://www.random.org/integers/?num=45&min=100000000&max=999999999&col=5&base=10&format=html&rnd=new)
@@ -484,5 +555,5 @@ I managed to deploy the website without any issues, and all my links worked perf
     * [Beauty Bay](https://www.beautybay.com/p/nyx-professional-makeup/highlight-and-contour-pro-palette/)
 
 ## Acknowledgements
-* The fantastic Student Support Team at Code Institute
+* The Student Support Team at Code Institute
 * My City of Bristol College Tutors

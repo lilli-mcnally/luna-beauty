@@ -1,5 +1,41 @@
 # Tests - Luna Beauty
 
+- [Automated Testing](#automated-testing)
+  * [Validators](#validators)
+    + [W3C HTML Validator](#w3c-html-validator)
+    + [W3C CSS Validator](#w3c-css-validator)
+    + [JSHint](#jshint)
+    + [Django Testing](#django-testing)
+    + [Flake8](#flake8)
+    + [Spell Check](#spell-check)
+  * [Lighthouse](#lighthouse)
+    + [Add Product Desktop](#add-product-desktop)
+    + [Add Product Mobile](#add-product-mobile)
+    + [Bag Desktop](#bag-desktop)
+    + [Bag Mobile](#bag-mobile)
+    + [Checkout Desktop](#checkout-desktop)
+    + [Checkout Mobile](#checkout-mobile)
+    + [Checkout Success Desktop](#checkout-success-desktop)
+    + [Checkout Success Mobile](#checkout-success-mobile)
+    + [Home Desktop](#home-desktop)
+    + [Home Mobile](#home-mobile)
+    + [Product Detail Desktop](#product-detail-desktop)
+    + [Product Detail Mobile](#product-detail-mobile)
+    + [Products Desktop](#products-desktop)
+    + [Products Mobile](#products-mobile)
+    + [Profile Desktop](#profile-desktop)
+    + [Profile Mobile](#profile-mobile)
+    + [Register Desktop](#register-desktop)
+    + [Register Mobile](#register-mobile)
+    + [Sign In Desktop](#sign-in-desktop)
+    + [Sign In Mobile](#sign-in-mobile)
+- [Manual Testing](#manual-testing)
+    + [Links & Buttons](#links---buttons)
+    + [Hover Qualities](#hover-qualities)
+    + [Forms](#forms)
+    + [Other](#other)
+- [User Story Testing](#user-story-testing)
+
 ## Automated Testing
 
 ### Validators
@@ -34,7 +70,7 @@ Profile
 
 Products Page
 * `<p>` cannot be a child of a `span` element - I have changed the `span` to a `div`.
-* I also realised I had two `<script type="text/javascript"></script>` blocks with seperate JavaScript to I combined these and confirmed they still both work.
+* I also realised I had two `<script type="text/javascript"></script>` blocks with separate JavaScript to I combined these and confirmed they still both work.
 * All other warnings were due to Django Templating not being acceptable HTML.
 
 Product Detail
@@ -143,13 +179,13 @@ As explained in my [Fixed Bugs](https://github.com/lilli-mcnally/luna-beauty?tab
 
 I used Flake8 to see if there were any PEP8 Compliance errors in my code. I had a range from lines being to long to trailing whitespace. I've used Autopep8 to fix as many linting errors as possible except for:
 
-    * Some files automtically came from Django with imports, which I have not used.
+    * Some files automatically came from Django with imports, which I have not used.
     * Some lines are too long because they're strings.
     * I haven't changed any linting errors found in my migration files.
 
 #### Spell Check
 
-I put my README in a [Microsoft Word](https://www.microsoft.com/en/microsoft-365/word?market=af) document and used the Editor to fix spelling mistakes.
+I put my README and test.md filed in a [Microsoft Word](https://www.microsoft.com/en/microsoft-365/word?market=af) document and used the Editor to fix spelling mistakes.
 
 ### Lighthouse
 
@@ -257,3 +293,13 @@ Info Toast - No errors
 Warning Toast - No errors
 Errors Toast - No errors
 
+## User Story Testing
+
+On a scale of 1-5, with 1 being Poor and 5 being Excellent, true were the following statements.
+
+| Question                                                                 | User 1 Score | User 2 Score |
+|--------------------------------------------------------------------------|:------------:|:------------:|
+|I could browse several products with display images and brief information |      5       |      5       |
+|I could choose a colour of a product and add it to my basket              |      5       |      5       |
+|I could able to save my name and address to my account when checking out  |      5       |      5       |
+|I could see my order on my profile or in my confirmation email            |      5       |      5       |

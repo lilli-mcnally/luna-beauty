@@ -14,6 +14,7 @@ from bag.contexts import bag_contents
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -26,8 +27,11 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-        messages.error(request, "Sorry, we're having problems processing your payment at the moment. Please try again later.")
+        messages.error(
+            request,
+            "Sorry, we're having problems processing your payment at the moment. Please try again later.")
         return HttpResponse(content=e, status=400)
+
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -65,7 +69,8 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for shade, quantity in item_data['items_by_shade'].items():
+                        for shade, quantity in item_data['items_by_shade'].items(
+                        ):
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -74,15 +79,21 @@ def checkout(request):
                             )
                             order_line_item.save()
                 except Product.DoesNotExist:
-                    messages.error(request, (
-                        "Whoops! Something in your bag isn't in out database. Please contact your administrator."
-                    ))
+                    messages.error(
+                        request,
+                        ("Whoops! Something in your bag isn't in out database. Please contact your administrator."))
                     order.delete()
                     return redirect(reverse('view_bag'))
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse(
+                    'checkout_success',
+                    args=[
+                        order.order_number]))
         else:
-            message.error(request, 'There was an error with your form. Please check your information.')
+            message.error(
+                request,
+                'There was an error with your form. Please check your information.')
 
     else:
         bag = request.session.get('bag', {})
@@ -131,6 +142,7 @@ def checkout(request):
 
     return render(request, template, context)
 
+
 def checkout_success(request, order_number):
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
@@ -156,7 +168,9 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, f'Order Number: {order_number}. A confirmation email will be sent to {order.email}')
+    messages.success(
+        request,
+        f'Order Number: {order_number}. A confirmation email will be sent to {order.email}')
 
     if 'bag' in request.session:
         del request.session['bag']

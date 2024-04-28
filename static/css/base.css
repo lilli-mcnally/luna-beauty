@@ -271,7 +271,6 @@ header {
 }
 
 .accordion-button:focus {
-    border-color: none;
     box-shadow: none;
 }
 

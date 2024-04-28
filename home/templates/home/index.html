@@ -62,19 +62,17 @@
             <div class="col d-flex justify-content-center">
                 <div class="card h-100 p-2 border-rad">
                     <div class="lb-product-image d-flex justify-content-center">
+                        {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
-                            {% if product.image %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img src="{{ product.image.url }}" class="card-img-top h-100 lb-images border-rad"
-                                    alt="{{ product.name }}">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img src="{{ MEDIA_URL }}image-preview.webp"
-                                    class="card-img-top h-100 lb-images border-rad" alt="{{ product.name }}">
-                            </a>
-                            {% endif %}
+                            <img src="{{ product.image.url }}" class="card-img-top h-100 lb-images border-rad"
+                                alt="{{ product.name }}">
                         </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ MEDIA_URL }}image-preview.webp" class="card-img-top h-100 lb-images border-rad"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
                     </div>
                     <div class="card-body">
                         <h5 class="card-title text-center">{{ product.name }}</h5>
@@ -104,7 +102,7 @@
             <h3 class=" lb-noto lb-eyeshadow-heading-one">Fast delivery</h3>
         </div>
         <div class="text-center col-4">
-            <h3 class="lb-eyeshadow-heading-two text-peach"><i class="fa-solid fa-money-bill-1-wave"></i></i></h3>
+            <h3 class="lb-eyeshadow-heading-two text-peach"><i class="fa-solid fa-money-bill-1-wave"></i></h3>
             <h3 class="lb-noto lb-eyeshadow-heading-one">Great prices</h3>
         </div>
     </div>

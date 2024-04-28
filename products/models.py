@@ -6,11 +6,13 @@ if os.path.exists("env.py"):
     import env
 
 # Create your models here.
+
+
 class Category(models.Model):
 
     class Meta:
-        # Tells Django Admin to put Categories not Categorys 
-        verbose_name_plural = "Categories" 
+        # Tells Django Admin to put Categories not Categorys
+        verbose_name_plural = "Categories"
 
     name = models.CharField(max_length=200)
     friendly_name = models.CharField(max_length=200, null=True, blank=True)
@@ -21,8 +23,13 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
+
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL)
     sku = models.CharField(max_length=200, null=True, blank=True)
     name = models.CharField(max_length=200)
     volume = models.CharField(max_length=200, null=True, blank=True)
@@ -34,7 +41,11 @@ class Product(models.Model):
     if 'DEVELOPMENT' in os.environ:
         shades = models.TextField(max_length=200, null=True, blank=True)
     else:
-        shades = ArrayField(models.CharField(max_length=200), null=True, blank=True)
+        shades = ArrayField(
+            models.CharField(
+                max_length=200),
+            null=True,
+            blank=True)
 
     def __str__(self):
         return self.name

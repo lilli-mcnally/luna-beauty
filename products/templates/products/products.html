@@ -82,10 +82,10 @@
                         {% endif %}
                         {% endfor %}
                         {% if product.shades|length > 2 %}
-                        <span class="lb-shade-empty p-0 d-flex justify-content-center align-items-center">
+                        <div class="lb-shade-empty p-0 d-flex justify-content-center align-items-center">
                             <p class="d-flex justify-content-center align-items-center m-0">
                                 +{{ product.shades|length|sub:2 }}</p>
-                        </span>
+                        </div>
                         {% endif %}
                     </div>
                     {% endif %}
@@ -113,25 +113,23 @@
 {{ block.super }}
 <script type="text/javascript">
     $(document).ready(function () {
-        $('#lb-back-top').css('display', 'none')
-    })
+        $('#lb-back-top').css('display', 'none');
+    });
     $(window).scroll(function () {
         scroll = $(window).scrollTop();
 
         if (scroll <= 100) {
-            $('#lb-back-top').css('display', 'none')
+            $('#lb-back-top').css('display', 'none');
         } else {
-            $('#lb-back-top').css('display', 'block')
+            $('#lb-back-top').css('display', 'block');
         }
 
         $('#lb-back-top').click(function (e) {
-            window.scrollTo(0, 0)
-        })
-    })
-</script>
-<script type="text/javascript">
+            window.scrollTo(0, 0);
+        });
+    });
     $('#sort-selector').change(function () {
-        let selector = $(this)
+        let selector = $(this);
         let currentUrl = new URL(window.location);
 
         let selectedValue = selector.val();
@@ -154,9 +152,9 @@
         }
     });
     $('.lb-shade-colour').each(function () {
-        let oldShade = (($(this).attr('id')).split(" ").join("-"))
-        let newShade = "lb-" + oldShade
-        $(this).attr('id', newShade)
+        let oldShade = (($(this).attr('id')).split(" ").join("-"));
+        let newShade = "lb-" + oldShade;
+        $(this).attr('id', newShade);
     });
 </script>
 

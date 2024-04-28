@@ -29,7 +29,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['luna-beauty-1a6fa7515eb8.herokuapp.com', '8000-lillimcnally-lunabeauty-y11mcz72q40.ws-eu110.gitpod.io', 'localhost']
+ALLOWED_HOSTS = [
+    'luna-beauty-1a6fa7515eb8.herokuapp.com',
+    '8000-lillimcnally-lunabeauty-y11mcz72q40.ws-eu110.gitpod.io',
+    'localhost']
 
 
 # Application definition
@@ -134,7 +137,6 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

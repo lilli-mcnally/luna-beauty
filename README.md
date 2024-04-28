@@ -341,12 +341,18 @@ I managed to deploy the website without any issues, and all my links worked perf
 * [Favicon Converter](https://favicon.io/favicon-converter/)
     * Moon Favicon
 
-#### Code
+#### Code & Testing
 * [Random Number Generator](https://www.random.org/integers/?num=45&min=100000000&max=999999999&col=5&base=10&format=html&rnd=new)
     * Creating Product SKU's
 
 * [Stack Overflow](https://stackoverflow.com/)
     * See [Fixed Bugs](#fixed-bugs) section
+
+* [Flake8](https://flake8.pycqa.org/en/latest/)
+    * Used to test PEP8 Compliance
+
+* [Autopep8](https://pypi.org/project/autopep8/#usage)
+    * Used to format all linting errors from Flake8
 
 #### Media
 * [Am I Responsive image](https://amiresponsive.blogspot.com/)

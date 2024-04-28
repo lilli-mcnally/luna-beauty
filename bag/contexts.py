@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+
 def bag_contents(request):
 
     bag_items = []
@@ -44,18 +45,18 @@ def bag_contents(request):
         grand_total = total + delivery
 
     total_from_discount = Decimal(settings.DISCOUNT_THRESHOLD - total)
-    
+
     context = {
-    'bag_items': bag_items,
-    'total': total,
-    'product_count': product_count,
-    'discount_threshold': settings.DISCOUNT_THRESHOLD,
-    'discount_percentage': settings.DISCOUNT_PERCENTAGE,
-    'discount': discount,
-    'discounted_total': discounted_total,
-    'grand_total': grand_total,
-    'delivery': delivery,
-    'total_from_discount': total_from_discount,
+        'bag_items': bag_items,
+        'total': total,
+        'product_count': product_count,
+        'discount_threshold': settings.DISCOUNT_THRESHOLD,
+        'discount_percentage': settings.DISCOUNT_PERCENTAGE,
+        'discount': discount,
+        'discounted_total': discounted_total,
+        'grand_total': grand_total,
+        'delivery': delivery,
+        'total_from_discount': total_from_discount,
     }
 
     return context

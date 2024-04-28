@@ -3,8 +3,10 @@ from django.contrib import messages
 from products.models import Product
 # Create your views here.
 
+
 def view_bag(request):
     return render(request, 'bag/bag.html')
+
 
 def add_to_bag(request, item_id):
 
@@ -20,32 +22,38 @@ def add_to_bag(request, item_id):
 
     if shade:
         if shade == "Choose your shade":
-                messages.error(request, f'Please choose a shade')
-                return redirect(redirect_url)
+            messages.error(request, f'Please choose a shade')
+            return redirect(redirect_url)
         else:
             if item_id in list(bag.keys()):
                 if shade in bag[item_id]['items_by_shade'].keys():
                     if bag[item_id]['items_by_shade'][shade] >= 10:
-                        messages.error(request, f'Only 10 of the same item can be purchase in one order.')
+                        messages.error(
+                            request, f'Only 10 of the same item can be purchase in one order.')
                         return redirect(redirect_url)
                     else:
                         bag[item_id]['items_by_shade'][shade] += quantity
-                        messages.success(request, f'{product.name} - {shade}  was added to your bag')
+                        messages.success(
+                            request, f'{product.name} - {shade}  was added to your bag')
                 else:
                     bag[item_id]['items_by_shade'][shade] = quantity
-                    messages.success(request, f'{product.name} - {shade}  was added to your bag')
+                    messages.success(
+                        request, f'{product.name} - {shade}  was added to your bag')
             else:
-                    bag[item_id] = {'items_by_shade': {shade: quantity}}
-                    messages.success(request, f'{product.name} - {shade}  was added to your bag')
+                bag[item_id] = {'items_by_shade': {shade: quantity}}
+                messages.success(
+                    request, f'{product.name} - {shade}  was added to your bag')
     else:
         if item_id in list(bag.keys()):
             if bag[item_id] >= 10:
-                messages.error(request, f'Only 10 of the same item can be purchase in one order.')
+                messages.error(
+                    request, f'Only 10 of the same item can be purchase in one order.')
                 return redirect(redirect_url)
             else:
                 bag[item_id] += quantity
-                messages.success(request, f'{product.name} was added to your bag')
-        else: 
+                messages.success(request,
+                                 f'{product.name} was added to your bag')
+        else:
             bag[item_id] = quantity
             messages.success(request, f'{product.name} was added to your bag')
 
@@ -65,10 +73,12 @@ def update_bag(request, item_id):
     if shade:
         if quantity > 0:
             bag[item_id]['items_by_shade'][shade] = quantity
-            messages.success(request, f'{product.name} - {shade} quantity was updated')
+            messages.success(request,
+                             f'{product.name} - {shade} quantity was updated')
         else:
             del bag[item_id]['items_by_shade'][shade]
-            messages.success(request, f'{product.name} - {shade} was removed from your bag')
+            messages.success(
+                request, f'{product.name} - {shade} was removed from your bag')
     else:
         if quantity > 0:
             bag[item_id] = quantity
@@ -76,11 +86,12 @@ def update_bag(request, item_id):
 
         else:
             bag.pop(item_id)
-            messages.success(request, f'{product.name} was removed from your bag')
-
+            messages.success(request,
+                             f'{product.name} was removed from your bag')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
+
 
 def remove_from_bag(request, item_id):
     try:
@@ -91,13 +102,15 @@ def remove_from_bag(request, item_id):
         bag = request.session.get('bag', {})
         if shade:
             del bag[item_id]['items_by_shade'][shade]
-            messages.success(request, f'{product.name} was removed from your bag')
+            messages.success(request,
+                             f'{product.name} was removed from your bag')
             if not bag[item_id]['items_by_shade']:
                 bag.pop(item_id)
 
         else:
             bag.pop(item_id)
-            messages.success(request, f'{product.name} was removed from your bag')
+            messages.success(request,
+                             f'{product.name} was removed from your bag')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)

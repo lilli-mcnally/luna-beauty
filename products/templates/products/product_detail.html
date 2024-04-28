@@ -43,10 +43,9 @@
                         {% endfor %}
                     </select>
                     {% endif %}
-                    <input type="hidden" name="quantity" value="1"></input>
-                    <input type="submit" value="Add to shopping bag" class="btn lb-add-bag px-1 py-2 mx-1 mt-2 mt-xl-0"
-                        href="{% url 'products' %}"></input>
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}"></input>
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="submit" value="Add to shopping bag" class="btn lb-add-bag px-1 py-2 mx-1 mt-2 mt-xl-0">
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
                 {% if product.shades %}
                 <div class="grid d-flex flex-row flex-wrap justify-content-center">
@@ -94,7 +93,6 @@
         </div>
     </div>
 </div>
-
 <div class="lb-eyeshadow-promo lb-cloud-mini col-12 mt-0 mt-sm-2 d-flex align-items-center justify-content-around">
     <h3 class="text-white">You might also like...</h3>
 </div>
@@ -145,9 +143,9 @@
         }
     });
     $('.lb-shade-colour').each(function () {
-        let oldShade = (($(this).attr('id')).split(" ").join("-"))
-        let newShade = "lb-" + oldShade
-        $(this).attr('id', newShade)
+        let oldShade = (($(this).attr('id')).split(" ").join("-"));
+        let newShade = "lb-" + oldShade;
+        $(this).attr('id', newShade);
     });
 </script>
 {% endblock %}

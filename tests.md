@@ -132,6 +132,13 @@ Products Page
 Email Page
 * No errors.
 
+#### Django Testing
+
+As explained in my [Fixed Bugs](https://github.com/lilli-mcnally/luna-beauty?tab=readme-ov-file#django-testing) section, I did have some issues with getting the tests to work. However, when I was able to run the tests, I got all 19 to pass. Below are links to the two test files:
+
+* [Products](./products/tests.py)
+* [Checkout](./checkout/tests.py)
+
 #### Flake8
 
 I used Flake8 to see if there were any PEP8 Compliance errors in my code. I had a range from lines being to long to trailing whitespace. I've used Autopep8 to fix as many linting errors as possible except for:
@@ -140,6 +147,9 @@ I used Flake8 to see if there were any PEP8 Compliance errors in my code. I had 
     * Some lines are too long because they're strings.
     * I haven't changed any linting errors found in my migration files.
 
+#### Spell Check
+
+I put my README in a [Microsoft Word](https://www.microsoft.com/en/microsoft-365/word?market=af) document and used the Editor to fix spelling mistakes.
 
 ### Lighthouse
 

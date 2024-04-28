@@ -22,7 +22,7 @@ To provide users with an easy to use website for browsing make up. To have an at
 
 #### Beauty Bay
 Pros
-> The home page grabs the users attention with large bold images. The Navigation bar is well set out underneath a search bar, that has icons to log in, see your wishlist, and your bag.
+> The home page grabs the users attention with large bold images. The Navigation bar is well set out underneath a search bar, that has icons to log in, see your wish list, and your bag.
 
 Cons
 > Once users click the Nav bar items, a huge dropdown appears with a lot of options, which makes it more difficult to navigate to exactly what you need as the content is overwhelming.
@@ -107,7 +107,7 @@ The bottom section is for similar products in that category that the user might 
 
 #### Shopping Bag
 
-This page iterates through each product in the shopping bag and displays the image, name, shade, price and quantity. The quantity can also be updated or the product can be removed.Underneath is a div to tell the user the delivery cost, and how long it takes. Below is a section that tells the user how much they have to spend to qualify for a discount, or how much discount they've got, and finally underneath is the total, and a link to Checkout. If the bag is empty, the page will display a div that says there's nothing in their bag.
+This page iterates through each product in the shopping bag and displays the image, name, shade, price and quantity. The quantity can also be updated or the product can be removed. Underneath is a div to tell the user the delivery cost, and how long it takes. Below is a section that tells the user how much they have to spend to qualify for a discount, or how much discount they've got, and finally underneath is the total, and a link to Checkout. If the bag is empty, the page will display a div that says there's nothing in their bag.
 
 #### Checkout
 
@@ -167,7 +167,7 @@ At Laptop size, the checkout success divs change from a `col-4` to `col-6` to fi
 #### Tablet
 Downsizing to tablet changes the eyeshadow promotion to only show the palettes, as the face image changes to `display: none;`. The Eyes and Cheeks links in the discount promotion on the Home page also become `display: none;` and the MAC promotion images change into two rows of two, instead of one row of four.
 
-The products page now has two product per row instead of three, and the product detail page now has the prodcut image stacked on top of the description card. The profile page has also changed to a column instead of a row and the delivery info is now stacked on top of the order history.
+The products page now has two product per row instead of three, and the product detail page now has the product image stacked on top of the description card. The profile page has also changed to a column instead of a row and the delivery info is now stacked on top of the order history.
 
 On the Profile page, the order history now only shows the order number and date the order was placed to make the most of the space. For smaller tablets and below, the product description div on the Product Details page fills the space from side to side with no margin.
 
@@ -195,7 +195,7 @@ and then amending my discount using:
 `discount = Decimal((total / 100) * settings.DISCOUNT_PERCENTAGE)`
 
 #### Stripe
-I initially created my checkout form to have fields for “First Name” and “Last Name”. However, while trying to get my Stripe Webhooks working, I had an error come up to say “Received unknown parameters “first_name”, “last_name”. I realised this was because [Stripe](https://docs.stripe.com/js/elements_object/create_payment_element#payment_element_create-options-business) was expecting one name field to come through, not two. I initially fixed this by using the concatenate function in Javascipt to put the first name and last name fields together. However, I ended up deciding the easier way to fix this issue was to amend the Checkout Model to only have a field for “Name”.
+I initially created my checkout form to have fields for “First Name” and “Last Name”. However, while trying to get my Stripe Webhooks working, I had an error come up to say “Received unknown parameters “first_name”, “last_name”. I realised this was because [Stripe](https://docs.stripe.com/js/elements_object/create_payment_element#payment_element_create-options-business) was expecting one name field to come through, not two. I initially fixed this by using the concatenate function in JavaScript to put the first name and last name fields together. However, I ended up deciding the easier way to fix this issue was to amend the Checkout Model to only have a field for “Name”.
 
 #### Products Model – Shade
 I wanted to add the option of users choosing different shades for products such as foundation. When learning how to create the Product model, I saw examples where the developer had a set list of “XS, S, M, L, XL” for all products, but I wanted to be able to have a different array for each product. To fix this issue, I found a field called “ArrayField” in the [Django Documentation](https://docs.djangoproject.com/en/5.0/ref/contrib/postgres/fields/#arrayfield) that can have varying lengths, so that the shades can be iterated through. 
@@ -228,7 +228,7 @@ After this, the shade's ID's were showing correctly - `#003 Moon` was now `#003-
 
 #### Shades Preview
 
-I wanted to add a couple of the shade to the product page, and then a third circle with the number of how many more shades availble there are. I tried to use `forloop.counter` in Django templating - as suggested in a [Stack Overflow](https://stackoverflow.com/questions/8659560/django-template-increment-the-value-of-a-variable) post, but I couldn't see an easy way to set a variable, then use `+=1` while iterating through the shades. Instead, I used `{% if forloop.first or forloop.last %}` to show two example shades. I also found a very interesting page on [Pypi](https://pypi.org/project/django-mathfilters/) that explained Django Math Filters. I was able to use Math Filters to subtract 2 from the length of the shades array, to show the user how many more shades Luna Beauty offers in for that product.
+I wanted to add a couple of the shade to the product page, and then a third circle with the number of how many more shades available there are. I tried to use `forloop.counter` in Django templating - as suggested in a [Stack Overflow](https://stackoverflow.com/questions/8659560/django-template-increment-the-value-of-a-variable) post, but I couldn't see an easy way to set a variable, then use `+=1` while iterating through the shades. Instead, I used `{% if forloop.first or forloop.last %}` to show two example shades. I also found a very interesting page on [Pypi](https://pypi.org/project/django-mathfilters/) that explained Django Math Filters. I was able to use Math Filters to subtract 2 from the length of the shades array, to show the user how many more shades Luna Beauty offers in for that product.
 
 #### Footer
 
@@ -275,7 +275,7 @@ I tried to commit my changes, but as I had committed from a different workspace,
 
 #### Django Testing (continued)
 
-Due to using the ArrayField in models.py in the Proucts app, I am unable to use SQLite3 in Development mode. This means each time I need to access Development mode, if I create a new workspace I would need to add the PostgreSQL Database URL to my env.py.
+Due to using the ArrayField in models.py in the Products app, I am unable to use SQLite3 in Development mode. This means each time I need to access Development mode, if I create a new workspace I would need to add the PostgreSQL Database URL to my env.py.
 
 #### Shades
 
@@ -295,7 +295,7 @@ I managed to deploy the website without any issues, and all my links worked perf
 9. I built my database by migrating my models to PostgreSQL, then using `python3 manage.py loaddata` for `categories` and `products`.
 10. I created a new superuser, and an AWS Account.
 11. I used AWS to host my Media and Static files by using S3, and created Users, Groups and Policies before uploading the files to the relevant folder.
-10. I checked my project had successfuly deployed using the "Open App" button on Heroku.
+10. I checked my project had successfully deployed using the "Open App" button on Heroku.
 
 ## Credits
 
@@ -353,6 +353,8 @@ I managed to deploy the website without any issues, and all my links worked perf
 
 * [Autopep8](https://pypi.org/project/autopep8/#usage)
     * Used to format all linting errors from Flake8
+
+* [Microsoft Word](https://www.microsoft.com/en/microsoft-365/word?market=af)
 
 #### Media
 * [Am I Responsive image](https://amiresponsive.blogspot.com/)

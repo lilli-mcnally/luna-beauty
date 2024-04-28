@@ -153,6 +153,67 @@ I put my README in a [Microsoft Word](https://www.microsoft.com/en/microsoft-365
 
 ### Lighthouse
 
-### Spell Check
+#### Add Product Desktop
+![Add Product Desktop](./static/README/lighthouse/add-product-desktop.png)
+
+#### Add Product Mobile
+![Add Product Mobile](./static/README/lighthouse/add-product-mobile.png)
+
+#### Bag Desktop
+![Bag Desktop](./static/README/lighthouse/bag-desktop.png)
+
+#### Bag Mobile
+![Bag Mobile](./static/README/lighthouse/bag-mobile.png)
+
+#### Checkout Desktop
+![Checkout Desktop](./static/README/lighthouse/checkout-desktop.png)
+
+#### Checkout Mobile
+![Checkout Mobile](./static/README/lighthouse/checkout-mobile.png)
+
+#### Checkout Success Desktop
+![Checkout Success Desktop](./static/README/lighthouse/checkout-success-desktop.png)
+
+#### Checkout Success Mobile
+![Checkout Success Mobile](./static/README/lighthouse/checkout-success-mobile.png)
+
+#### Home Desktop
+![Home Desktop](./static/README/lighthouse/home-desktop.png)
+
+#### Home Mobile
+![Home Mobile](./static/README/lighthouse/home-mobile.png)
+
+#### Product Detail Desktop
+![Product Detail Desktop](./static/README/lighthouse/product-detail-desktop.png)
+
+#### Product Detail Mobile
+![Product Detail Mobile](./static/README/lighthouse/product-detail-mobile.png)
+
+#### Products Desktop
+![Products Desktop](./static/README/lighthouse/products-desktop.png)
+
+#### Products Mobile
+![Products Mobile](./static/README/lighthouse/products-mobile.png)
+
+#### Profile Desktop
+![Profile Desktop](./static/README/lighthouse/profile-desktop.png)
+
+#### Profile Mobile
+![Profile Mobile](./static/README/lighthouse/profile-mobile.png)
+
+#### Register Desktop
+![Register Desktop](./static/README/lighthouse/register-desktop.png)
+
+#### Register Mobile
+![Register Mobile](./static/README/lighthouse/register-mobile.png)
+
+#### Sign In Desktop
+![Sign In Desktop](./static/README/lighthouse/signin-desktop.png)
+
+#### Sign In Mobile
+![Sign In Mobile](./static/README/lighthouse/signin-mobile.png)
+
 
 ## Manual Testing
+
+

@@ -12,7 +12,7 @@
         {% if item.product.image %}
         <img class="h-100 col-4" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
         {% else %}
-        <img class="h-100 col-4" src="{{ MEDIA_URL }}image-preview.webp" alt="{{ item.product.name }}">
+        <img class="h-100 col-4" src="{{ MEDIA_URL }}/image-preview.webp" alt="{{ item.product.name }}">
         {% endif %}
         <div id="success-bag" class="col-8 p-3 d-flex flex-column justify-content-center">
             <p class="card-title">{{ message }}</p>

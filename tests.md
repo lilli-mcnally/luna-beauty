@@ -216,4 +216,44 @@ I put my README in a [Microsoft Word](https://www.microsoft.com/en/microsoft-365
 
 ## Manual Testing
 
+#### Links & Buttons
+Add Product - No errors
+Bag - No errors
+Checkout - No errors
+Checkout Success - No errors
+Home - No errors
+Product Detail - No errors
+Products - No errors
+Profile - No errors
+Register - No errors
+Sign In - No errors
+
+#### Hover Qualities
+Add Product - No errors
+Bag - No errors
+Checkout - No errors
+Checkout Success - No errors
+Home - No errors
+Product Detail - No errors
+Products - No errors
+Profile - No errors
+Register - No errors
+Sign In - No errors
+
+#### Forms
+Add Product - No errors
+Checkout - No errors
+Product Detail - No errors
+Profile - No errors
+Register - No errors
+Sign In - No errors
+
+#### Other
+Product Detail Shades dropdown - No errors
+Product Detail Ingredients accordion - No errors
+Checkout Stripe input - No errors
+Success Toast - No errors
+Info Toast - No errors
+Warning Toast - No errors
+Errors Toast - No errors
 

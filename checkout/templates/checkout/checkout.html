@@ -17,7 +17,7 @@
         <div class="col-12 col-md-6 col-lg-7 me-md-2">
             <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="py-2">
                 {% csrf_token %}
-                <h5>Details</h5>
+                <h5>Shipping Details</h5>
                 {{ order_form.full_name | as_crispy_field }}
                 {{ order_form.email | as_crispy_field }}
                 {{ order_form.phone | as_crispy_field }}

@@ -1,7 +1,7 @@
 <div class="container-fluid px-0">
     <nav class="navbar border-body navbar-expand-md p-0" data-bs-theme="dark">
         <div class="container-fluid col-12">
-            <a class="navbar-brand mx-4 p-0" id="logo" href="{% url 'home' %}"></a>
+            <a class="navbar-brand mx-2 mx-sm-4 p-0" id="logo" href="{% url 'home' %}"></a>
             <button class="navbar-toggler mx-4" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -45,14 +45,14 @@
                     <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
                         <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                     </li>
-                    <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
-                    </li>
                     {% if request.user.is_superuser %}
                     <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
                         <a class="nav-link" href="{% url 'add_product' %}">Manage Products</a>
                     </li>
                     {% endif %}
+                    <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
+                        <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
+                    </li>
                     {% else %}
                     <li class="nav-item px-3 py-1 px-xl-4 py-md-3">
                         <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>

@@ -47,9 +47,10 @@ Cons
 ##### Future features
 * Add the option to review items
 * Expand the range to include skincare
-* Add blog pages about recommendations for products.
+* Add blog pages about recommendations for products
 * Add the option to log in using Facebook or Google
 * Add a Wishlist option to the profile
+* Make the shades look smarter by only showing the name of the shade in the options menu when the user hovers or clicks on the coloured div
 
 ## Wireframes
 * [Home Page](./static/README/home.PNG)
@@ -128,6 +129,59 @@ The link on each order line takes the user to the Checkout Success page, with a 
 
 Additionally, there are all of the Django Allauth templates. These have been styled to fit the Luna Beauty website, but still have the same core components that Allauth presents.
 
+## Design
+
+#### Colours
+I decided to have a black and while theme in the header and footer to tie in with the logo black and white, referencing the moon and the night sky. I also feel this gives the website a professional and clean look.
+
+I think the dark peach `#FF9C83` for buttons and hover qualities goes well with the black and white, and also goes well with a lot of the product images, such as the lipsticks and blushers. I chose the light peach `#FFECEB` background for the cards as it contrasts nicely with the dark peach. I chose a very dark grey for the bottom section of the Home page to give definition against the black background of the footer.
+
+Each shade in the shades.css file has a HEX taken straight from the websites referenced in [Credits](#credits) section.
+
+#### Typography
+
+I decided to use Jost for most of the website, as it has a clean and modern feel. I used Noto as a decorative font for impact, such as on the eyeshadow promotion, the prices on the product detail page and the product titles.
+
+#### Imagery
+I created the Luna Beauty Logo as a moon to fit the luna theme. I chose a face with a creative eyeshadow look to engage users, and the three palettes to show a range of colours. I also decided to use the clouds image behind the discount offer because the pinks and purples tied in to the colour scheme of the website, and the sky theme ties to the luna theme.
+
+On the home page I also added three Font Awesome icons, to reflect the imagery of the writing below each one. I used double arrows on some important buttons, a little delivery van on the bag page, and added the Font Awesome star icon next to the rating.
+
+#### Styling
+I wanted the site to look sharp and professional but also engage with the fun side of make up, so I made most of the website with sharp corners but added a small rounding to most buttons. I also liked that the form fields have a little extra rounding. I also added a margin top and bottom in the light peach `#FFECEB` to each page heading.
+
+### Backgrounds
+The background for the website is just a standard white to keep a fresh and clean look and not draw from the products. As mentioned above, the product cards have a light peach `#FFECEB` and I chose a cloud background for the discount promotion.
+
+## Responsive Design
+
+#### 4K Screens
+At 4K most of the text is has a larger size, including headings and icons. The products are evenly spaced to adjust to the larger screen and all forms have expanded to fill the space set by the Bootstrap columns
+
+#### Large Laptop
+The home images on the eyeshadow promotion have adjusted to the screen size and the checkout and product cards fit comfortably in the space. The font is also a little smaller then 4K Screens to suit the size.
+
+#### Laptop
+At Laptop size, the checkout success divs change from a `col-4` to `col-6` to fill the space well. The home eyeshadow promotion images are well sized and the Add Product and Edit Product pages have forms at `col-6`.
+
+#### Tablet
+Downsizing to tablet changes the eyeshadow promotion to only show the palettes, as the face image changes to `display: none;`. The Eyes and Cheeks links in the discount promotion on the Home page also become `display: none;` and the MAC promotion images change into two rows of two, instead of one row of four.
+
+The products page now has two product per row instead of three, and the product detail page now has the prodcut image stacked on top of the description card. The profile page has also changed to a column instead of a row and the delivery info is now stacked on top of the order history.
+
+On the Profile page, the order history now only shows the order number and date the order was placed to make the most of the space. For smaller tablets and below, the product description div on the Product Details page fills the space from side to side with no margin.
+
+#### Mobile
+At Mobile size, the Home page has changed so both images by the eyeshadow promotion are `display: none;` and the links on the discount promotion have also changed to `display: none;`. The MAC promotion is one card per row now. I changed the text inside the div advertising MAC as the this div and the last product are too far away from each other to tie in together properly.
+
+The Best Brands div has also changed to a column, and the footer has two columns with the social media links still in a row. In the navbar, the links are inside a burger menu and the search bar is set to col-8.
+
+Products are now stacked in rows of one and the shades on the product detail page have adjusted to the size of the container. As a [feature for the future](#future-features) I would love to smarten up the shades the name of the shade only shows when the user hovers or clicks. I think this would make the shade divs closer together and they wouldn't vary in length, pushing them in uneven columns.
+
+The Bag page has also changed, with the product images on top of the description, quantity and price, and on the checkout page the order summary is above the shipping details form.
+
+#### Small Mobile
+At Smallest Mobile size, the Toasts still fit comfortably in the middle, with a `max-width: 300px` leaving a 10px of margin either side. The logo has downsized to `height: 80px;` and `width: 80px;` with a little less margin either side. Generally across the site most divs now have a col-11 or col-10 to use up the space, but also leave a little margin around.
 
 ## Fixed Bugs
 

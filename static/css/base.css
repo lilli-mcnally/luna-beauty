@@ -97,6 +97,14 @@ header {
     background-color: #000;
 }
 
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
 /* Footer */
 
 .lb-footer {
@@ -473,5 +481,10 @@ header {
 
     #lb-total {
         font-size: 35px;
+    }
+
+    #logo {
+        height: 80px;
+        width: 80px;
     }
 }

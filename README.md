@@ -341,6 +341,9 @@ I managed to deploy the website without any issues, and all my links worked perf
 * [Favicon Converter](https://favicon.io/favicon-converter/)
     * Moon Favicon
 
+* [CloudConvert](https://cloudconvert.com/png-to-webp)
+    * Converted all PNG and JPEG files to WEBP
+
 #### Code & Testing
 * [Random Number Generator](https://www.random.org/integers/?num=45&min=100000000&max=999999999&col=5&base=10&format=html&rnd=new)
     * Creating Product SKU's

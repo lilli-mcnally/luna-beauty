@@ -21,7 +21,7 @@
                 {% if product.image %}
                 <img src="{{ product.image.url }}" class="card-img-top border-rad" alt="{{ product.name }}">
                 {% else %}
-                <img src="{{ MEDIA_URL }}image-preview.webp" class="card-img-top border-rad" alt="{{ product.name }}">
+                <img src="{{ MEDIA_URL }}/image-preview.webp" class="card-img-top border-rad" alt="{{ product.name }}">
                 {% endif %}
             </div>
             <div class="card card-body p-4 align-items-center col-xxl-8 col-lg-6 col-12" id="lb-info-card">

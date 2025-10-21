@@ -1,1 +1,1 @@
-web: gunicorn luna_beauty.wsgi:application
+web: gunicorn luna_beauty.wsgi:application --log-file=-

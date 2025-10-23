@@ -32,7 +32,10 @@ DEBUG = 'DEVELOPMENT' in os.environ
 ALLOWED_HOSTS = [
     'luna-beauty-1a6fa7515eb8.herokuapp.com',
     '8000-lillimcnally-lunabeauty-y11mcz72q40.ws-eu110.gitpod.io',
-    'localhost']
+    'localhost',
+    '127.0.0.1',
+    'localhost',
+    '.railway.app']
 
 
 # Application definition
@@ -128,21 +131,14 @@ WSGI_APPLICATION = 'luna_beauty.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
-        conn_max_age=600,
-        ssl_require=True
-        )
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+
+DATABASES = {
+'default': dj_database_url.config(
+    default=os.environ.get('DATABASE_URL'),
+    conn_max_age=600,
+    ssl_require=True
+    )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -180,10 +176,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = str('/static/')
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
-MEDIA_URL = str('/media/')
+MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
 
 if 'USE_AWS' in os.environ:

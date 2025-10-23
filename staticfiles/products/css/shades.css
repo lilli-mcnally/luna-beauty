@@ -1,0 +1,268 @@
+/* Shades */
+
+.lb-shade-colour,
+.lb-shade-empty {
+    max-height: 25px;
+    max-width: 25px;
+    min-height: 25px;
+    min-width: 25px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.lb-shade-empty {
+    background-color: #FF9C83;
+    font-size: 14px;
+}
+
+#lb-003-moon {
+    background-color: #d17070;
+}
+
+#lb-006-reef {
+    background-color: #ec918f;
+}
+
+#lb-009-topaz {
+    background-color: #a84b3e;
+}
+
+#lb-1 {
+    background-color: #deb18e;
+}
+
+#lb-2 {
+    background-color: #d3a26f;
+}
+
+#lb-3 {
+    background-color: #eac09a;
+}
+
+#lb-4 {
+    background-color: #c8946c;
+}
+
+#lb-5 {
+    background-color: #d2935a;
+}
+
+#lb-6 {
+    background-color: #b56a3a;
+}
+
+#lb-7 {
+    background-color: #9c5537;
+}
+
+#lb-8 {
+    background-color: #8e4c32;
+}
+
+#lb-1n {
+    background-color: #e7cfb5;
+}
+
+#lb-3n {
+    background-color: #debe9e;
+}
+
+#lb-5n {
+    background-color: #e9b180;
+}
+
+#lb-7w {
+    background-color: #a0553e;
+}
+
+#lb-9n {
+    background-color: #824c33;
+}
+
+#lb-11n {
+    background-color: #512716;
+}
+
+#lb-1n0-porcelain {
+    background-color: #daaf9c;
+}
+
+#lb-2n1-desert-beige {
+    background-color: #e0c1ad;
+}
+
+#lb-3n2-wheat {
+    background-color: #f8cca7;
+}
+
+#lb-4n2-spiced-sand {
+    background-color: #d18859;
+}
+
+#lb-5n2-amber-honey {
+    background-color: #cd6824;
+}
+
+#lb-6n2-truffle {
+    background-color: #893914;
+}
+
+#lb-7n1-deep-amber {
+    background-color: #711d05;
+}
+
+#lb-8n1-espresso {
+    background-color: #8e5a45;
+}
+
+#lb-235-nude {
+    background-color: #d87f8e;
+}
+
+#lb-258-berry-blush {
+    background-color: #b0545f;
+}
+
+#lb-303-rose-tendre {
+    background-color: #e68396;
+}
+
+#lb-amaretto {
+    background-color: #773236;
+}
+
+#lb-air-kiss {
+    background-color: #d28b6f;
+}
+
+#lb-clearly-grape {
+    background-color: #680f21;
+}
+
+#lb-apple-crisp {
+    background-color: #942e22;
+}
+
+#lb-creme-brulee {
+    background-color: #f8acaf;
+}
+
+#lb-sorbet {
+    background-color: #d25965;
+}
+
+#lb-black {
+    background-color: #000;
+}
+
+#lb-blue {
+    background-color: #2c2cb7;
+}
+
+#lb-brown {
+    background-color: #40252a;
+}
+
+#lb-f2 {
+    background-color: #ddbeaa;
+}
+
+#lb-f3 {
+    background-color: #e2c6b8;
+}
+
+#lb-f7 {
+    background-color: #e6ba9b;
+}
+
+#lb-f10 {
+    background-color: #c38963;
+}
+
+#lb-f13 {
+    background-color: #966642;
+}
+
+#lb-f17 {
+    background-color: #4f2612;
+}
+
+#lb-l2-mont-blanc {
+    background-color: #dfb98c;
+}
+
+#lb-l5-fiji {
+    background-color: #ddb089;
+}
+
+#lb-m2-santa-fe {
+    background-color: #dfad88;
+}
+
+#lb-md3-cadiz {
+    background-color: #e09156;
+}
+
+#lb-md5-marquises {
+    background-color: #b57339;
+}
+
+#lb-xd3-iguacu {
+    background-color: #7f4e2d;
+}
+
+#lb-xd5-zambie {
+    background-color: #905533;
+}
+
+#lb-marrakesh {
+    background-color: #9a281d;
+}
+
+#lb-velvet-teddy {
+    background-color: #cb7769;
+}
+
+#lb-ring-the-alarm {
+    background-color: #8e1d23;
+}
+
+#lb-nc17 {
+    background-color: #e9c89a;
+}
+
+#lb-nw20 {
+    background-color: #dfc094;
+}
+
+#lb-nc35 {
+    background-color: #e4a260;
+}
+
+#lb-nw40 {
+    background-color: #c79556;
+}
+
+#lb-nc42 {
+    background-color: #f7b577;
+}
+
+#lb-nc47 {
+    background-color: #ba8037;
+}
+
+#lb-nw50 {
+    background-color: #aa592c;
+}
+
+#lb-pink-quartz {
+    background-color: #dc4d61;
+}
+
+#lb-honey-talks {
+    background-color: #a15f59;
+}
+
+#lb-rose-envy {
+    background-color: #bc504f;
+}

@@ -1,0 +1,40 @@
+.stripe-style-input {
+    margin: 5px 0;
+}
+
+.stripe-style-input:focus {
+    box-shadow: none;
+    border-color: #FF9C83;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #6b6d70;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000;
+
+}
+
+#id_default_country option:first-child {
+    color: #6b6d70;
+}
+
+.order-history {
+    max-height: 398px;
+    overflow-y: auto;
+}
+
+.table>:not(caption)>*>* {
+    background: #FFECEB;
+}
+
+#lb-last-order {
+    border-bottom-color: #FFECEB;
+}
+
+.lb-table-corner {
+    border-radius: 10px;
+}

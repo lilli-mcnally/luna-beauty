@@ -30,8 +30,6 @@ def add_to_wishlist(request, product_id):
         product=product,
     )
 
-    messages.info(request, f'{product.name} is already on your wishlist')
-
     return redirect(request.META.get('HTTP_REFERER'))
 
 
@@ -47,8 +45,6 @@ def remove_from_wishlist(request, item_id):
 
     item.delete()
     
-    messages.success(request, f'{product_name} was removed from your wishlist')
-    
     return redirect(request.META.get('HTTP_REFERER'))
 
 
@@ -59,6 +55,10 @@ def move_to_bag(request, item_id):
 
     request.POST = request.POST.copy()
     request.POST['quantity'] = 1
+
+    shade = request.POST.get('shade')
+    if shade:
+        request.POST['shade'] = shade
     
     response = add_to_bag(request, product.id)
 

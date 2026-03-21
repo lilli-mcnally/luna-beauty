@@ -14,7 +14,7 @@
     <div class="col-10 d-flex flex-column align-items-center">
         {% if wishlist_items %}
         {% for item in wishlist_items %}
-        <div class="col-12 col-sm-8 col-md-10 col-xl-8 col-xxl-6 card lb-bag-card mb-3">
+        <div class="col-12 col-sm-8 col-md-10 col-xl-8 col-xxl-6 card lb-bag-card mb-3 wishlist-item">
             <div class="row g-0">
                 <div class="col-md-3 d-flex align-items-center justify-content-center bg-white lb-bd-pink">
                     {% if item.product.image %}
@@ -39,12 +39,21 @@
                                 <p><strong>£{{ item.product.price }}</strong></p>
                             </div>
                         </div>
-                        <div class="d-flex flex-row justify-content-between align-items-center flex-wrap mt-2">
+                        <div class="d-flex flex-column justify-content-between align-items-center flex-wrap mt-2">
+                            {% if item.product.shades %}
+                            <select class="form-select py-2 mx-1 wishlist-selector d-none" name="shade">
+                                <option selected disabled>Choose your shade</option>
+                                {% for shade in item.product.shades %}
+                                <option value="{{ shade }}">{{ shade }}</option>
+                                {% endfor %}
+                            </select>
+                            {% endif %}
                             <form action="{% url 'move_to_bag' item.id %}" method="POST"
-                                class="lb-shades-picker d-flex justify-content-center align-items-center my-3 flex-column flex-xl-row">
+                                class="lb-shades-picker d-flex justify-content-center align-items-center my-3 flex-column flex-xl-row move-to-bag-form">
                                 {% csrf_token %}
+                                <input type="hidden" name="shade" value="">
                                 <input type="hidden" name="quantity" value="1">
-                                <input type="submit" value="Move to shopping bag" class="btn lb-add-bag px-1 py-2 mx-1 mt-2 mt-xl-0">
+                                <input type="submit" value="Move to shopping bag" class="btn lb-add-bag px-1 py-2 mx-1 mt-2 mt-xl-0 add-to-bag-btn">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </form>
                         </div>
@@ -63,4 +72,35 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('.wishlist-item').each(function() {
+        const $item = $(this);
+        const $btn = $item.find('.add-to-bag-btn');
+        const $shadeSelect = $item.find('.wishlist-selector');
+        const $hiddenInput = $item.find('input[name="shade"]');
+        const $form = $item.find('.move-to-bag-form');
+
+        $btn.click(function(e) {
+            if ($shadeSelect.length && $shadeSelect.hasClass('d-none')) {
+                e.preventDefault();
+                $shadeSelect.removeClass('d-none');
+                $shadeSelect.focus();
+            }
+        });
+
+        $shadeSelect.change(function() {
+            $hiddenInput.val($(this).val());
+            $form.submit();
+        });
+    });
+});
+
+</script>
 {% endblock %}

@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
+from bag.views import add_to_bag
+
 from .models import Wishlist
 from products.models import Product
 
@@ -56,3 +58,20 @@ def remove_from_wishlist(request, item_id):
         messages.success(request, f'{product_name} - {shade} was removed from your wishlist')
     else:
         messages.success(request, f'{product_name} was removed from your wishlist')
+
+
+@login_required
+def move_to_bag(request, item_id):
+    item = get_object_or_404(Wishlist, id=item_id, user_profile=request.user.userprofile)
+    product = item.product
+    shade = item.shade
+
+    request.POST = request.POST.copy()
+    request.POST['quantity'] = 1
+    if shade:
+        request.POST['shade'] = shade
+    
+    response = add_to_bag(request, product.id)
+
+    item.delete()
+    return response

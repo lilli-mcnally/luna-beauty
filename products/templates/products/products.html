@@ -53,7 +53,14 @@
             <div class="col d-flex justify-content-center">
                 <div class="card h-100 p-2 border-rad">
                     <div class="lb-product-image d-flex justify-content-center">
-                        <i class="fa-regular fa-heart wishlist-heart"></i>
+
+                        <form action="{% url 'add_to_wishlist' product.id %}" method="POST" class="wishlist-form">
+                            {% csrf_token %}
+                            <button type="submit" class="wishlist-heart">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </form>
+                        
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img src="{{ product.image.url }}" class="card-img-top h-100 lb-images border-rad"

@@ -63,6 +63,8 @@ body {
     font-size: 30px;
     top: 20px;
     left: 20px;
+    border: none;
+    background-color: transparent;
 }
 
 /* Header */

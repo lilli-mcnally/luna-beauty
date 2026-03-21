@@ -76,11 +76,46 @@
 
     {% block postloadjs %}
     <script type="text/javascript">
+        //Bootstrap toasts for messages
         const lbToastList = $('.toast');
         for (let lbToast of lbToastList) {
             const toast = new bootstrap.Toast(lbToast);
             toast.show()
         }
+
+        //Wishlist icon global toggle
+        document.querySelectorAll('.wishlist-form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                //Stops the page reloading
+                e.preventDefault();
+                const icon = this.querySelector('i');
+
+                fetch(this.action, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': this.querySelector('[name=csrfmiddlewaretoken]').value,
+                    }
+                }).then(response => {
+                    if (response.status === 302) {
+                        window.location.href = response.url || '/accounts/login/';
+                        return
+                    }
+
+                    if (response.ok) {
+                        if (icon.classList.contains('far')) {
+                            //Removes the empty heart and adds a filled one
+                            icon.classList.remove('far');
+                            icon.classList.add('fas');
+                        } else {
+                            //Removes a full heart and adds and empty one
+                            icon.classList.remove('fas');
+                            icon.classList.add('far');
+                        }
+                    }
+                });
+            });
+        });
+
     </script>
     {% endblock %}
 

@@ -35,24 +35,14 @@
                             <a href="{% url 'product_detail' item.product.id %}" class="lb-hover-underline">
                                 <h5 class="card-title">{{ item.product.name }}</h5>
                             </a>
-                            {% if item.shade %}
-                            <div class="d-flex justify-content-between">
-                                <p class="text-body-secondary">Shade: {{ item.shade }}</p>
-                                <p><strong>£{{ item.product.price }}</strong></p>
-                            </div>
-                            {% else %}
                             <div class="d-flex justify-content-end">
                                 <p><strong>£{{ item.product.price }}</strong></p>
                             </div>
-                            {% endif %}
                         </div>
                         <div class="d-flex flex-row justify-content-between align-items-center flex-wrap mt-2">
                             <form action="{% url 'move_to_bag' item.id %}" method="POST"
                                 class="lb-shades-picker d-flex justify-content-center align-items-center my-3 flex-column flex-xl-row">
                                 {% csrf_token %}
-                                {% if item.shade %}
-                                <input type="hidden" value="{{ item.shade }}" name="shade">
-                                {% endif %}
                                 <input type="hidden" name="quantity" value="1">
                                 <input type="submit" value="Move to shopping bag" class="btn lb-add-bag px-1 py-2 mx-1 mt-2 mt-xl-0">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">

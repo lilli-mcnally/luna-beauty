@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.http import JsonResponse
 
 from bag.views import add_to_bag
 
@@ -20,15 +21,26 @@ def view_wishlist(request):
     return render(request, 'wishlist/wishlist.html', context)
 
 
-@login_required
 def add_to_wishlist(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    user_profile = request.user.userprofile
+    if not request.user.is_authenticated:
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest': # Check if AJAX
+            return JsonResponse({'status': 'login_required'}, status=401)
+        return redirect('account_login') 
 
-    item, created = Wishlist.objects.get_or_create(
-        user_profile=user_profile,
-        product=product,
-    )
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest': # Check if AJAX
+        product = get_object_or_404(Product, pk=product_id)
+        user_profile = request.user.userprofile
+
+        item, created = Wishlist.objects.get_or_create(
+            user_profile=user_profile,
+            product=product,
+        )
+
+        if created:
+            return JsonResponse({'status': 'added', 'message': 'Added to wishlist'})
+        else:
+            item.delete()
+            return JsonResponse({'status': 'removed', 'message': 'Removed from wishlist'})
 
     return redirect(request.META.get('HTTP_REFERER'))
 

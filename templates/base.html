@@ -94,23 +94,18 @@
                     method: 'POST',
                     headers: {
                         'X-CSRFToken': this.querySelector('[name=csrfmiddlewaretoken]').value,
+                        'X-Requested-With': 'XMLHttpRequest', // Tells Django this is an AJAX call
                     }
                 }).then(response => {
-                    if (response.status === 302) {
-                        window.location.href = response.url || '/accounts/login/';
+                    if (response.status === 401) {
+                        window.location.href = '/accounts/login/';
                         return
                     }
 
                     if (response.ok) {
-                        if (icon.classList.contains('far')) {
-                            //Removes the empty heart and adds a filled one
-                            icon.classList.remove('far');
-                            icon.classList.add('fas');
-                        } else {
-                            //Removes a full heart and adds and empty one
-                            icon.classList.remove('fas');
-                            icon.classList.add('far');
-                        }
+                        //Removes the empty heart and adds a filled one
+                        icon.classList.toggle('far');
+                        icon.classList.toggle('fas');
                     }
                 });
             });

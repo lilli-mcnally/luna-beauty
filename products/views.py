@@ -5,6 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
 from bag.views import add_to_bag
+from wishlist.models import Wishlist
 
 from .forms import ProductForm
 
@@ -18,6 +19,12 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+
+    wishlist_ids = []
+    if request.user.is_authenticated:
+        wishlist_ids = Wishlist.objects.filter(
+            user_profile=request.user.userprofile
+        ).values_list('product_id', flat=True)
 
     if request.GET:
 

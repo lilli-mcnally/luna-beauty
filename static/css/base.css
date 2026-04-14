@@ -266,6 +266,10 @@ header {
 
 /* Product Details */
 
+.lb-detail-image {
+    position: relative;
+}
+
 #lb-info-card,
 .lb-bag-card,
 #lb-delivery-card,
@@ -479,6 +483,10 @@ header {
         font-size: 24px;
     }
 
+    .lb-add-bag {
+        width: 250px;
+    }
+
 }
 
 @media (max-width: 575px) {
@@ -499,4 +507,11 @@ header {
         height: 80px;
         width: 80px;
     }
+}
+
+@media (max-width: 350px) {
+    .lb-add-bag {
+        width: 200px;
+    }
+
 }

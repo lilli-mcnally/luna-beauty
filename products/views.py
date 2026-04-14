@@ -74,6 +74,12 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     filter_products = []
 
+    wishlist_ids = []
+    if request.user.is_authenticated:
+        wishlist_ids = Wishlist.objects.filter(
+            user_profile=request.user.userprofile
+        ).values_list('product_id', flat=True)
+
     for p in all_products:
         if p.category == product.category:
             if p.name != product.name:
@@ -84,6 +90,7 @@ def product_detail(request, product_id):
         'product': product,
         'all_products': all_products,
         'similar_products': similar_products,
+        'wishlist_ids': wishlist_ids,
     }
 
     return render(request, 'products/product_detail.html', context)

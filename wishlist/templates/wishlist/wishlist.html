@@ -35,8 +35,10 @@
                             <a href="{% url 'product_detail' item.product.id %}" class="lb-hover-underline">
                                 <h5 class="card-title">{{ item.product.name }}</h5>
                             </a>
-                            <div class="d-flex justify-content-end">
-                                <p><strong>£{{ item.product.price }}</strong></p>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-center m-2"> {% if item.product.volume %} {{ item.product.volume }} |{% endif %}
+                                    {{ item.product.rating }} <i class="fa-solid fa-star"></i></p>
+                                <p class="m-2"><strong>£{{ item.product.price }}</strong></p>
                             </div>
                         </div>
                         <div class="d-flex flex-column justify-content-between align-items-center flex-wrap mt-2">
@@ -48,8 +50,14 @@
                                 {% endfor %}
                             </select>
                             {% endif %}
+                            <form action="{% url 'remove_from_wishlist' item.id %}" method="POST"
+                                class="lb-shades-picker d-flex justify-content-center align-items-center my-1 flex-column flex-xl-row">
+                                {% csrf_token %}
+                                <input type="submit" value="Remove from Wishlist" class="btn lb-add-bag px-1 py-2 mx-1 mt-2 mt-xl-0">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </form>
                             <form action="{% url 'move_to_bag' item.id %}" method="POST"
-                                class="lb-shades-picker d-flex justify-content-center align-items-center my-3 flex-column flex-xl-row move-to-bag-form">
+                                class="lb-shades-picker d-flex justify-content-center align-items-center my-1 flex-column flex-xl-row move-to-bag-form">
                                 {% csrf_token %}
                                 <input type="hidden" name="shade" value="">
                                 <input type="hidden" name="quantity" value="1">
